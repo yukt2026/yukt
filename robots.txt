@@ -1,0 +1,13 @@
+# ==========================================================================
+# Robots.txt for YUKT IT SOLUTIONS (yukt.online)
+# ==========================================================================
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /includes/
+Disallow: /legacy_archive/
+Disallow: /node_modules/
+
+# XML Sitemap
+Sitemap: https://yukt.online/sitemap.xml

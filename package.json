@@ -1,0 +1,24 @@
+{
+  "name": "yukt-it-solutions",
+  "version": "1.0.0",
+  "description": "Premium, modern, minimalist website for YUKT IT SOLUTIONS (yukt.online)",
+  "main": "assets/js/app.js",
+  "scripts": {
+    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify",
+    "watch:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch"
+  },
+  "keywords": [
+    "yukt",
+    "it-solutions",
+    "website-development",
+    "custom-software",
+    "ai-automation"
+  ],
+  "author": "YUKT IT SOLUTIONS",
+  "license": "Proprietary",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  }
+}
