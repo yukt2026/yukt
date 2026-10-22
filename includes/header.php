@@ -250,61 +250,116 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
         </div>
       </nav>
 
-      <!-- Mobile Navigation Drawer -->
-      <div id="mobileDrawer" class="hidden lg:hidden mt-2 bg-navy-950/98 backdrop-blur-2xl rounded-2xl p-5 border border-white/20 shadow-2xl shadow-black/90">
-        <div class="flex flex-col space-y-2">
-          <a href="index.php" class="mobile-nav-link px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
-            <span>Home</span>
-            <i data-lucide="chevron-right" class="w-4 h-4 text-electric-400"></i>
+      <!-- Mobile Navigation Drawer with Responsive Max Height & Smooth Scrolling -->
+      <div 
+        id="mobileDrawer" 
+        class="hidden lg:hidden mt-2 bg-navy-950/98 backdrop-blur-2xl rounded-2xl p-4 sm:p-5 border border-white/20 shadow-2xl shadow-black/95 max-h-[calc(100dvh-5.25rem)] overflow-y-auto overscroll-contain"
+      >
+        <div class="flex flex-col space-y-1.5">
+          <!-- Home Link -->
+          <a href="index.php" class="mobile-nav-link px-3.5 py-2.5 rounded-xl text-sm font-medium <?php echo ($activePage === 'home') ? 'text-white bg-white/10' : 'text-slate-200 hover:bg-white/5'; ?> flex items-center justify-between transition-colors">
+            <span class="flex items-center gap-2.5">
+              <i data-lucide="home" class="w-4 h-4 text-electric-400"></i>
+              <span>Home</span>
+            </span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
           </a>
           
-          <div class="border-t border-b border-white/10 py-2.5 my-1">
-            <div class="flex items-center justify-between px-4 mb-2">
-              <a href="services.php" class="text-xs font-bold font-mono uppercase tracking-wider text-electric-400 hover:underline">
-                Services (All 8 Disciplines) &rarr;
-              </a>
-              <a href="index.php#services" class="text-[11px] font-mono text-slate-400 hover:text-white">3D View</a>
-            </div>
-            <div class="grid grid-cols-1 gap-1 pl-4 pr-2">
-              <?php foreach ($SERVICES as $s): ?>
-                <a href="<?php echo $s['url']; ?>" class="flex items-center gap-2 py-1.5 text-xs text-slate-300 hover:text-electric-400">
-                  <span class="w-1.5 h-1.5 rounded-full <?php echo ($s['accent'] === 'orange') ? 'bg-yukt-orange' : 'bg-electric-400'; ?>"></span>
-                  <span><?php echo htmlspecialchars($s['title']); ?></span>
+          <!-- Collapsible Services Accordion Section -->
+          <div class="rounded-xl overflow-hidden bg-white/[0.03] border border-white/10 transition-all">
+            <button 
+              type="button" 
+              id="mobileServicesToggle"
+              class="w-full px-3.5 py-2.5 text-sm font-medium text-slate-200 hover:text-white hover:bg-white/5 flex items-center justify-between transition-colors cursor-pointer select-none"
+              aria-expanded="false"
+            >
+              <div class="flex items-center gap-2.5">
+                <i data-lucide="layers" class="w-4 h-4 text-electric-400"></i>
+                <span class="font-semibold text-white">Services</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-electric-500/15 text-electric-400 border border-electric-400/25">8 Disciplines</span>
+              </div>
+              <i data-lucide="chevron-down" id="mobileServicesChevron" class="w-4 h-4 text-slate-400 transition-transform duration-200"></i>
+            </button>
+            
+            <!-- Collapsible Submenu (Hidden by default, toggled via JS) -->
+            <div id="mobileServicesMenu" class="hidden px-2 pb-2.5 space-y-1 border-t border-white/10 pt-2 bg-black/20">
+              <div class="flex items-center justify-between px-3 py-1 text-[11px] font-mono border-b border-white/5 mb-1 pb-1.5">
+                <a href="services.php" class="text-yukt-orange hover:text-amber-400 font-semibold flex items-center gap-1">
+                  <span>View All 8 Services &rarr;</span>
                 </a>
-              <?php endforeach; ?>
+                <a href="index.php#services" class="text-slate-400 hover:text-white flex items-center gap-1">
+                  <i data-lucide="sparkles" class="w-3 h-3 text-electric-400"></i>
+                  <span>3D View</span>
+                </a>
+              </div>
+              <div class="grid grid-cols-1 gap-1">
+                <?php foreach ($SERVICES as $s): ?>
+                  <a href="<?php echo $s['url']; ?>" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/10 transition-colors">
+                    <span class="w-1.5 h-1.5 rounded-full <?php echo ($s['accent'] === 'orange') ? 'bg-yukt-orange' : 'bg-electric-400'; ?> shrink-0"></span>
+                    <span class="font-medium truncate"><?php echo htmlspecialchars($s['title']); ?></span>
+                  </a>
+                <?php endforeach; ?>
+              </div>
             </div>
           </div>
 
-          <a href="<?php echo ($activePage === 'home') ? '#process' : 'index.php#process'; ?>" class="mobile-nav-link px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
-            <span>3D Execution Process</span>
-            <i data-lucide="chevron-right" class="w-4 h-4 text-electric-400"></i>
-          </a>
-          <a href="portfolio.php" class="mobile-nav-link px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
-            <span>Portfolio &amp; Work</span>
-            <i data-lucide="chevron-right" class="w-4 h-4 text-electric-400"></i>
-          </a>
-          <a href="about.php" class="mobile-nav-link px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
-            <span>About YUKT</span>
-            <i data-lucide="chevron-right" class="w-4 h-4 text-electric-400"></i>
-          </a>
-          <a href="<?php echo ($activePage === 'home') ? '#why-yukt' : 'index.php#why-yukt'; ?>" class="mobile-nav-link px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
-            <span>Why Choose YUKT</span>
-            <i data-lucide="chevron-right" class="w-4 h-4 text-electric-400"></i>
-          </a>
-          <a href="contact.php" class="mobile-nav-link px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
-            <span>Contact Us</span>
-            <i data-lucide="chevron-right" class="w-4 h-4 text-electric-400"></i>
+          <!-- 3D Execution Process -->
+          <a href="<?php echo ($activePage === 'home') ? '#process' : 'index.php#process'; ?>" class="mobile-nav-link px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/5 flex items-center justify-between transition-colors">
+            <span class="flex items-center gap-2.5">
+              <i data-lucide="cpu" class="w-4 h-4 text-electric-400"></i>
+              <span>3D Execution Process</span>
+            </span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
           </a>
 
-          <div class="pt-3 border-t border-white/10 space-y-2">
-            <button type="button" class="w-full py-3 px-4 rounded-xl font-semibold text-sm text-slate-200 bg-white/10 hover:bg-white/20 border border-white/10 transition-colors open-quote-modal-btn">
-              Get a Project Quote
+          <!-- Portfolio & Work -->
+          <a href="portfolio.php" class="mobile-nav-link px-3.5 py-2.5 rounded-xl text-sm font-medium <?php echo ($activePage === 'portfolio') ? 'text-white bg-white/10' : 'text-slate-200 hover:bg-white/5'; ?> flex items-center justify-between transition-colors">
+            <span class="flex items-center gap-2.5">
+              <i data-lucide="briefcase" class="w-4 h-4 text-electric-400"></i>
+              <span>Portfolio &amp; Work</span>
+              <span class="text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">42+ Live</span>
+            </span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+          </a>
+
+          <!-- About YUKT -->
+          <a href="about.php" class="mobile-nav-link px-3.5 py-2.5 rounded-xl text-sm font-medium <?php echo ($activePage === 'about') ? 'text-white bg-white/10' : 'text-slate-200 hover:bg-white/5'; ?> flex items-center justify-between transition-colors">
+            <span class="flex items-center gap-2.5">
+              <i data-lucide="info" class="w-4 h-4 text-electric-400"></i>
+              <span>About YUKT</span>
+            </span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+          </a>
+
+          <!-- Why Choose YUKT -->
+          <a href="<?php echo ($activePage === 'home') ? '#why-yukt' : 'index.php#why-yukt'; ?>" class="mobile-nav-link px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/5 flex items-center justify-between transition-colors">
+            <span class="flex items-center gap-2.5">
+              <i data-lucide="shield-check" class="w-4 h-4 text-electric-400"></i>
+              <span>Why Choose YUKT</span>
+            </span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+          </a>
+
+          <!-- Contact Us -->
+          <a href="contact.php" class="mobile-nav-link px-3.5 py-2.5 rounded-xl text-sm font-medium <?php echo ($activePage === 'contact') ? 'text-white bg-white/10' : 'text-slate-200 hover:bg-white/5'; ?> flex items-center justify-between transition-colors">
+            <span class="flex items-center gap-2.5">
+              <i data-lucide="phone-call" class="w-4 h-4 text-electric-400"></i>
+              <span>Contact Us</span>
+            </span>
+            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+          </a>
+
+          <!-- Bottom Action Buttons -->
+          <div class="pt-3 border-t border-white/10 space-y-2.5 mt-1">
+            <button type="button" class="w-full py-3 px-4 rounded-xl font-display font-semibold text-xs sm:text-sm text-slate-200 bg-white/10 hover:bg-white/20 border border-white/15 transition-all flex items-center justify-center gap-2 open-quote-modal-btn">
+              <span>Get a Project Scope Quote</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-electric-400"></i>
             </button>
             <a 
               href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I want to discuss a project.'); ?>"
               target="_blank"
               rel="noopener noreferrer"
-              class="w-full py-3.5 px-4 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-yukt-orange to-amber-500 flex items-center justify-center gap-2 shadow-lg shadow-yukt-orange/25"
+              class="w-full py-3.5 px-4 rounded-xl font-display font-semibold text-xs sm:text-sm text-white bg-gradient-to-r from-yukt-orange to-amber-600 hover:from-yukt-orangeLight hover:to-yukt-orange flex items-center justify-center gap-2 shadow-xl shadow-yukt-orange/30 border border-amber-400/30 transition-all active:scale-[0.98]"
             >
               <i data-lucide="message-circle" class="w-4 h-4"></i>
               <span>Start Project on WhatsApp (+91 72176 45059)</span>

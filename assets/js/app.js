@@ -118,7 +118,7 @@ function initContactForm() {
 }
 
 /**
- * Mobile Navigation Drawer
+ * Mobile Navigation Drawer & Collapsible Services Accordion
  */
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobileMenuToggle');
@@ -137,15 +137,42 @@ function initMobileMenu() {
       iconOpen?.classList.add('hidden');
       iconClose?.classList.remove('hidden');
       toggleBtn.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('overflow-hidden');
     } else {
       drawer.classList.add('hidden');
       iconOpen?.classList.remove('hidden');
       iconClose?.classList.add('hidden');
       toggleBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('overflow-hidden');
     }
   }
 
-  toggleBtn.addEventListener('click', () => toggleMenu());
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // Collapsible Services Accordion inside Mobile Drawer
+  const servicesToggle = document.getElementById('mobileServicesToggle');
+  const servicesMenu = document.getElementById('mobileServicesMenu');
+  const servicesChevron = document.getElementById('mobileServicesChevron');
+
+  if (servicesToggle && servicesMenu) {
+    servicesToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isExpanded = !servicesMenu.classList.contains('hidden');
+      if (isExpanded) {
+        servicesMenu.classList.add('hidden');
+        servicesChevron?.classList.remove('rotate-180');
+        servicesToggle.setAttribute('aria-expanded', 'false');
+      } else {
+        servicesMenu.classList.remove('hidden');
+        servicesChevron?.classList.add('rotate-180');
+        servicesToggle.setAttribute('aria-expanded', 'true');
+      }
+    });
+  }
 
   // Close on Escape
   document.addEventListener('keydown', (e) => {
@@ -154,9 +181,20 @@ function initMobileMenu() {
     }
   });
 
-  // Close when clicking a nav link inside drawer
+  // Close when clicking outside drawer
+  document.addEventListener('click', (e) => {
+    if (!drawer.classList.contains('hidden')) {
+      if (!drawer.contains(e.target) && !toggleBtn.contains(e.target)) {
+        toggleMenu(false);
+      }
+    }
+  });
+
+  // Close when clicking an actual nav link inside drawer (not accordion button)
   drawer.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => toggleMenu(false));
+    link.addEventListener('click', () => {
+      toggleMenu(false);
+    });
   });
 }
 
