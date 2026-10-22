@@ -13,30 +13,52 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /**
- * Scroll Reveal Observer
+ * Scroll Reveal Observer & Immediate Viewport Activator
  */
 function initScrollReveal() {
-  const elements = document.querySelectorAll('.reveal-on-scroll');
+  const elements = document.querySelectorAll('.reveal-up, .reveal-on-scroll');
   if (!elements.length) return;
 
-  if (!('IntersectionObserver' in window)) {
-    elements.forEach(el => el.classList.add('is-revealed'));
-    return;
-  }
+  const reveal = (el) => {
+    el.classList.add('active', 'is-revealed');
+  };
 
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-revealed');
-        obs.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
+  // Immediately activate any element that is in or near the viewport
+  const vh = window.innerHeight || document.documentElement.clientHeight || 800;
+  elements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top <= vh + 100) {
+      reveal(el);
+    }
   });
 
-  elements.forEach(el => observer.observe(el));
+  // IntersectionObserver for below-the-fold elements
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          reveal(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.05,
+      rootMargin: '100px 0px 50px 0px'
+    });
+
+    elements.forEach(el => {
+      if (!el.classList.contains('active')) {
+        observer.observe(el);
+      }
+    });
+  } else {
+    elements.forEach(reveal);
+  }
+
+  // Failsafe: Ensure all elements are visible after a short timeout
+  setTimeout(() => {
+    document.querySelectorAll('.reveal-up:not(.active), .reveal-on-scroll:not(.is-revealed)').forEach(reveal);
+  }, 500);
 }
 
 /**
@@ -336,4 +358,11 @@ function initScrollHeader() {
       header.classList.remove('shadow-sm');
     }
   }, { passive: true });
+}
+
+// Trigger scroll reveal immediately if DOM is already parsed
+if (document.readyState === 'interactive' || document.readyState === 'complete') {
+  initScrollReveal();
+} else {
+  window.addEventListener('load', initScrollReveal);
 }

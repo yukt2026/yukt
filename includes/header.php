@@ -46,6 +46,12 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
   <!-- Compiled Stylesheet (Tailwind CSS + Futuristic 3D Design Tokens) -->
   <link rel="stylesheet" href="assets/css/main.css?v=<?php echo $cssVersion; ?>">
 
+  <noscript>
+    <style>
+      .reveal-up, .reveal-on-scroll { opacity: 1 !important; transform: none !important; }
+    </style>
+  </noscript>
+
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
