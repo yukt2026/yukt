@@ -1,39 +1,43 @@
 <?php
 $activePage = 'about';
-$pageTitle = 'About Us — Yukt IT Solutions';
-$pageDesc = 'Learn about Yukt IT Solutions: our Sanskrit engineering roots, mission, working principles, cohesive technology mesh, and verified engineering pod architecture.';
+$pageTitle = 'About Us — YUKT IT SOLUTIONS | Engineering Clarity for Ambitious Enterprises';
+$pageDesc = 'Learn about YUKT IT SOLUTIONS: our Sanskrit engineering roots, mission, working principles, cohesive technology mesh, and verified engineering pod architecture.';
 
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/components/section-header.php';
 ?>
 
 <!-- ==========================================================================
-     ABOUT HERO SECTION (COMPACT & ANIMATED)
+     ABOUT HERO SECTION (FUTURISTIC 3D BRAND THEME)
 ========================================================================== -->
-<section class="stripe-ambient-canvas border-b border-canvas-border pt-10 pb-12 sm:pt-14 sm:pb-16 bg-grid-pattern relative">
-  <div class="container-custom relative z-10">
-    <div class="max-w-3xl animate-hero-fade">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-electric-50 text-electric-700 border border-electric-200 mb-3">
-        <span class="w-2 h-2 rounded-full bg-electric-600"></span> Corporate Identity &amp; Philosophy
+<section class="relative pt-12 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
+  <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-electric-500/15 rounded-full blur-[130px] pointer-events-none"></div>
+  <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-yukt-orange/15 rounded-full blur-[130px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+    <div class="max-w-3xl space-y-5 reveal-up">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-yukt-orange animate-ping"></span>
+        <span>Corporate Identity &amp; Engineering Ethos</span>
       </div>
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-800 tracking-tight leading-tight">
-        Engineering Clarity for Ambitious <span class="stripe-gradient-text">Enterprises.</span>
+      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1]">
+        Engineering Clarity for Ambitious <span class="text-gradient-electric">Enterprises.</span>
       </h1>
-      <p class="text-base sm:text-lg text-navy-600 mt-3 leading-relaxed font-normal">
-        Founded on transparent agile execution, <strong class="text-navy-900">YUKT IT SOLUTIONS Private Limited</strong> is an Indian digital engineering studio bridging the gap between clean enterprise software, autonomous AI systems, and high-growth digital marketing.
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+        Founded on transparent agile execution, <strong class="text-white font-semibold">YUKT IT SOLUTIONS Private Limited</strong> is an Indian digital engineering studio bridging the gap between clean enterprise software, autonomous AI systems, and high-growth digital marketing.
       </p>
 
-      <div class="pt-5 flex flex-wrap items-center gap-5 text-xs text-slate-500">
+      <div class="pt-4 flex flex-wrap items-center gap-5 text-xs text-slate-400 border-t border-white/10">
         <span class="flex items-center gap-2 font-medium">
-          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
           NCR &amp; Bengaluru Hubs
         </span>
         <span class="flex items-center gap-2 font-medium">
-          <span class="w-2 h-2 rounded-full bg-electric-500"></span>
+          <span class="w-2 h-2 rounded-full bg-electric-400"></span>
           Direct Senior Architecture
         </span>
         <span class="flex items-center gap-2 font-medium">
-          <span class="w-2 h-2 rounded-full bg-brandOrange-500"></span>
+          <span class="w-2 h-2 rounded-full bg-yukt-orange"></span>
           100% Client Code Ownership
         </span>
       </div>
@@ -41,62 +45,63 @@ require_once __DIR__ . '/includes/components/section-header.php';
   </div>
 </section>
 
-
 <!-- ==========================================================================
-     COMPANY INTRODUCTION & THE MEANING OF "YUKT" (COMPACT)
+     COMPANY INTRODUCTION & THE MEANING OF "YUKT"
 ========================================================================== -->
-<section class="section-padding bg-white border-b border-canvas-border">
-  <div class="container-custom">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+<section class="py-20 lg:py-28 bg-slate-50 text-slate-900 bg-grid-light border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
       
       <!-- Left Column: Sanskrit Roots & Story (6 Cols) -->
-      <div class="lg:col-span-6 space-y-4 reveal-on-scroll">
-        <span class="text-xs font-bold uppercase tracking-wider text-electric-600">Our Heritage &amp; Ethos</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight leading-tight">
-          What does <span class="text-electric-600">“YUKT”</span> mean?
+      <div class="lg:col-span-6 space-y-5 reveal-up">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric-500/10 border border-electric-500/20 text-electric-600 font-mono text-xs uppercase tracking-widest">
+          <span>Our Heritage &amp; Ethos</span>
+        </div>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl text-slate-900 tracking-tight leading-tight">
+          What does <span class="text-gradient-brand">“YUKT”</span> mean?
         </h2>
         
-        <p class="text-sm sm:text-base text-navy-700 leading-relaxed font-normal">
-          Our name is derived from the classical Sanskrit word <strong class="text-navy-900 font-semibold font-serif text-lg">युक्त (Yukt)</strong> — meaning <em class="text-navy-900 font-medium">connected, equipped, skilled, and engineered with precision</em>.
+        <p class="text-base text-slate-700 leading-relaxed font-normal">
+          Our name is derived from the classical Sanskrit word <strong class="text-slate-900 font-semibold font-serif text-lg">युक्त (Yukt)</strong> — meaning <em class="text-slate-900 font-medium">connected, equipped, skilled, and engineered with precision</em>.
         </p>
 
-        <p class="text-sm sm:text-base text-navy-600 leading-relaxed font-normal">
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
           In an industry often marred by bloated agencies, unvetted outsourcing chains, and fragile template shortcuts, Yukt was established to operate differently: as a focused, disciplined engineering pod where senior architects work directly with founders and technical leaders.
         </p>
 
-        <p class="text-sm sm:text-base text-navy-600 leading-relaxed font-normal">
+        <p class="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
           We believe that code quality and business velocity are not mutually exclusive. By pairing rigorous software architecture with modern agile release cadences, we deliver software that stands the test of transaction scale and time.
         </p>
       </div>
 
       <!-- Right Column: Visual Philosophy Card (6 Cols) -->
-      <div class="lg:col-span-6 reveal-on-scroll reveal-delay-100">
-        <div class="bg-canvas-subtle border border-canvas-border rounded-xl p-6 sm:p-7 shadow-card space-y-5 stripe-card-interactive">
-          <div class="flex items-center justify-between pb-3 border-b border-canvas-border">
-            <span class="text-xs font-mono font-bold text-navy-900">YUKT IT SOLUTIONS ETHOS</span>
+      <div class="lg:col-span-6 reveal-up">
+        <div class="bg-white border border-slate-200/90 rounded-3xl p-7 sm:p-8 shadow-xl space-y-6">
+          <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+            <span class="text-xs font-mono font-bold text-slate-900 uppercase tracking-wider">YUKT IT SOLUTIONS ETHOS</span>
             <span class="text-xs font-mono text-electric-600 font-semibold">EST. 2021</span>
           </div>
 
           <!-- Vision Box -->
-          <div class="space-y-1.5">
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+          <div class="space-y-2">
+            <div class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
               <span class="w-2 h-2 rounded bg-electric-600"></span>
               <span>Our Vision</span>
             </div>
-            <h3 class="text-lg font-bold text-navy-900">To be the most dependable digital engineering partner for modern businesses.</h3>
-            <p class="text-xs sm:text-sm text-navy-600 leading-relaxed font-normal">
+            <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900">To be the most dependable digital engineering partner for modern businesses.</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
               Empowering organizations in India and across the globe to compete, scale, and innovate through resilient software architecture, transparent operations, and zero vendor lock-in.
             </p>
           </div>
 
           <!-- Mission Box -->
-          <div class="space-y-1.5 pt-3.5 border-t border-canvas-border">
-            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
-              <span class="w-2 h-2 rounded bg-brandOrange-500"></span>
+          <div class="space-y-2 pt-4 border-t border-slate-100">
+            <div class="text-xs font-mono font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+              <span class="w-2 h-2 rounded bg-yukt-orange"></span>
               <span>Our Mission</span>
             </div>
-            <h3 class="text-lg font-bold text-navy-900">Delivering high-speed platforms with 100% intellectual property ownership.</h3>
-            <p class="text-xs sm:text-sm text-navy-600 leading-relaxed font-normal">
+            <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900">Delivering high-speed platforms with 100% intellectual property ownership.</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
               To design, engineer, and deploy secure web applications, custom enterprise systems, and autonomous AI agents while transferring full source code ownership and technical autonomy to our clients.
             </p>
           </div>
@@ -107,151 +112,155 @@ require_once __DIR__ . '/includes/components/section-header.php';
   </div>
 </section>
 
-
 <!-- ==========================================================================
-     WORKING PRINCIPLES & APPROACH TO TECHNOLOGY (COMPACT & ANIMATED)
+     WORKING PRINCIPLES & APPROACH TO TECHNOLOGY
 ========================================================================== -->
-<section class="section-padding bg-canvas-subtle border-b border-canvas-border">
-  <div class="container-custom">
+<section class="py-20 lg:py-28 bg-navy-950 text-white bg-grid-dark border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
     
-    <?php echo renderSectionHeader(
-      'Our Guiding Principles',
-      'How We Approach Technology & Delivery',
-      'Disciplined engineering practices that prioritize long-term system stability, maintainability, and measurable commercial outcomes.',
-      true
-    ); ?>
+    <div class="max-w-3xl mx-auto text-center space-y-4 mb-14 reveal-up">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
+        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-yukt-orange"></i>
+        <span>Our Guiding Principles</span>
+      </div>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white">
+        How We Approach <span class="text-gradient-electric">Technology &amp; Delivery</span>
+      </h2>
+      <p class="text-slate-400 text-base sm:text-lg">
+        Disciplined engineering practices that prioritize long-term system stability, maintainability, and measurable commercial outcomes.
+      </p>
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
       
       <!-- Principle 1 -->
-      <div class="bg-white border border-canvas-border rounded-xl p-5 sm:p-6 shadow-subtle hover:border-electric-300 hover:shadow-card transition-all stripe-card-interactive reveal-on-scroll reveal-delay-50">
-        <div class="w-9 h-9 rounded-lg bg-electric-50 text-electric-600 border border-electric-200 flex items-center justify-center mb-3">
-          <?php echo getIconSvg('cpu', 'w-4 h-4'); ?>
+      <div class="glass-dark rounded-2xl p-6 border border-white/10 hover:border-electric-400/50 transition-all group reveal-up">
+        <div class="w-11 h-11 rounded-xl bg-electric-500/15 border border-electric-400/30 flex items-center justify-center text-electric-400 mb-4 group-hover:scale-110 transition-transform">
+          <i data-lucide="cpu" class="w-5 h-5"></i>
         </div>
-        <div class="text-xs font-mono font-bold text-slate-400 mb-1">01 / ARCHITECTURE</div>
-        <h3 class="text-base font-bold text-navy-900">Senior Architecture First</h3>
-        <p class="text-xs sm:text-sm text-navy-600 mt-1.5 leading-relaxed">
+        <div class="text-xs font-mono text-slate-400 mb-1">01 / ARCHITECTURE</div>
+        <h3 class="font-display font-bold text-lg text-white mb-2">Senior Architecture First</h3>
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
           Every project is scoped, structured, and reviewed by senior engineers. We never hand off mission-critical logic to unvetted third parties.
         </p>
       </div>
 
       <!-- Principle 2 -->
-      <div class="bg-white border border-canvas-border rounded-xl p-5 sm:p-6 shadow-subtle hover:border-brandOrange-300 hover:shadow-card transition-all stripe-card-interactive reveal-on-scroll reveal-delay-100">
-        <div class="w-9 h-9 rounded-lg bg-brandOrange-50 text-brandOrange-600 border border-brandOrange-200 flex items-center justify-center mb-3">
-          <?php echo getIconSvg('trending-up', 'w-4 h-4'); ?>
+      <div class="glass-dark rounded-2xl p-6 border border-white/10 hover:border-yukt-orange/50 transition-all group reveal-up">
+        <div class="w-11 h-11 rounded-xl bg-yukt-orange/15 border border-yukt-orange/30 flex items-center justify-center text-yukt-orange mb-4 group-hover:scale-110 transition-transform">
+          <i data-lucide="trending-up" class="w-5 h-5"></i>
         </div>
-        <div class="text-xs font-mono font-bold text-slate-400 mb-1">02 / VISIBILITY</div>
-        <h3 class="text-base font-bold text-navy-900">Agile Bi-Weekly Cadence</h3>
-        <p class="text-xs sm:text-sm text-navy-600 mt-1.5 leading-relaxed">
+        <div class="text-xs font-mono text-slate-400 mb-1">02 / VISIBILITY</div>
+        <h3 class="font-display font-bold text-lg text-white mb-2">Agile Bi-Weekly Cadence</h3>
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
           Two-week sprint cadences with live staging environment access, regular video reviews, and continuous Git commit transparency.
         </p>
       </div>
 
       <!-- Principle 3 -->
-      <div class="bg-white border border-canvas-border rounded-xl p-5 sm:p-6 shadow-subtle hover:border-electric-300 hover:shadow-card transition-all stripe-card-interactive reveal-on-scroll reveal-delay-150">
-        <div class="w-9 h-9 rounded-lg bg-electric-50 text-electric-600 border border-electric-200 flex items-center justify-center mb-3">
-          <?php echo getIconSvg('code', 'w-4 h-4'); ?>
+      <div class="glass-dark rounded-2xl p-6 border border-white/10 hover:border-electric-400/50 transition-all group reveal-up">
+        <div class="w-11 h-11 rounded-xl bg-electric-500/15 border border-electric-400/30 flex items-center justify-center text-electric-400 mb-4 group-hover:scale-110 transition-transform">
+          <i data-lucide="code" class="w-5 h-5"></i>
         </div>
-        <div class="text-xs font-mono font-bold text-slate-400 mb-1">03 / SUSTAINABILITY</div>
-        <h3 class="text-base font-bold text-navy-900">Clean Code Standards</h3>
-        <p class="text-xs sm:text-sm text-navy-600 mt-1.5 leading-relaxed">
+        <div class="text-xs font-mono text-slate-400 mb-1">03 / SUSTAINABILITY</div>
+        <h3 class="font-display font-bold text-lg text-white mb-2">Clean Code Standards</h3>
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
           We write modular, human-readable code following strict linting, automated testing, and comprehensive documentation to eliminate technical debt.
         </p>
       </div>
 
       <!-- Principle 4 -->
-      <div class="bg-white border border-canvas-border rounded-xl p-5 sm:p-6 shadow-subtle hover:border-emerald-300 hover:shadow-card transition-all stripe-card-interactive reveal-on-scroll reveal-delay-200">
-        <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mb-3">
-          <?php echo getIconSvg('shield-check', 'w-4 h-4'); ?>
+      <div class="glass-dark rounded-2xl p-6 border border-white/10 hover:border-emerald-400/50 transition-all group reveal-up">
+        <div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-400/30 flex items-center justify-center text-emerald-400 mb-4 group-hover:scale-110 transition-transform">
+          <i data-lucide="shield-check" class="w-5 h-5"></i>
         </div>
-        <div class="text-xs font-mono font-bold text-slate-400 mb-1">04 / AUTONOMY</div>
-        <h3 class="text-base font-bold text-navy-900">100% Client IP Ownership</h3>
-        <p class="text-xs sm:text-sm text-navy-600 mt-1.5 leading-relaxed">
+        <div class="text-xs font-mono text-slate-400 mb-1">04 / AUTONOMY</div>
+        <h3 class="font-display font-bold text-lg text-white mb-2">100% Client IP Ownership</h3>
+        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
           You own everything we build. All Git repos, database schemas, Figma files, and server configurations are transferred upon milestone delivery.
         </p>
       </div>
 
     </div>
-
   </div>
 </section>
-
-  </div>
-</section>
-
 
 <!-- ==========================================================================
      THE COHESIVE TECH MESH
-     Explaining how Web Dev, AI, Software & Marketing Work Together
 ========================================================================== -->
-<section class="section-padding bg-white border-b border-canvas-border">
-  <div class="container-custom">
+<section class="py-20 lg:py-28 bg-white text-slate-900 bg-grid-light border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
     
-    <?php echo renderSectionHeader(
-      'Integrated Technology Mesh',
-      'Why Web, Software, AI & Marketing Must Work Together',
-      'Modern digital excellence fails when disciplines operate in silos. At Yukt, our capabilities form a unified, synchronized flywheel.',
-      true
-    ); ?>
+    <div class="max-w-3xl mx-auto text-center space-y-4 mb-14 reveal-up">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-electric-500/10 border border-electric-500/20 text-electric-600 font-mono text-xs uppercase tracking-widest">
+        <span>Integrated Technology Mesh</span>
+      </div>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-slate-900">
+        Why Web, Software, AI &amp; Marketing <span class="text-gradient-brand">Work Together</span>
+      </h2>
+      <p class="text-slate-600 text-base sm:text-lg">
+        Modern digital excellence fails when disciplines operate in silos. At Yukt, our capabilities form a unified, synchronized flywheel.
+      </p>
+    </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 relative">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       
       <!-- Pillar 1: Web Development -->
-      <div class="p-6 rounded-card border border-canvas-border bg-canvas-subtle hover:bg-white hover:border-electric-300 transition-all">
-        <div class="w-10 h-10 rounded-lg bg-electric-50 text-electric-600 flex items-center justify-center mb-4">
-          <?php echo getIconSvg('globe', 'w-5 h-5'); ?>
+      <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:border-electric-500 hover:shadow-xl transition-all group reveal-up">
+        <div class="w-11 h-11 rounded-xl bg-electric-500/10 text-electric-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <i data-lucide="globe" class="w-5 h-5"></i>
         </div>
-        <div class="text-xs font-bold uppercase tracking-wider text-electric-600 mb-1">Layer 1: Interface</div>
-        <h3 class="text-lg font-bold text-navy-900">Web Platforms</h3>
-        <p class="text-xs sm:text-sm text-navy-600 mt-2 leading-relaxed">
+        <div class="text-xs font-mono uppercase tracking-wider text-electric-600 mb-1">Layer 1: Interface</div>
+        <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Web Platforms</h3>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
           The high-speed, sub-second visual interface. Captures user interest, renders cleanly on all devices, and minimizes bounce rates.
         </p>
-        <div class="mt-4 pt-3 border-t border-canvas-border text-[11px] font-mono text-slate-500">
+        <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-mono text-slate-500">
           Role: Conversion &amp; Presentation
         </div>
       </div>
 
       <!-- Pillar 2: Custom Software -->
-      <div class="p-6 rounded-card border border-canvas-border bg-canvas-subtle hover:bg-white hover:border-electric-300 transition-all">
-        <div class="w-10 h-10 rounded-lg bg-navy-100 text-navy-800 flex items-center justify-center mb-4">
-          <?php echo getIconSvg('cpu', 'w-5 h-5'); ?>
+      <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:border-electric-500 hover:shadow-xl transition-all group reveal-up">
+        <div class="w-11 h-11 rounded-xl bg-navy-800 text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <i data-lucide="cpu" class="w-5 h-5"></i>
         </div>
-        <div class="text-xs font-bold uppercase tracking-wider text-navy-800 mb-1">Layer 2: Engine</div>
-        <h3 class="text-lg font-bold text-navy-900">Custom Software</h3>
-        <p class="text-xs sm:text-sm text-navy-600 mt-2 leading-relaxed">
+        <div class="text-xs font-mono uppercase tracking-wider text-slate-800 mb-1">Layer 2: Engine</div>
+        <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Custom Software</h3>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
           The backend engine enforcing business rules, multi-tenant database integrity, role-based security, and microservice APIs.
         </p>
-        <div class="mt-4 pt-3 border-t border-canvas-border text-[11px] font-mono text-slate-500">
+        <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-mono text-slate-500">
           Role: Core Operations &amp; Logic
         </div>
       </div>
 
       <!-- Pillar 3: AI & Automation -->
-      <div class="p-6 rounded-card border border-canvas-border bg-canvas-subtle hover:bg-white hover:border-brandOrange-300 transition-all">
-        <div class="w-10 h-10 rounded-lg bg-brandOrange-50 text-brandOrange-600 flex items-center justify-center mb-4">
-          <?php echo getIconSvg('sparkles', 'w-5 h-5'); ?>
+      <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:border-yukt-orange hover:shadow-xl transition-all group reveal-up">
+        <div class="w-11 h-11 rounded-xl bg-yukt-orange/15 text-yukt-orange flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <i data-lucide="bot" class="w-5 h-5"></i>
         </div>
-        <div class="text-xs font-bold uppercase tracking-wider text-brandOrange-600 mb-1">Layer 3: Velocity</div>
-        <h3 class="text-lg font-bold text-navy-900">AI &amp; Automation</h3>
-        <p class="text-xs sm:text-sm text-navy-600 mt-2 leading-relaxed">
+        <div class="text-xs font-mono uppercase tracking-wider text-yukt-orange mb-1">Layer 3: Velocity</div>
+        <h3 class="font-display font-bold text-lg text-slate-900 mb-2">AI &amp; Automation</h3>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
           Injects intelligence into the stack. Automates document processing, handles customer queries 24/7, and scores leads algorithmically.
         </p>
-        <div class="mt-4 pt-3 border-t border-canvas-border text-[11px] font-mono text-slate-500">
+        <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-mono text-slate-500">
           Role: Efficiency &amp; Intelligence
         </div>
       </div>
 
       <!-- Pillar 4: Digital Growth -->
-      <div class="p-6 rounded-card border border-canvas-border bg-canvas-subtle hover:bg-white hover:border-electric-300 transition-all">
-        <div class="w-10 h-10 rounded-lg bg-electric-50 text-electric-600 flex items-center justify-center mb-4">
-          <?php echo getIconSvg('trending-up', 'w-5 h-5'); ?>
+      <div class="p-6 rounded-3xl bg-slate-50 border border-slate-200 hover:border-emerald-500 hover:shadow-xl transition-all group reveal-up">
+        <div class="w-11 h-11 rounded-xl bg-emerald-500/15 text-emerald-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <i data-lucide="trending-up" class="w-5 h-5"></i>
         </div>
-        <div class="text-xs font-bold uppercase tracking-wider text-electric-600 mb-1">Layer 4: Expansion</div>
-        <h3 class="text-lg font-bold text-navy-900">Digital Marketing</h3>
-        <p class="text-xs sm:text-sm text-navy-600 mt-2 leading-relaxed">
+        <div class="text-xs font-mono uppercase tracking-wider text-emerald-600 mb-1">Layer 4: Expansion</div>
+        <h3 class="font-display font-bold text-lg text-slate-900 mb-2">Digital Marketing</h3>
+        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
           Drives targeted audience acquisition, captures high-intent demand, and feeds real-time attribution data back into product optimization.
         </p>
-        <div class="mt-4 pt-3 border-t border-canvas-border text-[11px] font-mono text-slate-500">
+        <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-mono text-slate-500">
           Role: Demand &amp; Feedback Loop
         </div>
       </div>
@@ -259,86 +268,89 @@ require_once __DIR__ . '/includes/components/section-header.php';
     </div>
 
     <!-- Flywheel Narrative Card -->
-    <div class="mt-8 p-6 sm:p-8 bg-canvas-subtle rounded-card border border-canvas-border flex flex-col sm:flex-row items-center justify-between gap-6">
+    <div class="mt-10 p-6 sm:p-8 bg-slate-900 text-white rounded-3xl border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6 reveal-up">
       <div class="space-y-1">
-        <div class="text-xs font-bold uppercase tracking-wider text-electric-600">The Studio Advantage</div>
-        <h4 class="text-lg font-bold text-navy-900">Zero Hand-Off Friction Between Engineering &amp; Marketing</h4>
-        <p class="text-xs sm:text-sm text-navy-600">When your software developers, UI designers, AI specialists, and performance marketers collaborate under one roof, features launch faster and marketing campaigns track with 100% data fidelity.</p>
+        <div class="text-xs font-mono uppercase tracking-wider text-electric-400">The Studio Advantage</div>
+        <h4 class="font-display font-bold text-lg sm:text-xl text-white">Zero Hand-Off Friction Between Engineering &amp; Marketing</h4>
+        <p class="text-xs sm:text-sm text-slate-300">When your software developers, UI designers, AI specialists, and performance marketers collaborate under one roof, features launch faster and marketing campaigns track with 100% data fidelity.</p>
       </div>
-      <a href="services.php" class="btn-secondary flex-shrink-0">
+      <a href="services.php" class="px-5 py-3 rounded-xl font-display font-semibold text-xs sm:text-sm text-white bg-electric-500 hover:bg-electric-400 transition-all flex items-center gap-2 flex-shrink-0 shadow-lg shadow-electric-500/25">
         <span>Explore All 8 Disciplines</span>
-        <?php echo getIconSvg('arrow-right', 'w-4 h-4'); ?>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
       </a>
     </div>
 
   </div>
 </section>
 
-
 <!-- ==========================================================================
      VERIFIED ORGANIZATIONAL STRUCTURE & ENGINEERING PODS
-     Strict Rule: Include team information only when verified.
 ========================================================================== -->
-<section class="section-padding bg-canvas-subtle border-b border-canvas-border">
-  <div class="container-custom">
+<section class="py-20 lg:py-28 bg-slate-50 text-slate-900 bg-grid-light border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
     
-    <?php echo renderSectionHeader(
-      'Our Organization',
-      'The Agile Pod Delivery Architecture',
-      'Verified organizational model: client engagements are led by dedicated, senior cross-functional pods located across our Indian development hubs.',
-      true
-    ); ?>
+    <div class="max-w-3xl mx-auto text-center space-y-4 mb-14 reveal-up">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-electric-500/10 border border-electric-500/20 text-electric-600 font-mono text-xs uppercase tracking-widest">
+        <span>Our Organization</span>
+      </div>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-slate-900">
+        The Agile Pod <span class="text-gradient-brand">Delivery Architecture</span>
+      </h2>
+      <p class="text-slate-600 text-base sm:text-lg">
+        Verified organizational model: client engagements are led by dedicated, senior cross-functional pods located across our Indian development hubs.
+      </p>
+    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       
-      <div class="bg-white border border-canvas-border rounded-card p-6 shadow-subtle">
-        <div class="w-10 h-10 rounded-lg bg-electric-50 text-electric-600 flex items-center justify-center mb-4">
-          <?php echo getIconSvg('cpu', 'w-5 h-5'); ?>
+      <div class="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all reveal-up">
+        <div class="w-10 h-10 rounded-xl bg-electric-50 text-electric-600 flex items-center justify-center mb-4">
+          <i data-lucide="cpu" class="w-5 h-5"></i>
         </div>
-        <h3 class="text-base font-bold text-navy-900">Lead Solutions Architecture</h3>
-        <p class="text-xs text-navy-600 mt-2 leading-relaxed">
+        <h3 class="font-display font-bold text-base text-slate-900">Lead Solutions Architecture</h3>
+        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
           Oversees system design, microservice topology, database schemas, cloud infrastructure, and technical security compliance.
         </p>
-        <div class="mt-4 pt-3 border-t border-canvas-border text-[11px] text-slate-400">
+        <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-400">
           Focus: High-concurrency &amp; Stability
         </div>
       </div>
 
-      <div class="bg-white border border-canvas-border rounded-card p-6 shadow-subtle">
-        <div class="w-10 h-10 rounded-lg bg-navy-100 text-navy-800 flex items-center justify-center mb-4">
-          <?php echo getIconSvg('code', 'w-5 h-5'); ?>
+      <div class="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all reveal-up">
+        <div class="w-10 h-10 rounded-xl bg-navy-800 text-white flex items-center justify-center mb-4">
+          <i data-lucide="code" class="w-5 h-5"></i>
         </div>
-        <h3 class="text-base font-bold text-navy-900">Full-Stack &amp; Cloud Pod</h3>
-        <p class="text-xs text-navy-600 mt-2 leading-relaxed">
+        <h3 class="font-display font-bold text-base text-slate-900">Full-Stack &amp; Cloud Pod</h3>
+        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
           Specialized in React, Next.js, Laravel, PHP, Python, PostgreSQL, and Docker containerized cloud deployments.
         </p>
-        <div class="mt-4 pt-3 border-t border-canvas-border text-[11px] text-slate-400">
+        <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-400">
           Focus: Clean Code &amp; CI/CD Pipelines
         </div>
       </div>
 
-      <div class="bg-white border border-canvas-border rounded-card p-6 shadow-subtle">
-        <div class="w-10 h-10 rounded-lg bg-brandOrange-50 text-brandOrange-600 flex items-center justify-center mb-4">
-          <?php echo getIconSvg('sparkles', 'w-5 h-5'); ?>
+      <div class="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all reveal-up">
+        <div class="w-10 h-10 rounded-xl bg-yukt-orange/15 text-yukt-orange flex items-center justify-center mb-4">
+          <i data-lucide="sparkles" class="w-5 h-5"></i>
         </div>
-        <h3 class="text-base font-bold text-navy-900">AI &amp; Automation Pod</h3>
-        <p class="text-xs text-navy-600 mt-2 leading-relaxed">
+        <h3 class="font-display font-bold text-base text-slate-900">AI &amp; Automation Pod</h3>
+        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
           Engineers vector embeddings, LangChain RAG pipelines, WhatsApp API bots, and intelligent optical document processing models.
         </p>
-        <div class="mt-4 pt-3 border-t border-canvas-border text-[11px] text-slate-400">
+        <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-400">
           Focus: Zero-Hallucination AI Workflows
         </div>
       </div>
 
-      <div class="bg-white border border-canvas-border rounded-card p-6 shadow-subtle">
-        <div class="w-10 h-10 rounded-lg bg-electric-50 text-electric-600 flex items-center justify-center mb-4">
-          <?php echo getIconSvg('palette', 'w-5 h-5'); ?>
+      <div class="bg-white border border-slate-200/90 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all reveal-up">
+        <div class="w-10 h-10 rounded-xl bg-electric-50 text-electric-600 flex items-center justify-center mb-4">
+          <i data-lucide="palette" class="w-5 h-5"></i>
         </div>
-        <h3 class="text-base font-bold text-navy-900">UI/UX &amp; Growth Pod</h3>
-        <p class="text-xs text-navy-600 mt-2 leading-relaxed">
+        <h3 class="font-display font-bold text-base text-slate-900">UI/UX &amp; Growth Pod</h3>
+        <p class="text-xs text-slate-600 mt-2 leading-relaxed">
           Figma component systems, user experience testing, conversion rate optimization (CRO), and server-side tracking analytics.
         </p>
-        <div class="mt-4 pt-3 border-t border-canvas-border text-[11px] text-slate-400">
+        <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] font-mono text-slate-400">
           Focus: Intuitive Interfaces &amp; Attribution
         </div>
       </div>
@@ -346,17 +358,17 @@ require_once __DIR__ . '/includes/components/section-header.php';
     </div>
 
     <!-- Verified Locations Strip -->
-    <div class="mt-10 p-6 bg-white border border-canvas-border rounded-card flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+    <div class="mt-10 p-6 bg-white border border-slate-200 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm reveal-up">
       <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-md bg-electric-50 text-electric-600 flex items-center justify-center flex-shrink-0">
-          <?php echo getIconSvg('map-pin', 'w-4 h-4'); ?>
+        <div class="w-10 h-10 rounded-xl bg-electric-500/10 text-electric-600 flex items-center justify-center flex-shrink-0">
+          <i data-lucide="map-pin" class="w-5 h-5"></i>
         </div>
         <div>
-          <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Development Hubs</div>
-          <div class="text-sm font-bold text-navy-900"><?php echo OFFICE_PRIMARY; ?> &bull; <?php echo OFFICE_SECONDARY; ?></div>
+          <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Development Hubs</div>
+          <div class="text-sm font-bold text-slate-900"><?php echo OFFICE_PRIMARY; ?> &bull; <?php echo OFFICE_SECONDARY; ?></div>
         </div>
       </div>
-      <div class="text-xs text-slate-500">
+      <div class="text-xs font-mono text-slate-500">
         Operating Pan-India &bull; Delivering Globally
       </div>
     </div>
@@ -364,33 +376,34 @@ require_once __DIR__ . '/includes/components/section-header.php';
   </div>
 </section>
 
-
 <!-- ==========================================================================
      STANDARDIZED BOTTOM CTA
 ========================================================================== -->
-<section class="section-padding bg-navy-900 border-t border-slate-800 text-white">
-  <div class="container-custom">
-    <div class="max-w-3xl mx-auto text-center space-y-6">
-      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-navy-800 text-electric-400 border border-slate-700">
-        <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Transparent Partnership
+<section class="py-20 lg:py-28 bg-navy-950 border-t border-white/10 text-white relative overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-electric-500/15 rounded-full blur-[130px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+    <div class="max-w-3xl mx-auto text-center space-y-6 reveal-up">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>Transparent Partnership</span>
       </span>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
         Work with an engineering studio that values clarity.
       </h2>
       <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
         Let’s review your architectural requirements, discuss feasibility, and map out a clean two-week sprint delivery roadmap.
       </p>
       <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <button type="button" class="btn-primary-lg open-quote-modal-btn">
+        <button type="button" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-electric-500 hover:bg-electric-400 transition-all open-quote-modal-btn shadow-lg shadow-electric-500/25">
           <span>Get a Project Estimate</span>
-          <?php echo getIconSvg('arrow-right', 'w-4 h-4'); ?>
         </button>
-        <a href="<?php echo getWhatsAppUrl('Hi Yukt IT Solutions, I would like to learn more about partnering with your engineering team.'); ?>" target="_blank" rel="noopener noreferrer" class="btn-secondary-lg text-navy-800 bg-white hover:bg-slate-100 flex items-center justify-center gap-2">
-          <?php echo getIconSvg('whatsapp', 'w-4 h-4 text-emerald-600'); ?>
+        <a href="<?php echo getWhatsAppUrl('Hi Yukt IT Solutions, I would like to learn more about partnering with your engineering team.'); ?>" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-yukt-orange to-amber-600 hover:from-yukt-orangeLight hover:to-yukt-orange transition-all flex items-center justify-center gap-2 shadow-lg shadow-yukt-orange/25">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
           <span>WhatsApp Consultation</span>
         </a>
       </div>
-      <div class="pt-4 text-xs text-slate-400 flex items-center justify-center gap-6">
+      <div class="pt-4 text-xs text-slate-400 flex items-center justify-center gap-6 font-mono">
         <span>&bull; Strict NDAs Honored</span>
         <span>&bull; 100% IP Transfer</span>
         <span>&bull; Bi-Weekly Sprint Reviews</span>

@@ -1,46 +1,50 @@
 <?php
 $activePage = 'portfolio';
-$pageTitle = 'Portfolio & Architecture Case Studies — Yukt IT Solutions';
-$pageDesc = 'Explore technical case studies and architectural reference blueprints engineered by Yukt IT Solutions across Websites, Software, AI, E-Commerce, and Marketing.';
+$pageTitle = 'Portfolio & Architecture Case Studies — YUKT IT SOLUTIONS';
+$pageDesc = 'Explore technical case studies and architectural reference blueprints engineered by YUKT IT SOLUTIONS across Websites, Software, AI, E-Commerce, and Marketing.';
 
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/components/section-header.php';
 ?>
 
 <!-- ==========================================================================
-     PORTFOLIO HERO & CATEGORY FILTERS (COMPACT & ANIMATED)
+     PORTFOLIO HERO & CATEGORY FILTERS (FUTURISTIC 3D BRAND THEME)
 ========================================================================== -->
-<section class="stripe-ambient-canvas border-b border-canvas-border pt-10 pb-12 sm:pt-14 sm:pb-16 bg-grid-pattern relative">
-  <div class="container-custom relative z-10">
-    <div class="max-w-3xl animate-hero-fade">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-electric-50 text-electric-700 border border-electric-200 mb-3">
-        <span class="w-2 h-2 rounded-full bg-electric-600"></span> Verified Technical Blueprints
+<section class="relative pt-12 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
+  <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-electric-500/15 rounded-full blur-[130px] pointer-events-none"></div>
+  <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-yukt-orange/15 rounded-full blur-[130px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+    <div class="max-w-3xl space-y-5 reveal-up">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-electric-400 animate-ping"></span>
+        <span>Verified Technical Blueprints</span>
       </div>
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-800 tracking-tight leading-tight">
-        Engineered Solutions &amp; System <span class="stripe-gradient-text">Blueprints.</span>
+      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1]">
+        Engineered Solutions &amp; System <span class="text-gradient-electric">Blueprints.</span>
       </h1>
-      <p class="text-base sm:text-lg text-navy-600 mt-3 leading-relaxed font-normal">
+      <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
         Explore representative architectural blueprints, technical case studies, and engineering implementations across web platforms, custom SaaS systems, AI automation, and performance marketing.
       </p>
 
       <!-- Category Filter Tabs -->
-      <div class="pt-6 flex flex-wrap items-center gap-2" id="portfolioFilterNav" role="tablist">
-        <button type="button" data-filter="all" class="portfolio-filter-btn px-3.5 py-1.5 rounded-btn text-xs font-bold transition-all bg-navy-900 text-white shadow-xs" role="tab" aria-selected="true">
+      <div class="pt-4 border-t border-white/10 flex flex-wrap items-center gap-2" id="portfolioFilterNav" role="tablist">
+        <button type="button" data-filter="all" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-electric-500 text-white shadow-md transition-all" role="tab" aria-selected="true">
           All Projects (<?php echo count($CASE_STUDIES); ?>)
         </button>
-        <button type="button" data-filter="websites" class="portfolio-filter-btn px-3.5 py-1.5 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
+        <button type="button" data-filter="websites" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
           Websites
         </button>
-        <button type="button" data-filter="software" class="portfolio-filter-btn px-3.5 py-1.5 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
+        <button type="button" data-filter="software" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
           Software &amp; SaaS
         </button>
-        <button type="button" data-filter="ai" class="portfolio-filter-btn px-3.5 py-1.5 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
+        <button type="button" data-filter="ai" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
           AI &amp; Automation
         </button>
-        <button type="button" data-filter="ecommerce" class="portfolio-filter-btn px-3.5 py-1.5 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
+        <button type="button" data-filter="ecommerce" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
           E-Commerce
         </button>
-        <button type="button" data-filter="marketing" class="portfolio-filter-btn px-3.5 py-1.5 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
+        <button type="button" data-filter="marketing" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
           Marketing
         </button>
       </div>
@@ -49,48 +53,47 @@ require_once __DIR__ . '/includes/components/section-header.php';
   </div>
 </section>
 
-
 <!-- ==========================================================================
-     PORTFOLIO GRID (COMPACT)
+     PORTFOLIO GRID (ARCHITECTURAL CARDS)
 ========================================================================== -->
-<section class="section-padding bg-white border-b border-canvas-border">
-  <div class="container-custom">
+<section class="py-20 lg:py-28 bg-slate-50 text-slate-900 bg-grid-light border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6" id="portfolioGrid">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="portfolioGrid">
       <?php foreach ($CASE_STUDIES as $case): ?>
-        <article class="portfolio-item bg-white border border-canvas-border rounded-xl p-5 sm:p-6 flex flex-col justify-between hover:border-electric-300 hover:shadow-card-hover transition-all duration-300 stripe-card-interactive reveal-on-scroll" data-category="<?php echo $case['category_slug']; ?>">
+        <article class="portfolio-item bg-white border border-slate-200/90 rounded-3xl p-6 sm:p-7 flex flex-col justify-between hover:border-electric-500/40 hover:shadow-2xl transition-all duration-300 reveal-up" data-category="<?php echo $case['category_slug']; ?>">
           
           <div>
             <!-- Header Tag Strip -->
             <div class="flex items-center justify-between mb-4">
-              <span class="text-[11px] font-mono font-medium text-brandOrange-700 bg-brandOrange-50 px-2 py-0.5 rounded border border-brandOrange-200">
+              <span class="text-[11px] font-mono font-medium text-yukt-orangeDark bg-yukt-orange/10 px-2.5 py-0.5 rounded-full border border-yukt-orange/20">
                 <?php echo htmlspecialchars($case['label']); ?>
               </span>
-              <span class="text-xs font-semibold text-slate-500"><?php echo htmlspecialchars($case['category']); ?></span>
+              <span class="text-xs font-mono font-semibold text-slate-400"><?php echo htmlspecialchars($case['category']); ?></span>
             </div>
 
             <!-- Title & Summary -->
-            <h3 class="text-xl font-bold text-navy-900 hover:text-electric-600 transition-colors">
+            <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-900 hover:text-electric-600 transition-colors">
               <a href="<?php echo $case['url']; ?>">
                 <?php echo htmlspecialchars($case['title']); ?>
               </a>
             </h3>
 
-            <p class="text-xs sm:text-sm text-navy-600 mt-2.5 leading-relaxed font-normal">
+            <p class="text-xs sm:text-sm text-slate-600 mt-2.5 leading-relaxed font-normal">
               <?php echo htmlspecialchars($case['summary']); ?>
             </p>
 
             <!-- Problem / Challenge snippet -->
-            <div class="mt-4 pt-3 border-t border-canvas-border/70 text-xs text-slate-600">
-              <strong class="text-navy-900 font-semibold block mb-0.5">Architectural Challenge:</strong>
+            <div class="mt-4 pt-3 border-t border-slate-100 text-xs text-slate-600">
+              <strong class="text-slate-900 font-semibold block mb-0.5 font-mono text-[11px] uppercase tracking-wider text-slate-500">Architectural Challenge:</strong>
               <p class="line-clamp-2"><?php echo htmlspecialchars($case['problem']); ?></p>
             </div>
 
             <!-- Tech Stack Pills -->
-            <div class="mt-4 pt-3 border-t border-canvas-border/70">
+            <div class="mt-4 pt-3 border-t border-slate-100">
               <div class="flex flex-wrap gap-1.5">
                 <?php foreach ($case['stack'] as $t): ?>
-                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-canvas-muted text-navy-800 border border-canvas-border">
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 border border-slate-200">
                     <?php echo htmlspecialchars($t); ?>
                   </span>
                 <?php endforeach; ?>
@@ -99,11 +102,11 @@ require_once __DIR__ . '/includes/components/section-header.php';
           </div>
 
           <!-- Bottom Action -->
-          <div class="pt-6 border-t border-canvas-border mt-6 flex items-center justify-between">
-            <span class="text-xs text-slate-400">Technical Case Study</span>
-            <a href="<?php echo $case['url']; ?>" class="inline-flex items-center gap-1.5 text-xs font-bold text-electric-600 hover:text-electric-700 focus:outline-none">
+          <div class="pt-5 border-t border-slate-100 mt-6 flex items-center justify-between">
+            <span class="text-xs font-mono text-slate-400">Technical Case Study</span>
+            <a href="<?php echo $case['url']; ?>" class="inline-flex items-center gap-1.5 text-xs font-bold text-electric-600 hover:text-yukt-orange transition-colors">
               <span>View Case Study</span>
-              <?php echo getIconSvg('arrow-right', 'w-3.5 h-3.5'); ?>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </a>
           </div>
 
@@ -114,42 +117,43 @@ require_once __DIR__ . '/includes/components/section-header.php';
     <!-- Empty State Container (If filter has 0 items) -->
     <div id="portfolioEmptyState" class="hidden text-center py-16">
       <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
-        <?php echo getIconSvg('sparkles', 'w-6 h-6'); ?>
+        <i data-lucide="sparkles" class="w-6 h-6"></i>
       </div>
-      <h3 class="text-lg font-bold text-navy-900">No case studies in this category yet</h3>
+      <h3 class="font-display font-bold text-lg text-slate-900">No case studies in this category yet</h3>
       <p class="text-xs text-slate-500 mt-1">We are actively documenting new reference implementations.</p>
     </div>
 
   </div>
 </section>
 
-
 <!-- ==========================================================================
      STANDARDIZED BOTTOM CTA
 ========================================================================== -->
-<section class="section-padding bg-navy-900 border-t border-slate-800 text-white">
-  <div class="container-custom">
-    <div class="max-w-3xl mx-auto text-center space-y-6">
-      <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-navy-800 text-electric-400 border border-slate-700">
-        <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Custom Engineering
+<section class="py-20 lg:py-28 bg-navy-950 text-white border-t border-white/10 relative overflow-hidden">
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-electric-500/15 rounded-full blur-[130px] pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+    <div class="max-w-3xl mx-auto text-center space-y-6 reveal-up">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>Custom Engineering</span>
       </span>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+      <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight">
         Have a complex engineering challenge?
       </h2>
       <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
         Let’s review your system requirements. Our senior solutions architects can design a tailored technical blueprint with transparent milestone sprint estimates.
       </p>
       <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <button type="button" class="btn-primary-lg open-quote-modal-btn">
+        <button type="button" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-electric-500 hover:bg-electric-400 transition-all open-quote-modal-btn shadow-lg shadow-electric-500/25">
           <span>Get a Scoped Estimate</span>
-          <?php echo getIconSvg('arrow-right', 'w-4 h-4'); ?>
         </button>
-        <a href="<?php echo getWhatsAppUrl('Hi Yukt IT Solutions, I reviewed your portfolio and would like to discuss a project.'); ?>" target="_blank" rel="noopener noreferrer" class="btn-secondary-lg text-navy-800 bg-white hover:bg-slate-100 flex items-center justify-center gap-2">
-          <?php echo getIconSvg('whatsapp', 'w-4 h-4 text-emerald-600'); ?>
+        <a href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I reviewed your portfolio and would like to discuss a project.'); ?>" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-yukt-orange to-amber-600 hover:from-yukt-orangeLight hover:to-yukt-orange transition-all flex items-center justify-center gap-2 shadow-lg shadow-yukt-orange/25">
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
           <span>Chat on WhatsApp</span>
         </a>
       </div>
-      <div class="pt-4 text-xs text-slate-400 flex items-center justify-center gap-6">
+      <div class="pt-4 text-xs text-slate-400 flex items-center justify-center gap-6 font-mono">
         <span>&bull; Strict NDAs Honored</span>
         <span>&bull; 100% IP Transfer</span>
         <span>&bull; Direct Senior Pods</span>
@@ -171,12 +175,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Update button visual states
       filterBtns.forEach(b => {
-        b.classList.remove('bg-navy-900', 'text-white', 'shadow-xs');
-        b.classList.add('bg-white', 'text-navy-700', 'border', 'border-canvas-border');
+        b.className = 'portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all';
         b.setAttribute('aria-selected', 'false');
       });
-      btn.classList.remove('bg-white', 'text-navy-700', 'border', 'border-canvas-border');
-      btn.classList.add('bg-navy-900', 'text-white', 'shadow-xs');
+      btn.className = 'portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-electric-500 text-white shadow-md transition-all';
       btn.setAttribute('aria-selected', 'true');
 
       // Filter gallery cards

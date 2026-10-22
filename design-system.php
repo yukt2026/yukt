@@ -24,7 +24,7 @@ require_once __DIR__ . '/includes/components/card-service.php';
       
       <div class="mt-8 flex flex-wrap gap-4 items-center">
         <?php echo renderButton('Test Live Quote Modal', null, 'primary', 'md', 'sparkles', 'left', 'open-quote-modal-btn'); ?>
-        <?php echo renderButton('View Project Roadmap', 'assets/../#roadmap', 'secondary', 'md', 'arrow-right', 'right'); ?>
+        <?php echo renderButton('View 3D Process Engine', 'index.php#process', 'secondary', 'md', 'arrow-right', 'right'); ?>
         <a href="#colors" class="text-xs font-semibold text-slate-500 hover:text-navy-900 px-3 py-2">Jump to Color Tokens &darr;</a>
       </div>
     </div>
