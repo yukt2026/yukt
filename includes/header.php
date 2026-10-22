@@ -110,7 +110,7 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
   =========================================== -->
   <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-2.5 px-3 sm:py-3.5 sm:px-6 lg:px-10">
     <div class="max-w-7xl mx-auto">
-      <nav class="glass-dark rounded-2xl px-3 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between shadow-2xl shadow-black/40 border border-white/10">
+      <nav class="bg-navy-950/92 backdrop-blur-xl rounded-2xl px-3 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between shadow-2xl shadow-black/50 border border-white/15">
         
         <!-- Brand Logo Badge -->
         <a href="index.php" class="flex items-center gap-2 sm:gap-3 group focus:outline-none flex-shrink-0" aria-label="YUKT IT SOLUTIONS Home">
@@ -139,36 +139,38 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
               <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400 group-hover/menu:text-white transition-transform group-hover/menu:rotate-180"></i>
             </a>
 
-            <!-- Dropdown Menu -->
-            <div class="absolute top-full left-0 w-[680px] glass-dark rounded-2xl p-5 border border-white/15 shadow-2xl opacity-0 translate-y-2 pointer-events-none group-hover/menu:opacity-100 group-hover/menu:translate-y-0 group-hover/menu:pointer-events-auto transition-all duration-200 z-50">
-              <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/10 text-xs">
-                <span class="font-mono uppercase tracking-wider text-slate-400">8 Core Capabilities</span>
-                <div class="flex items-center gap-3">
-                  <a href="index.php#services" class="text-electric-400 hover:text-electric-300 font-medium flex items-center gap-1">
-                    <span>3D Showcase</span>
-                    <i data-lucide="sparkles" class="w-3 h-3"></i>
-                  </a>
-                  <span class="text-slate-600">|</span>
-                  <a href="services.php" class="text-yukt-orange hover:text-amber-400 font-semibold flex items-center gap-1">
-                    <span>View All Services</span>
-                    <i data-lucide="arrow-right" class="w-3 h-3"></i>
-                  </a>
+            <!-- Dropdown Menu Container with Hover Bridge & Opaque High-Contrast Surface -->
+            <div class="absolute top-full left-0 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover/menu:opacity-100 group-hover/menu:translate-y-0 group-hover/menu:pointer-events-auto transition-all duration-200 z-50">
+              <div class="w-[680px] bg-navy-950/98 backdrop-blur-2xl rounded-2xl p-5 border border-white/20 shadow-2xl shadow-black/90 text-white">
+                <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/10 text-xs">
+                  <span class="font-mono uppercase tracking-wider text-slate-300 font-semibold">8 Core Capabilities</span>
+                  <div class="flex items-center gap-3">
+                    <a href="index.php#services" class="text-electric-400 hover:text-electric-300 font-medium flex items-center gap-1 transition-colors">
+                      <span>3D Showcase</span>
+                      <i data-lucide="sparkles" class="w-3 h-3"></i>
+                    </a>
+                    <span class="text-slate-600">|</span>
+                    <a href="services.php" class="text-yukt-orange hover:text-amber-400 font-semibold flex items-center gap-1 transition-colors">
+                      <span>View All Services</span>
+                      <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                    </a>
+                  </div>
                 </div>
-              </div>
-              <div class="grid grid-cols-2 gap-2 text-left">
-                <?php foreach ($SERVICES as $s): ?>
-                  <a href="<?php echo $s['url']; ?>" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-white/5 border border-transparent hover:border-white/10 transition-all group/item">
-                    <div class="w-8 h-8 rounded-lg <?php echo ($s['accent'] === 'orange') ? 'bg-yukt-orange/20 text-yukt-orange border border-yukt-orange/30' : 'bg-electric-500/20 text-electric-400 border border-electric-400/30'; ?> flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <i data-lucide="<?php echo $s['icon']; ?>" class="w-4 h-4"></i>
-                    </div>
-                    <div>
-                      <div class="text-xs font-semibold text-white group-hover/item:text-electric-400 transition-colors">
-                        <?php echo htmlspecialchars($s['title']); ?>
+                <div class="grid grid-cols-2 gap-2 text-left">
+                  <?php foreach ($SERVICES as $s): ?>
+                    <a href="<?php echo $s['url']; ?>" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 hover:border-electric-400/30 transition-all group/item">
+                      <div class="w-9 h-9 rounded-xl <?php echo ($s['accent'] === 'orange') ? 'bg-yukt-orange/20 text-yukt-orange border border-yukt-orange/30' : 'bg-electric-500/20 text-electric-400 border border-electric-400/30'; ?> flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <i data-lucide="<?php echo $s['icon']; ?>" class="w-4 h-4"></i>
                       </div>
-                      <p class="text-[11px] text-slate-400 line-clamp-1 mt-0.5"><?php echo htmlspecialchars($s['tagline']); ?></p>
-                    </div>
-                  </a>
-                <?php endforeach; ?>
+                      <div class="min-w-0">
+                        <div class="text-xs font-semibold text-white group-hover/item:text-electric-400 transition-colors">
+                          <?php echo htmlspecialchars($s['title']); ?>
+                        </div>
+                        <p class="text-[11px] text-slate-300 line-clamp-1 mt-0.5 font-normal"><?php echo htmlspecialchars($s['tagline']); ?></p>
+                      </div>
+                    </a>
+                  <?php endforeach; ?>
+                </div>
               </div>
             </div>
           </div>
@@ -249,7 +251,7 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
       </nav>
 
       <!-- Mobile Navigation Drawer -->
-      <div id="mobileDrawer" class="hidden lg:hidden mt-2 glass-dark rounded-2xl p-5 border border-white/10 shadow-2xl">
+      <div id="mobileDrawer" class="hidden lg:hidden mt-2 bg-navy-950/98 backdrop-blur-2xl rounded-2xl p-5 border border-white/20 shadow-2xl shadow-black/90">
         <div class="flex flex-col space-y-2">
           <a href="index.php" class="mobile-nav-link px-4 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/10 flex items-center justify-between">
             <span>Home</span>
