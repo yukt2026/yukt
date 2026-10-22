@@ -87,14 +87,12 @@
   }
 
   /* Mobile Services Accordion Transitions & States */
-  #mobileServicesToggle svg,
-  #mobileServicesToggle i {
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  #mobileServicesToggle .mobile-services-chevron-wrapper {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
   }
-  #mobileServicesToggle[aria-expanded="true"] svg,
-  #mobileServicesToggle[aria-expanded="true"] i,
-  #mobileServicesToggle[aria-expanded="true"] #mobileServicesChevron {
-    transform: rotate(180deg) !important;
+  #mobileServicesToggle[aria-expanded="true"] .mobile-services-chevron-wrapper {
+    transform: rotate(180deg);
   }
 
   .dropdown-mega-panel {

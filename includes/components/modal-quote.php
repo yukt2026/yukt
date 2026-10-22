@@ -104,7 +104,7 @@
             <div class="pt-3 border-t border-white/10 text-center">
                 <a id="quoteModalWhatsAppBtn" href="<?php echo getWhatsAppUrl('Hi Yukt IT Solutions, I would like to request an instant project scope and pricing estimate.'); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold text-emerald-400 hover:text-emerald-300 transition-colors">
                     <?php echo getIconSvg('whatsapp', 'w-4 h-4 text-emerald-400'); ?>
-                    <span>Prefer an instant chat? Connect directly on WhatsApp (+91 72176 45059) &rarr;</span>
+                    <span>Prefer an instant chat? Connect directly on WhatsApp (+91 95763 38282) &rarr;</span>
                 </a>
             </div>
         </form>

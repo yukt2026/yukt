@@ -363,7 +363,7 @@ if (!empty($faqs) && is_array($faqs)) {
             target="_blank"
             rel="noopener noreferrer"
             class="hidden sm:inline-flex items-center gap-2.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-electric-500 to-electric-600 bg-electric-600 hover:from-electric-400 hover:to-electric-500 border border-electric-400/30 shadow-lg shadow-electric-500/25 hover:shadow-electric-500/40 transition-all hover:-translate-y-0.5"
-            title="Chat on WhatsApp (+91 72176 45059)"
+            title="Chat on WhatsApp (+91 95763 38282)"
           >
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
             <span>WhatsApp Us</span>
@@ -404,19 +404,18 @@ if (!empty($faqs) && is_array($faqs)) {
             <button 
               type="button" 
               id="mobileServicesToggle"
-              onclick="window.toggleMobileServices && window.toggleMobileServices(event)"
-              class="w-full px-3.5 py-3 text-sm font-medium text-slate-200 hover:text-white hover:bg-white/5 active:bg-white/10 flex items-center justify-between transition-all cursor-pointer select-none group"
+              class="w-full px-3.5 py-3 text-sm font-medium text-slate-200 hover:text-white hover:bg-white/5 active:bg-white/10 flex items-center justify-between transition-all cursor-pointer select-none group focus:outline-none"
               aria-expanded="false"
               aria-controls="mobileServicesMenu"
             >
-              <div class="flex items-center gap-2.5 pointer-events-none">
+              <span class="flex items-center gap-2.5">
                 <i data-lucide="layers" class="w-4 h-4 text-electric-400 group-hover:scale-110 transition-transform"></i>
                 <span class="font-semibold text-white">Services</span>
                 <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-electric-500/15 text-electric-400 border border-electric-400/25">8 Disciplines</span>
-              </div>
-              <div class="pointer-events-none p-1 rounded-lg bg-white/5 text-slate-300">
-                <i data-lucide="chevron-down" id="mobileServicesChevron" class="w-4 h-4 transition-transform duration-300"></i>
-              </div>
+              </span>
+              <span class="mobile-services-chevron-wrapper p-1 rounded-lg bg-white/5 text-slate-300 transition-transform duration-300 inline-flex items-center justify-center">
+                <i data-lucide="chevron-down" id="mobileServicesChevron" class="w-4 h-4"></i>
+              </span>
             </button>
             
             <!-- Collapsible Submenu (Hidden by default, toggled via JS) -->
@@ -504,42 +503,11 @@ if (!empty($faqs) && is_array($faqs)) {
               class="w-full py-3.5 px-4 rounded-xl font-display font-semibold text-xs sm:text-sm text-white bg-gradient-to-r from-yukt-orange to-amber-600 hover:from-yukt-orangeLight hover:to-yukt-orange flex items-center justify-center gap-2 shadow-xl shadow-yukt-orange/30 border border-amber-400/30 transition-all active:scale-[0.98]"
             >
               <i data-lucide="message-circle" class="w-4 h-4"></i>
-              <span>Start Project on WhatsApp (+91 72176 45059)</span>
+              <span>Start Project on WhatsApp (+91 95763 38282)</span>
             </a>
           </div>
         </div>
       </div>
-
-      <!-- Direct Inline Helper for Instant Mobile Services Submenu Toggle -->
-      <script>
-        window.toggleMobileServices = function(e) {
-          if (e) {
-            if (e.preventDefault) e.preventDefault();
-            if (e.stopPropagation) e.stopPropagation();
-          }
-          var toggle = document.getElementById('mobileServicesToggle');
-          var menu = document.getElementById('mobileServicesMenu');
-          var container = document.getElementById('mobileServicesContainer');
-          if (!menu || !toggle) return;
-
-          var isHidden = menu.classList.contains('hidden');
-          if (isHidden) {
-            menu.classList.remove('hidden');
-            toggle.setAttribute('aria-expanded', 'true');
-            toggle.classList.add('bg-white/[0.08]');
-            if (container) container.classList.add('border-electric-400/40');
-            var chevron = toggle.querySelector('[data-lucide="chevron-down"], svg.lucide-chevron-down, #mobileServicesChevron');
-            if (chevron) chevron.style.transform = 'rotate(180deg)';
-          } else {
-            menu.classList.add('hidden');
-            toggle.setAttribute('aria-expanded', 'false');
-            toggle.classList.remove('bg-white/[0.08]');
-            if (container) container.classList.remove('border-electric-400/40');
-            var chevron = toggle.querySelector('[data-lucide="chevron-down"], svg.lucide-chevron-down, #mobileServicesChevron');
-            if (chevron) chevron.style.transform = 'rotate(0deg)';
-          }
-        };
-      </script>
     </div>
   </header>
 

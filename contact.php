@@ -343,7 +343,7 @@ require_once __DIR__ . '/includes/components/section-header.php';
             <div class="pt-2 text-center sm:text-right">
               <a href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I would like to discuss our project scope on WhatsApp.'); ?>" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 hover:text-emerald-800 transition-colors">
                 <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
-                <span>Prefer instant chat? Connect on WhatsApp (+91 72176 45059) &rarr;</span>
+                <span>Prefer instant chat? Connect on WhatsApp (+91 95763 38282) &rarr;</span>
               </a>
             </div>
 

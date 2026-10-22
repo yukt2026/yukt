@@ -1505,7 +1505,7 @@ require_once __DIR__ . '/includes/header.php';
         <div class="text-center max-w-2xl mx-auto space-y-5 mb-10">
           <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 font-mono text-xs uppercase tracking-widest">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span>Instant WhatsApp Consultation &bull; +91 7217645059</span>
+            <span>Instant WhatsApp Consultation &bull; +91 95763 38282</span>
           </div>
 
           <h2 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white">

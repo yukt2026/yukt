@@ -161,14 +161,32 @@ function initMobileMenu() {
   // Collapsible Services Accordion inside Mobile Drawer
   const servicesToggle = document.getElementById('mobileServicesToggle');
   const servicesMenu = document.getElementById('mobileServicesMenu');
+  const servicesContainer = document.getElementById('mobileServicesContainer');
 
   if (servicesToggle && servicesMenu) {
-    // Single consolidated handler ensuring no duplicate toggling
-    servicesToggle.onclick = function(e) {
-      if (typeof window.toggleMobileServices === 'function') {
-        window.toggleMobileServices(e);
+    function toggleServices(e) {
+      if (e) {
+        if (typeof e.preventDefault === 'function') e.preventDefault();
+        if (typeof e.stopPropagation === 'function') e.stopPropagation();
       }
-    };
+      const isExpanded = servicesToggle.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        servicesMenu.classList.add('hidden');
+        servicesToggle.setAttribute('aria-expanded', 'false');
+        servicesToggle.classList.remove('bg-white/[0.08]');
+        servicesContainer?.classList.remove('border-electric-400/40');
+      } else {
+        servicesMenu.classList.remove('hidden');
+        servicesToggle.setAttribute('aria-expanded', 'true');
+        servicesToggle.classList.add('bg-white/[0.08]');
+        servicesContainer?.classList.add('border-electric-400/40');
+      }
+    }
+
+    // Expose globally for instant accessibility
+    window.toggleMobileServices = toggleServices;
+    servicesToggle.onclick = null;
+    servicesToggle.addEventListener('click', toggleServices);
   }
 
   // Close on Escape
@@ -233,7 +251,7 @@ function initQuoteModal() {
       const msg = targetService
         ? `Hi Yukt IT Solutions, I would like to request an instant quote and timeline for ${targetService}.`
         : 'Hi Yukt IT Solutions, I would like to request an instant project scope and pricing estimate.';
-      waBtn.href = `https://wa.me/917217645059?text=${encodeURIComponent(msg)}`;
+      waBtn.href = `https://wa.me/919576338282?text=${encodeURIComponent(msg)}`;
     }
   }
 
@@ -269,7 +287,7 @@ function initQuoteModal() {
         const msg = val
           ? `Hi Yukt IT Solutions, I would like to request an instant quote and timeline for ${val}.`
           : 'Hi Yukt IT Solutions, I would like to request an instant project scope and pricing estimate.';
-        waBtn.href = `https://wa.me/917217645059?text=${encodeURIComponent(msg)}`;
+        waBtn.href = `https://wa.me/919576338282?text=${encodeURIComponent(msg)}`;
       }
     });
   }
