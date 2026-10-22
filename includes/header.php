@@ -51,7 +51,7 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
   <meta name="twitter:title" content="<?php echo htmlspecialchars($pageTitle); ?>">
   <meta name="twitter:description" content="<?php echo htmlspecialchars($pageDesc); ?>">
   <meta name="twitter:image" content="<?php echo COMPANY_URL; ?>/assets/images/yukt-official-logo.png">
-
+  <meta name="google-site-verification" content="oqPPOWfWv2kCTwMmT7xGdUBhuG_xoGckejq0ypIVJbE" />
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
