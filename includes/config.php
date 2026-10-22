@@ -16,10 +16,20 @@ if (!defined('COMPANY_NAME')) {
     // Contact & Location (Indian IT Powerhouse)
     define('PHONE_NUMBER', '+91 72176 45059');
     define('PHONE_RAW', '917217645059');
+    define('PHONE_SECONDARY', '+91 95763 38282');
+    define('PHONE_SECONDARY_RAW', '919576338282');
+    define('PHONE_RANJEET', '+91 72176 45059');
+    define('PHONE_RANJEET_RAW', '917217645059');
+    define('PHONE_ANSAR', '+91 95763 38282');
+    define('PHONE_ANSAR_RAW', '919576338282');
+
     define('WHATSAPP_NUMBER', '917217645059');
     define('WHATSAPP_FORMATTED', '+91 72176 45059');
     define('WHATSAPP_BASE_URL', 'https://wa.me/917217645059');
     define('WHATSAPP_URL', 'https://wa.me/917217645059?text=Hi%20Yukt%20IT%20Solutions%2C%20I%20would%20like%20to%20discuss%20a%20project.');
+    define('WHATSAPP_ANSAR_URL', 'https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Yukt%20IT%20Solutions.');
+    define('WHATSAPP_RANJEET_URL', 'https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Yukt%20IT%20Solutions.');
+
     define('EMAIL_PRIMARY', 'contact@yukt.online');
     define('EMAIL_SALES', 'sales@yukt.online');
     define('EMAIL_SUPPORT', 'support@yukt.online');
@@ -29,8 +39,8 @@ if (!defined('COMPANY_NAME')) {
 
     // Helper function to generate tailored WhatsApp URLs with prefilled messages
     if (!function_exists('getWhatsAppUrl')) {
-        function getWhatsAppUrl($message = '') {
-            $base = 'https://wa.me/917217645059';
+        function getWhatsAppUrl($message = '', $rawPhone = '917217645059') {
+            $base = 'https://wa.me/' . $rawPhone;
             if (!empty($message)) {
                 return $base . '?text=' . rawurlencode($message);
             }
@@ -39,10 +49,42 @@ if (!defined('COMPANY_NAME')) {
     }
 
     // Social & Professional Profiles
-    define('LINKEDIN_URL', 'https://linkedin.com/company/yukt-it-solutions');
+    define('LINKEDIN_URL', 'https://www.linkedin.com/in/ranjeet-m-079777262/?isSelfProfile=true');
+    define('GITHUB_URL', 'https://github.com/yukt2026');
+    define('INSTAGRAM_URL', 'https://www.instagram.com/yukt_officials?psln=MWo3bndtb3JhMmN2dQ==');
     define('TWITTER_URL', 'https://twitter.com/yuktonline');
-    define('GITHUB_URL', 'https://github.com/yukt-it');
-    define('INSTAGRAM_URL', 'https://instagram.com/yukt.online');
+
+    // Leadership Specific Profile Links
+    define('RANJEET_GITHUB', 'https://github.com/yukt2026');
+    define('RANJEET_LINKEDIN', 'https://www.linkedin.com/in/ranjeet-m-079777262/?isSelfProfile=true');
+    define('ANSAR_GITHUB', 'https://github.com/ansaralisahh');
+    define('ANSAR_LINKEDIN', 'https://www.linkedin.com/in/ansaralisahh');
+
+    // Verified Engineering Leadership Pod
+    $LEADERSHIP_TEAM = [
+        [
+            'name' => 'Ranjeet',
+            'role' => 'Co-Founder & Lead Solutions Architect',
+            'focus' => 'Cloud Systems, Full-Stack Architecture & AI Integration',
+            'phone' => '+91 72176 45059',
+            'phone_raw' => '917217645059',
+            'whatsapp_url' => 'https://wa.me/917217645059?text=' . rawurlencode('Hi Ranjeet, I would like to discuss a project with Yukt IT Solutions.'),
+            'github' => 'https://github.com/yukt2026',
+            'linkedin' => 'https://www.linkedin.com/in/ranjeet-m-079777262/?isSelfProfile=true',
+            'avatar_initials' => 'RM'
+        ],
+        [
+            'name' => 'Ansar Ali Shah',
+            'role' => 'Co-Founder & Lead Technical Architect',
+            'focus' => 'Web Applications, High-Performance Backends & Systems',
+            'phone' => '+91 95763 38282',
+            'phone_raw' => '919576338282',
+            'whatsapp_url' => 'https://wa.me/919576338282?text=' . rawurlencode('Hi Ansar, I would like to discuss a project with Yukt IT Solutions.'),
+            'github' => 'https://github.com/ansaralisahh',
+            'linkedin' => 'https://www.linkedin.com/in/ansaralisahh',
+            'avatar_initials' => 'AS'
+        ]
+    ];
 
     // Engineering Pillars & Quality Commitments (Authentic Principles, No Invented Statistics)
     $ENGINEERING_PILLARS = [
@@ -522,5 +564,345 @@ if (!defined('COMPANY_NAME')) {
             'badge' => 'Enterprise Operations',
             'url' => 'project-franchise-platform.php'
         ]
+    ];
+
+    // 42 Live Client Production Deployments & Commercial Portals
+    $LIVE_CLIENT_PORTFOLIO = [
+        [
+            'domain' => 'bettersupplytrading.com',
+            'name' => 'Better Supply Trading',
+            'category' => 'B2B & Industrial Trading',
+            'tag' => 'B2B Trading',
+            'url' => 'https://bettersupplytrading.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'techeracomputer.com',
+            'name' => 'TechEra Computer Education',
+            'category' => 'Education & Academy',
+            'tag' => 'EdTech',
+            'url' => 'https://techeracomputer.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'fsaludoclub.com',
+            'name' => 'Fsaludo Club',
+            'category' => 'Lifestyle & Wellness',
+            'tag' => 'Lifestyle',
+            'url' => 'https://fsaludoclub.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'thedesertiron.com',
+            'name' => 'The Desert Iron',
+            'category' => 'Fitness & Athletic Apparel',
+            'tag' => 'E-Commerce',
+            'url' => 'https://thedesertiron.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'game.foundida.com',
+            'name' => 'Foundida Games',
+            'category' => 'Interactive Gaming & Web App',
+            'tag' => 'Web App',
+            'url' => 'https://game.foundida.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'onestallcargo.com',
+            'name' => 'One Stall Cargo',
+            'category' => 'Logistics & Cargo Transport',
+            'tag' => 'Logistics',
+            'url' => 'https://onestallcargo.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'indinursery.in',
+            'name' => 'Indi Nursery',
+            'category' => 'Horticulture & Plant Nursery',
+            'tag' => 'E-Commerce',
+            'url' => 'https://indinursery.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'muskaninteriors.in',
+            'name' => 'Muskan Interiors',
+            'category' => 'Interior Design & Architecture',
+            'tag' => 'Architecture',
+            'url' => 'https://muskaninteriors.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'zenvixalaboratories.com',
+            'name' => 'Zenvixa Laboratories',
+            'category' => 'Pharma & Medical Laboratories',
+            'tag' => 'Pharma',
+            'url' => 'https://zenvixalaboratories.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'kavexcourier.in',
+            'name' => 'Kavex Courier Express',
+            'category' => 'Courier & Express Logistics',
+            'tag' => 'Logistics',
+            'url' => 'https://kavexcourier.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'ebigcart.in',
+            'name' => 'EBigCart Online Shopping',
+            'category' => 'Multi-Category Retail Store',
+            'tag' => 'E-Commerce',
+            'url' => 'https://ebigcart.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'relievephysiotherapy.in',
+            'name' => 'Relieve Physiotherapy',
+            'category' => 'Clinical Healthcare & Rehab',
+            'tag' => 'Healthcare',
+            'url' => 'https://relievephysiotherapy.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'sainmatrimony.in',
+            'name' => 'Sain Matrimony',
+            'category' => 'Matrimonial Matchmaking Hub',
+            'tag' => 'Web Portal',
+            'url' => 'https://sainmatrimony.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'mediskyindia.com',
+            'name' => 'Medisky India',
+            'category' => 'Medical Equipment & Supply',
+            'tag' => 'Healthcare',
+            'url' => 'https://mediskyindia.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'rakeshvermaartist.com',
+            'name' => 'Rakesh Verma Artist',
+            'category' => 'Fine Art & Creative Gallery',
+            'tag' => 'Portfolio',
+            'url' => 'https://rakeshvermaartist.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'mahadevtractor.com',
+            'name' => 'Mahadev Tractor & Agro',
+            'category' => 'Agro Machinery & Equipment',
+            'tag' => 'Automotive',
+            'url' => 'https://mahadevtractor.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'raipurtaxi.com',
+            'name' => 'Raipur Taxi Services',
+            'category' => 'Cab Booking & Travel Services',
+            'tag' => 'Travel',
+            'url' => 'https://raipurtaxi.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'brainmindbehaviour.com',
+            'name' => 'Brain Mind Behaviour',
+            'category' => 'Neuroscience & Mental Health',
+            'tag' => 'Healthcare',
+            'url' => 'https://brainmindbehaviour.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'gurutmafin.com',
+            'name' => 'Gurutma Financial Services',
+            'category' => 'Wealth & Financial Advisory',
+            'tag' => 'Fintech',
+            'url' => 'https://gurutmafin.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'ranisahab.com',
+            'name' => 'Rani Sahab Couture',
+            'category' => 'Ethnic Wear & Fashion Brand',
+            'tag' => 'E-Commerce',
+            'url' => 'https://ranisahab.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'bhavikafoundation.in',
+            'name' => 'Bhavika Foundation',
+            'category' => 'Non-Profit Social Welfare',
+            'tag' => 'NGO',
+            'url' => 'https://bhavikafoundation.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'scan2freight.com',
+            'name' => 'Scan2Freight Logistics',
+            'category' => 'Digital Freight & Cargo Tech',
+            'tag' => 'Logistics SaaS',
+            'url' => 'https://scan2freight.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'norvastore.in',
+            'name' => 'Norva Store',
+            'category' => 'Modern Retail & Lifestyle Store',
+            'tag' => 'E-Commerce',
+            'url' => 'https://norvastore.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'hotelmidwaymalari.in',
+            'name' => 'Hotel Midway Malari',
+            'category' => 'Resort & Mountain Hospitality',
+            'tag' => 'Hospitality',
+            'url' => 'https://hotelmidwaymalari.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'jaibhawanifrutscompany.in',
+            'name' => 'Jai Bhawani Fruits Co.',
+            'category' => 'Wholesale Fresh Produce & Agro',
+            'tag' => 'Agro Wholesale',
+            'url' => 'https://jaibhawanifrutscompany.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'dasgold.in',
+            'name' => 'Das Gold & Ornaments',
+            'category' => 'Jewellery & Precious Metals',
+            'tag' => 'Luxury Retail',
+            'url' => 'https://dasgold.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'ijari.in',
+            'name' => 'IJARI Research Journal',
+            'category' => 'Academic Publishing & Journal',
+            'tag' => 'Publishing',
+            'url' => 'https://ijari.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'advertresources.com',
+            'name' => 'Advert Resources',
+            'category' => 'Digital Media & Ad Solutions',
+            'tag' => 'Digital Media',
+            'url' => 'https://advertresources.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'aadhivarahaservices.com',
+            'name' => 'Aadhivaraha Services',
+            'category' => 'Corporate Facility Management',
+            'tag' => 'Corporate',
+            'url' => 'https://aadhivarahaservices.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'mpwaindia.org',
+            'name' => 'MPWA India',
+            'category' => 'Industry Welfare Association',
+            'tag' => 'Association',
+            'url' => 'https://mpwaindia.org',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'mykalyani.in',
+            'name' => 'MyKalyani City Portal',
+            'category' => 'Hyperlocal Community Portal',
+            'tag' => 'Web Portal',
+            'url' => 'https://mykalyani.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'vedicbotanica.com',
+            'name' => 'Vedic Botanica',
+            'category' => 'Ayurvedic & Herbal Wellness',
+            'tag' => 'E-Commerce',
+            'url' => 'https://vedicbotanica.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'revoxon.com',
+            'name' => 'Revoxon Polymer Tech',
+            'category' => 'Industrial Materials & Polymers',
+            'tag' => 'Industrial',
+            'url' => 'https://revoxon.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'topdarascoutandguides.in',
+            'name' => 'Topdara Scouts & Guides',
+            'category' => 'Youth Leadership & Scouting',
+            'tag' => 'Education',
+            'url' => 'https://topdarascoutandguides.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'zorentradingservices.com',
+            'name' => 'Zoren Trading Services',
+            'category' => 'Import-Export & Global Trade',
+            'tag' => 'B2B Trade',
+            'url' => 'https://zorentradingservices.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'revoxonpipes.com',
+            'name' => 'Revoxon Pipes & Fittings',
+            'category' => 'Piping & Civil Infrastructure',
+            'tag' => 'Manufacturing',
+            'url' => 'https://revoxonpipes.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'vivektech.online',
+            'name' => 'VivekTech Solutions',
+            'category' => 'Cloud & IT Software Services',
+            'tag' => 'IT Services',
+            'url' => 'https://vivektech.online',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'foundida.in',
+            'name' => 'Foundida India',
+            'category' => 'Brand Strategy & Growth Studio',
+            'tag' => 'Agency',
+            'url' => 'https://foundida.in',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'retrust.store',
+            'name' => 'ReTrust Electronics',
+            'category' => 'Consumer Tech & Gadget Store',
+            'tag' => 'E-Commerce',
+            'url' => 'https://retrust.store',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'foundida.com',
+            'name' => 'Foundida Global',
+            'category' => 'Enterprise Web & Media Platform',
+            'tag' => 'Web Platform',
+            'url' => 'https://foundida.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'ecocraftersindia.com',
+            'name' => 'Eco Crafters India',
+            'category' => 'Handcrafted Sustainable Goods',
+            'tag' => 'Sustainable',
+            'url' => 'https://ecocraftersindia.com',
+            'status' => 'Live Production'
+        ],
+        [
+            'domain' => 'patrkarmediaparishad.in',
+            'name' => 'Patrkar Media Parishad',
+            'category' => 'National Media & Press Council',
+            'tag' => 'Media & Press',
+            'url' => 'https://patrkarmediaparishad.in',
+            'status' => 'Live Production'
+        ],
     ];
 }

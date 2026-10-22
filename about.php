@@ -373,6 +373,110 @@ require_once __DIR__ . '/includes/components/section-header.php';
       </div>
     </div>
 
+    <!-- Verified Leadership & Core Technical Architects -->
+    <div class="mt-16 reveal-up">
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric-500/10 border border-electric-500/20 text-electric-600 font-mono text-xs uppercase tracking-widest">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+          <span>Verified Leadership</span>
+        </div>
+        <h3 class="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-slate-900">
+          Meet the <span class="text-gradient-brand">Technical Architects</span> Behind Yukt
+        </h3>
+        <p class="text-sm text-slate-600 max-w-2xl mx-auto">
+          Direct senior engineering access without junior hand-offs or middlemen. Connect directly with the architects who design and deploy your solutions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Ranjeet Card -->
+        <div class="bg-navy-950 border border-white/10 rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden shadow-xl group hover:border-electric-500/50 transition-all">
+          <div class="absolute -top-16 -right-16 w-40 h-40 bg-electric-500/15 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="flex items-start justify-between gap-4 relative z-10">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-electric-600 to-blue-700 flex items-center justify-center text-white font-display font-bold text-2xl shadow-lg shadow-electric-600/30">
+                RM
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-xl text-white">Ranjeet</h4>
+                <div class="text-xs font-mono text-electric-400 mt-0.5">Co-Founder &amp; Lead Solutions Architect</div>
+                <div class="text-xs text-slate-400 mt-1">Cloud Systems &bull; Full-Stack Architecture &bull; AI Pipelines</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-white/10 space-y-2.5 text-xs relative z-10">
+            <div class="flex items-center justify-between">
+              <span class="text-slate-400 font-mono">Direct Line:</span>
+              <a href="tel:+917217645059" class="font-mono text-slate-200 hover:text-white transition-colors">+91 72176 45059</a>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-slate-400 font-mono">WhatsApp Desk:</span>
+              <a href="https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-mono flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>Direct WhatsApp &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-white/10 flex flex-wrap items-center gap-3 relative z-10">
+            <a href="https://github.com/yukt2026" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>github.com/yukt2026</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ranjeet-m-079777262/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-electric-500/20 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors">
+              <i data-lucide="linkedin" class="w-3.5 h-3.5 text-electric-400"></i>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ansar Card -->
+        <div class="bg-navy-950 border border-white/10 rounded-2xl p-6 sm:p-8 text-white relative overflow-hidden shadow-xl group hover:border-yukt-orange/50 transition-all">
+          <div class="absolute -top-16 -right-16 w-40 h-40 bg-yukt-orange/15 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="flex items-start justify-between gap-4 relative z-10">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-yukt-orange to-amber-600 flex items-center justify-center text-white font-display font-bold text-2xl shadow-lg shadow-yukt-orange/30">
+                AS
+              </div>
+              <div>
+                <h4 class="font-display font-bold text-xl text-white">Ansar Ali Shah</h4>
+                <div class="text-xs font-mono text-yukt-orange mt-0.5">Co-Founder &amp; Lead Technical Architect</div>
+                <div class="text-xs text-slate-400 mt-1">Web Applications &bull; High-Performance Backends &bull; DevOps</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-white/10 space-y-2.5 text-xs relative z-10">
+            <div class="flex items-center justify-between">
+              <span class="text-slate-400 font-mono">Direct Line:</span>
+              <a href="tel:+919576338282" class="font-mono text-slate-200 hover:text-white transition-colors">+91 95763 38282</a>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-slate-400 font-mono">WhatsApp Desk:</span>
+              <a href="https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-mono flex items-center gap-1">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>Direct WhatsApp &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-white/10 flex flex-wrap items-center gap-3 relative z-10">
+            <a href="https://github.com/ansaralisahh" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/15 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>github.com/ansaralisahh</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ansaralisahh" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-blue-500/20 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors">
+              <i data-lucide="linkedin" class="w-3.5 h-3.5 text-blue-400"></i>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 

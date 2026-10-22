@@ -1020,6 +1020,45 @@ require_once __DIR__ . '/includes/header.php';
         </div>
 
       </div>
+
+      <!-- 42+ Live Production Client Deployments Preview Banner -->
+      <div class="mt-14 p-8 rounded-3xl bg-slate-50 border border-slate-200/90 shadow-md reveal-up">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div class="space-y-2 max-w-2xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-mono font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+              <span>42+ Live Production Websites Deployed</span>
+            </div>
+            <h3 class="font-display font-bold text-2xl text-slate-900 tracking-tight">
+              Looking for Real-World Client Work?
+            </h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Explore our live production registry of 42+ active commercial client websites across E-Commerce, Logistics, Healthcare, B2B Trading, and Corporate Portals.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 flex-shrink-0">
+            <a href="portfolio.php#live-registry" class="px-6 py-3 rounded-xl font-display font-semibold text-xs sm:text-sm text-white bg-slate-900 hover:bg-electric-600 transition-colors shadow-md flex items-center gap-2">
+              <span>View 42+ Live Client Websites</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Featured Live Domain Badges Preview -->
+        <div class="mt-6 pt-5 border-t border-slate-200 flex flex-wrap items-center gap-2">
+          <span class="text-xs font-mono text-slate-500 mr-2">Featured Live Deployments:</span>
+          <?php 
+          $sampleDomains = ['bettersupplytrading.com', 'onestallcargo.com', 'kavexcourier.in', 'zenvixalaboratories.com', 'norvastore.in', 'scan2freight.com', 'muskaninteriors.in', 'mediskyindia.com'];
+          foreach ($sampleDomains as $sd): ?>
+            <a href="https://<?php echo $sd; ?>" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-xs font-mono text-slate-700 hover:text-electric-600 hover:border-electric-400 transition-colors inline-flex items-center gap-1 shadow-xs">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              <span><?php echo $sd; ?></span>
+              <i data-lucide="external-link" class="w-3 h-3 text-slate-400"></i>
+            </a>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
     </div>
   </section>
 

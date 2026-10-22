@@ -108,11 +108,8 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
         
         <!-- Brand Logo Badge -->
         <a href="index.php" class="flex items-center gap-3 group focus:outline-none" aria-label="YUKT IT SOLUTIONS Home">
-          <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-electric-500 via-electric-600 to-yukt-orange p-[1.5px] shadow-lg shadow-electric-500/25 group-hover:scale-105 transition-transform">
-            <div class="w-full h-full bg-navy-950 rounded-[10px] flex items-center justify-center relative overflow-hidden">
-              <div class="absolute inset-0 bg-gradient-to-tr from-electric-500/20 to-yukt-orange/30 opacity-80"></div>
-              <span class="font-display font-bold text-lg tracking-tighter text-white relative z-10">Y<span class="text-yukt-orange">.</span></span>
-            </div>
+          <div class="h-10 sm:h-11 px-2.5 py-1 rounded-xl bg-white shadow-lg shadow-black/40 flex items-center justify-center group-hover:scale-105 transition-transform border border-white/40">
+            <img src="assets/images/yukt-official-logo.png" alt="YUKT IT SOLUTIONS Official Logo" class="h-7 sm:h-8 w-auto object-contain">
           </div>
           <div class="flex flex-col">
             <div class="flex items-center gap-1.5">

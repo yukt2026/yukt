@@ -63,34 +63,86 @@ require_once __DIR__ . '/includes/components/section-header.php';
           </p>
         </div>
 
-        <!-- WhatsApp Primary Card -->
-        <div class="p-6 rounded-3xl bg-emerald-50 border border-emerald-200 shadow-md space-y-3">
-          <div class="flex items-center gap-2 text-emerald-800 font-bold text-sm">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
-            <span>Instant Technical Scoping via WhatsApp</span>
+        <!-- WhatsApp & Direct Architect Hotlines -->
+        <div class="space-y-3">
+          
+          <!-- Ranjeet WhatsApp Card -->
+          <div class="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2 hover:border-electric-400 transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-electric-600">Solutions Architecture</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Online
+              </span>
+            </div>
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <h4 class="font-display font-bold text-base text-slate-900">Ranjeet</h4>
+                <a href="tel:+917217645059" class="text-xs font-mono text-slate-600 hover:text-slate-900 block">+91 72176 45059</a>
+              </div>
+              <a href="https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20would%20like%20to%20discuss%20a%20project%20scope%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl text-xs font-medium bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 transition-colors shadow-sm">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500">
+              <a href="https://github.com/yukt2026" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 flex items-center gap-1">
+                <i data-lucide="github" class="w-3 h-3"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/ranjeet-m-079777262/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="hover:text-electric-600 flex items-center gap-1">
+                <i data-lucide="linkedin" class="w-3 h-3"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
           </div>
-          <p class="text-xs text-emerald-700 leading-relaxed">
-            Need an immediate scoping consultation? Chat directly with our solutions team on WhatsApp for fast response times.
-          </p>
-          <a href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I would like to discuss our project scope and technical roadmap.'); ?>" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl font-display font-semibold text-xs sm:text-sm text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition-all">
-            <i data-lucide="message-circle" class="w-4 h-4"></i>
-            <span>Open WhatsApp Conversation (+91 72176 45059)</span>
-            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-          </a>
+
+          <!-- Ansar WhatsApp Card -->
+          <div class="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2 hover:border-yukt-orange transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-yukt-orange">Technical Architecture</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Online
+              </span>
+            </div>
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <h4 class="font-display font-bold text-base text-slate-900">Ansar Ali Shah</h4>
+                <a href="tel:+919576338282" class="text-xs font-mono text-slate-600 hover:text-slate-900 block">+91 95763 38282</a>
+              </div>
+              <a href="https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20would%20like%20to%20discuss%20a%20project%20scope%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl text-xs font-medium bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 transition-colors shadow-sm">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+            <div class="pt-2 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500">
+              <a href="https://github.com/ansaralisahh" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 flex items-center gap-1">
+                <i data-lucide="github" class="w-3 h-3"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/ansaralisahh" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 flex items-center gap-1">
+                <i data-lucide="linkedin" class="w-3 h-3"></i>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+
         </div>
 
         <!-- Contact Detail Cards -->
         <div class="space-y-3">
           
-          <!-- Phone Card -->
-          <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
-            <div class="w-11 h-11 rounded-xl bg-yukt-orange/15 text-yukt-orange flex items-center justify-center flex-shrink-0 mt-0.5">
-              <i data-lucide="phone" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Phone &amp; Direct Line</div>
-              <a href="tel:<?php echo PHONE_RAW; ?>" class="text-base font-bold text-slate-900 hover:text-electric-600 transition-colors"><?php echo PHONE_NUMBER; ?></a>
-              <div class="text-xs text-slate-500 mt-0.5"><?php echo WORKING_HOURS; ?></div>
+          <!-- Official Socials & Instagram Card -->
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
+            <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Official Social &amp; Community Channels</div>
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <a href="https://www.instagram.com/yukt_officials?psln=MWo3bndtb3JhMmN2dQ==" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-2 rounded-xl bg-slate-50 hover:bg-pink-50 hover:text-pink-600 transition-colors border border-slate-200">
+                <i data-lucide="instagram" class="w-4 h-4 text-pink-500"></i>
+                <span class="font-medium truncate">@yukt_officials</span>
+              </a>
+              <a href="https://github.com/yukt2026" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-2 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-200">
+                <i data-lucide="github" class="w-4 h-4 text-slate-800"></i>
+                <span class="font-medium truncate">github/yukt2026</span>
+              </a>
             </div>
           </div>
 

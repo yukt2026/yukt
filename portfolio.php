@@ -127,6 +127,99 @@ require_once __DIR__ . '/includes/components/section-header.php';
 </section>
 
 <!-- ==========================================================================
+     LIVE CLIENT WEBSITES REGISTRY (42 REAL PRODUCTION WEBSITES)
+========================================================================== -->
+<section id="live-registry" class="py-20 lg:py-28 bg-white text-slate-900 border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal-up">
+      <div class="space-y-3 max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-mono text-xs uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+          <span>42 Live Production Deployments</span>
+        </div>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-slate-900">
+          Client Websites <span class="text-gradient-brand">In Production</span>
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+          Explore authentic live commercial websites, portals, and platforms designed, engineered, and managed by Yukt IT Solutions. Click any project to inspect live.
+        </p>
+      </div>
+
+      <!-- Quick Search Bar -->
+      <div class="w-full md:w-80">
+        <div class="relative">
+          <input 
+            type="text" 
+            id="registrySearchInput" 
+            placeholder="Search domain or company..." 
+            class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-electric-500 focus:bg-white transition-all shadow-xs"
+          >
+          <div class="absolute left-3.5 top-3 text-slate-400">
+            <i data-lucide="search" class="w-4 h-4"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Client Sites Grid (42 Real Websites) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5" id="registryGrid">
+      <?php foreach ($LIVE_CLIENT_PORTFOLIO as $site): ?>
+        <a 
+          href="<?php echo htmlspecialchars($site['url']); ?>" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="registry-card group p-5 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/90 hover:border-electric-500/50 hover:shadow-xl transition-all duration-200 flex flex-col justify-between"
+          data-domain="<?php echo strtolower($site['domain']); ?>"
+          data-name="<?php echo strtolower($site['name']); ?>"
+          data-category="<?php echo strtolower($site['category']); ?>"
+        >
+          <div>
+            <!-- Top Tag Strip -->
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-[10px] font-mono text-slate-600 font-medium">
+                <?php echo htmlspecialchars($site['tag']); ?>
+              </span>
+              <span class="inline-flex items-center gap-1 text-[10px] font-mono font-semibold text-emerald-600">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <span>Live</span>
+              </span>
+            </div>
+
+            <!-- Site Name & Domain -->
+            <h3 class="font-display font-bold text-base text-slate-900 group-hover:text-electric-600 transition-colors line-clamp-1">
+              <?php echo htmlspecialchars($site['name']); ?>
+            </h3>
+            <div class="text-xs font-mono text-slate-400 group-hover:text-slate-600 transition-colors mt-0.5 truncate">
+              <?php echo htmlspecialchars($site['domain']); ?>
+            </div>
+          </div>
+
+          <!-- Bottom Action Strip -->
+          <div class="mt-4 pt-3 border-t border-slate-200/70 flex items-center justify-between text-xs font-medium text-slate-500 group-hover:text-electric-600 transition-colors">
+            <span class="text-[11px] text-slate-400"><?php echo htmlspecialchars($site['category']); ?></span>
+            <div class="flex items-center gap-1">
+              <span>Visit</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+            </div>
+          </div>
+        </a>
+      <?php endforeach; ?>
+    </div>
+
+    <!-- Registry Empty Search State -->
+    <div id="registryEmptyState" class="hidden text-center py-12">
+      <div class="w-10 h-10 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-2">
+        <i data-lucide="search" class="w-5 h-5"></i>
+      </div>
+      <p class="text-sm font-semibold text-slate-700">No websites match your search</p>
+      <p class="text-xs text-slate-400 mt-0.5">Try searching for a different keyword or domain.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================================================
      STANDARDIZED BOTTOM CTA
 ========================================================================== -->
 <section class="py-20 lg:py-28 bg-navy-950 text-white border-t border-white/10 relative overflow-hidden">
@@ -203,6 +296,39 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Client registry quick search
+  const registrySearchInput = document.getElementById('registrySearchInput');
+  const registryCards = document.querySelectorAll('.registry-card');
+  const registryEmptyState = document.getElementById('registryEmptyState');
+
+  if (registrySearchInput) {
+    registrySearchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      let matchCount = 0;
+
+      registryCards.forEach(card => {
+        const domain = card.getAttribute('data-domain') || '';
+        const name = card.getAttribute('data-name') || '';
+        const cat = card.getAttribute('data-category') || '';
+
+        if (!q || domain.includes(q) || name.includes(q) || cat.includes(q)) {
+          card.classList.remove('hidden');
+          matchCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+
+      if (registryEmptyState) {
+        if (matchCount === 0) {
+          registryEmptyState.classList.remove('hidden');
+        } else {
+          registryEmptyState.classList.add('hidden');
+        }
+      }
+    });
+  }
 });
 </script>
 
