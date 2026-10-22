@@ -108,21 +108,21 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
   <!-- ==========================================
        HEADER / GLASSMORPHISM NAVIGATION BAR
   =========================================== -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-6 lg:px-10">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-2.5 px-3 sm:py-3.5 sm:px-6 lg:px-10">
     <div class="max-w-7xl mx-auto">
-      <nav class="glass-dark rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between shadow-2xl shadow-black/40">
+      <nav class="glass-dark rounded-2xl px-3 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between shadow-2xl shadow-black/40 border border-white/10">
         
         <!-- Brand Logo Badge -->
-        <a href="index.php" class="flex items-center gap-3 group focus:outline-none" aria-label="YUKT IT SOLUTIONS Home">
-          <div class="h-10 sm:h-11 px-2.5 py-1 rounded-xl bg-white shadow-lg shadow-black/40 flex items-center justify-center group-hover:scale-105 transition-transform border border-white/40">
-            <img src="assets/images/yukt-official-logo.png" alt="YUKT IT SOLUTIONS Official Logo" class="h-7 sm:h-8 w-auto object-contain">
+        <a href="index.php" class="flex items-center gap-2 sm:gap-3 group focus:outline-none flex-shrink-0" aria-label="YUKT IT SOLUTIONS Home">
+          <div class="h-9 sm:h-11 px-2 sm:px-2.5 py-1 rounded-xl bg-white shadow-md shadow-black/40 flex items-center justify-center group-hover:scale-105 transition-transform border border-white/40 flex-shrink-0">
+            <img src="assets/images/yukt-official-logo.png" alt="YUKT IT SOLUTIONS Official Logo" class="h-6 sm:h-8 w-auto object-contain flex-shrink-0">
           </div>
-          <div class="flex flex-col">
-            <div class="flex items-center gap-1.5">
-              <span class="font-display font-bold text-base sm:text-lg tracking-tight text-white">YUKT</span>
-              <span class="font-display font-semibold text-xs sm:text-sm tracking-widest uppercase text-electric-400">IT SOLUTIONS</span>
+          <div class="flex flex-col leading-none">
+            <div class="flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
+              <span class="font-display font-bold text-sm sm:text-lg tracking-tight text-white">YUKT</span>
+              <span class="font-display font-semibold text-[11px] sm:text-sm tracking-wider sm:tracking-widest uppercase text-electric-400">IT SOLUTIONS</span>
             </div>
-            <span class="font-mono text-[10px] text-slate-400 tracking-wider hidden sm:inline">yukt.online</span>
+            <span class="font-mono text-[9px] sm:text-[10px] text-slate-400 tracking-wider hidden xs:inline mt-0.5">yukt.online</span>
           </div>
         </a>
 
@@ -240,7 +240,7 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
             id="mobileMenuToggle" 
             type="button"
             aria-label="Toggle Menu"
-            class="lg:hidden p-2.5 rounded-xl bg-white/[0.05] border border-white/10 text-slate-200 hover:text-white hover:bg-white/10 transition-colors"
+            class="lg:hidden p-2 sm:p-2.5 rounded-xl bg-white/[0.05] border border-white/10 text-slate-200 hover:text-white hover:bg-white/10 transition-colors flex-shrink-0"
           >
             <span id="menuIconOpen"><i data-lucide="menu" class="w-5 h-5"></i></span>
             <span id="menuIconClose" class="hidden"><i data-lucide="x" class="w-5 h-5"></i></span>

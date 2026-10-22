@@ -9,163 +9,179 @@ require_once __DIR__ . '/includes/header.php';
   <!-- ==========================================
        SECTION 1: FULL-SCREEN INTERACTIVE 3D HERO
   =========================================== -->
-  <section id="hero" class="relative min-h-screen pt-28 pb-16 lg:py-0 flex items-center overflow-hidden bg-navy-950 bg-grid-dark">
-    <!-- Ambient Lighting Glows -->
-    <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-electric-500/20 rounded-full blur-[130px] pointer-events-none"></div>
-    <div class="absolute bottom-1/4 right-10 w-[420px] h-[420px] bg-yukt-orange/15 rounded-full blur-[140px] pointer-events-none"></div>
+  <section id="hero" class="relative pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20 lg:min-h-[calc(100vh-4.5rem)] lg:flex lg:items-center overflow-hidden bg-navy-950 bg-grid-dark">
+    <!-- Ambient Lighting Glows Behind 3D Visual -->
+    <div class="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-electric-500/18 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute top-1/2 right-10 sm:right-1/4 translate-x-1/4 -translate-y-1/2 w-[320px] sm:w-[480px] h-[320px] sm:h-[480px] bg-gradient-to-tr from-electric-600/20 via-cyan-500/15 to-yukt-orange/20 rounded-full blur-[130px] pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full relative z-10 py-12 lg:py-24">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 w-full relative z-10 pt-2 pb-6 sm:py-6 lg:py-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 xl:gap-12 items-center">
         
         <!-- Left Column: High-Impact Copy & Actions (7 Cols on large screens) -->
-        <div class="lg:col-span-7 space-y-7 text-left z-20">
-          <!-- Eyebrow Badge -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 backdrop-blur-md">
-            <span class="flex h-2 w-2 relative">
+        <div class="lg:col-span-7 space-y-5 sm:space-y-6 text-left z-20 reveal-up">
+          <!-- Compact Eyebrow Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md max-w-full">
+            <span class="relative flex h-2 w-2 shrink-0">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-yukt-orange opacity-75"></span>
               <span class="relative inline-flex rounded-full h-2 w-2 bg-yukt-orange"></span>
             </span>
-            <span class="font-mono text-xs uppercase tracking-widest text-slate-300">YUKT IT SOLUTIONS &bull; NEXT-GEN DIGITAL ENGINEERING</span>
+            <span class="font-mono text-[11px] sm:text-xs uppercase tracking-wider text-slate-300 truncate">
+              Next-Gen Digital Engineering
+            </span>
+            <span class="hidden sm:inline-block w-1 h-1 rounded-full bg-slate-500"></span>
+            <span class="hidden sm:inline-block font-mono text-[11px] text-electric-400 font-medium">
+              YUKT IT SOLUTIONS
+            </span>
           </div>
 
-          <!-- Main Headline -->
-          <h1 class="font-display font-bold text-4xl sm:text-5xl xl:text-6xl leading-[1.08] tracking-tight text-white">
-            Technology That Moves Your <span class="text-gradient-electric">Business Forward.</span>
+          <!-- Main Headline with Responsive Fluid Clamp -->
+          <h1 class="font-display font-bold tracking-tight text-white leading-[1.08] text-[clamp(2.15rem,6.8vw,3.75rem)] sm:text-[clamp(2.5rem,5.5vw,3.75rem)] lg:text-5xl xl:text-6xl max-w-2xl">
+            Technology That Moves Your <span class="bg-gradient-to-r from-electric-400 via-cyan-400 to-electric-500 bg-clip-text text-transparent">Business Forward</span><span class="text-yukt-orange">.</span>
           </h1>
 
-          <!-- Supporting Text -->
-          <p class="text-base sm:text-lg xl:text-xl text-slate-300/90 max-w-2xl leading-relaxed font-normal">
+          <!-- Supporting Description -->
+          <p class="text-sm sm:text-base lg:text-lg text-slate-300/95 max-w-xl leading-relaxed font-normal">
             We build intelligent digital experiences, powerful software, and AI-driven solutions that help businesses grow faster.
           </p>
 
           <!-- Primary & Secondary CTA Buttons -->
-          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-1 w-full sm:w-auto">
             <a 
               href="#services"
-              class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl font-display font-semibold text-sm sm:text-base text-white bg-gradient-to-r from-electric-500 via-electric-600 to-blue-700 bg-electric-600 hover:from-electric-400 hover:to-electric-500 shadow-xl shadow-electric-500/30 border border-electric-400/40 transition-all duration-300 hover:-translate-y-0.5 group"
+              class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-electric-600 via-electric-500 to-blue-700 hover:from-electric-500 hover:to-blue-600 shadow-xl shadow-electric-600/30 border border-electric-400/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-electric-400 group w-full sm:w-auto"
             >
               <span>Explore Our Services</span>
-              <i data-lucide="compass" class="w-5 h-5 group-hover:rotate-45 transition-transform duration-300"></i>
+              <i data-lucide="compass" class="w-4 h-4 group-hover:rotate-45 transition-transform duration-300"></i>
             </a>
 
             <a 
               href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I want to discuss a project.'); ?>"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-2xl font-display font-semibold text-sm sm:text-base text-white bg-gradient-to-r from-yukt-orange to-amber-600 hover:from-yukt-orangeLight hover:to-yukt-orange shadow-xl shadow-yukt-orange/25 border border-amber-400/40 transition-all duration-300 hover:-translate-y-0.5 group"
+              class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 sm:py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-yukt-orange to-amber-600 hover:from-yukt-orangeLight hover:to-yukt-orange shadow-xl shadow-yukt-orange/25 border border-amber-400/40 transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-yukt-orange group w-full sm:w-auto"
             >
-              <i data-lucide="message-square-dot" class="w-5 h-5"></i>
-              <span>Start Your Project — WhatsApp</span>
+              <i data-lucide="message-square-dot" class="w-4 h-4 text-white"></i>
+              <span>Start Project — WhatsApp</span>
               <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
             </a>
           </div>
 
           <!-- Interactive Capability Tags -->
-          <div class="pt-4 border-t border-white/10 flex flex-wrap items-center gap-3 text-xs text-slate-400">
-            <span class="font-mono uppercase tracking-wider text-slate-500">Core Capabilities:</span>
-            <span class="px-3 py-1 rounded-lg bg-white/[0.04] border border-white/[0.07] text-slate-300 flex items-center gap-1.5">
+          <div class="pt-3 border-t border-white/10 flex flex-wrap items-center gap-2 text-xs">
+            <span class="font-mono uppercase tracking-wider text-[11px] text-slate-400 mr-1 hidden sm:inline">Capabilities:</span>
+            <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/[0.08] text-slate-300 font-mono text-[11px] flex items-center gap-1.5 hover:bg-white/[0.08] transition-colors">
               <i data-lucide="globe" class="w-3.5 h-3.5 text-electric-400"></i> Web &amp; SaaS
             </span>
-            <span class="px-3 py-1 rounded-lg bg-white/[0.04] border border-white/[0.07] text-slate-300 flex items-center gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/[0.08] text-slate-300 font-mono text-[11px] flex items-center gap-1.5 hover:bg-white/[0.08] transition-colors">
               <i data-lucide="cpu" class="w-3.5 h-3.5 text-yukt-orange"></i> AI Automation
             </span>
-            <span class="px-3 py-1 rounded-lg bg-white/[0.04] border border-white/[0.07] text-slate-300 flex items-center gap-1.5">
+            <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/[0.08] text-slate-300 font-mono text-[11px] flex items-center gap-1.5 hover:bg-white/[0.08] transition-colors">
               <i data-lucide="smartphone" class="w-3.5 h-3.5 text-emerald-400"></i> Custom Apps
             </span>
-            <span class="px-3 py-1 rounded-lg bg-white/[0.04] border border-white/[0.07] text-slate-300 flex items-center gap-1.5">
-              <i data-lucide="trending-up" class="w-3.5 h-3.5 text-purple-400"></i> Digital Growth
+            <span class="px-2.5 py-1 rounded-lg bg-white/[0.04] border border-white/[0.08] text-slate-300 font-mono text-[11px] flex items-center gap-1.5 hover:bg-white/[0.08] transition-colors">
+              <i data-lucide="trending-up" class="w-3.5 h-3.5 text-cyan-400"></i> Digital Growth
             </span>
           </div>
         </div>
 
         <!-- Right Column: Interactive Three.js 3D Stage + Floating Glass UI Panels (5 Cols) -->
-        <div class="lg:col-span-5 relative h-[460px] sm:h-[540px] lg:h-[620px] w-full flex items-center justify-center">
-          
-          <!-- 3D WebGL Canvas Container -->
-          <div id="hero-canvas-container" class="w-full h-full relative rounded-3xl overflow-hidden cursor-grab active:cursor-grabbing">
-            <canvas id="hero-3d-canvas" class="w-full h-full block"></canvas>
+        <div class="lg:col-span-5 relative w-full flex items-center justify-center reveal-up">
+          <!-- 3D Stage Container with Responsive Proportional Height -->
+          <div class="relative w-full h-[310px] xs:h-[350px] sm:h-[420px] md:h-[480px] lg:h-[520px] xl:h-[560px] flex items-center justify-center">
+            
+            <!-- Ambient Glow Behind 3D Object -->
+            <div class="absolute inset-4 bg-gradient-to-tr from-electric-500/20 via-cyan-400/10 to-yukt-orange/15 rounded-full blur-2xl pointer-events-none opacity-80"></div>
 
-            <!-- Static Fallback if WebGL is disabled -->
-            <div id="webgl-fallback" class="hidden absolute inset-0 flex items-center justify-center bg-navy-900/90 rounded-3xl border border-white/10 p-6 text-center">
-              <div class="space-y-3">
-                <div class="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-electric-500 to-yukt-orange flex items-center justify-center shadow-lg">
-                  <i data-lucide="box" class="w-10 h-10 text-white"></i>
-                </div>
-                <p class="font-display font-semibold text-white">YUKT 3D Core Engine</p>
-                <p class="text-xs text-slate-400">Interactive architectural preview mode active.</p>
-              </div>
-            </div>
-          </div>
+            <!-- 3D WebGL Canvas Container -->
+            <div id="hero-canvas-container" class="w-full h-full relative rounded-3xl overflow-hidden cursor-grab active:cursor-grabbing">
+              <canvas id="hero-3d-canvas" class="w-full h-full block"></canvas>
 
-          <!-- Floating UI Panel 1: Websites & Web Apps (Top Left) -->
-          <div class="hero-float-card absolute top-4 left-0 sm:-left-6 z-20 glass-pill rounded-2xl p-3.5 w-48 sm:w-56 animate-float-slow pointer-events-none select-none">
-            <div class="flex items-center justify-between mb-2">
-              <span class="font-mono text-[10px] uppercase tracking-wider text-electric-400 flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-electric-400"></span> Web Architecture
-              </span>
-              <i data-lucide="layout" class="w-3.5 h-3.5 text-slate-400"></i>
-            </div>
-            <div class="text-xs font-semibold text-white mb-1">High-Speed Web &amp; SaaS</div>
-            <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
-              <div class="bg-gradient-to-r from-electric-400 to-electric-500 h-full w-[92%] rounded-full"></div>
-            </div>
-          </div>
-
-          <!-- Floating UI Panel 2: AI Automation Node (Top Right) -->
-          <div class="hero-float-card absolute top-12 right-0 sm:-right-4 z-20 glass-pill rounded-2xl p-3.5 w-48 sm:w-52 animate-float-delayed pointer-events-none select-none border-yukt-orange/30">
-            <div class="flex items-center gap-2.5">
-              <div class="w-8 h-8 rounded-lg bg-yukt-orange/20 border border-yukt-orange/40 flex items-center justify-center text-yukt-orange shrink-0">
-                <i data-lucide="bot" class="w-4 h-4"></i>
-              </div>
-              <div>
-                <div class="font-mono text-[10px] text-yukt-orange uppercase">AI Workflows</div>
-                <div class="text-xs font-semibold text-white">Autonomous Pipelines</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Floating UI Panel 3: Mobile Apps & Analytics (Bottom Left) -->
-          <div class="hero-float-card absolute bottom-14 left-2 sm:-left-4 z-20 glass-pill rounded-2xl p-3.5 w-52 sm:w-60 animate-float-delayed pointer-events-none select-none">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center gap-2.5">
-                <div class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-400">
-                  <i data-lucide="trending-up" class="w-4 h-4"></i>
-                </div>
-                <div>
-                  <div class="text-[11px] font-semibold text-white">Digital Growth &amp; Apps</div>
-                  <div class="font-mono text-[10px] text-slate-400">Full-Stack Telemetry</div>
+              <!-- Static Fallback if WebGL is disabled -->
+              <div id="webgl-fallback" class="hidden absolute inset-0 flex items-center justify-center bg-navy-900/90 rounded-3xl border border-white/10 p-6 text-center">
+                <div class="space-y-3">
+                  <div class="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-electric-500 to-yukt-orange flex items-center justify-center shadow-lg">
+                    <i data-lucide="box" class="w-8 h-8 text-white"></i>
+                  </div>
+                  <p class="font-display font-semibold text-white text-sm">YUKT 3D Core Engine</p>
+                  <p class="text-xs text-slate-400">Interactive architectural preview mode active.</p>
                 </div>
               </div>
-              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px]">LIVE</span>
             </div>
-          </div>
 
-          <!-- Interactive 3D Scene Mode Switcher Toolbar (Bottom Center of 3D Stage) -->
-          <div class="absolute bottom-2 left-1/2 -translate-x-1/2 z-30 glass-dark px-2.5 py-1.5 rounded-xl border border-white/15 flex items-center gap-1.5 shadow-xl">
-            <span class="font-mono text-[10px] text-slate-400 px-2 hidden sm:inline">3D CORE:</span>
-            <button type="button" data-hero-mode="orbit" class="hero-mode-btn px-2.5 py-1 rounded-lg font-mono text-[11px] bg-electric-500 text-white font-medium transition-all">
-              Orbit
-            </button>
-            <button type="button" data-hero-mode="exploded" class="hero-mode-btn px-2.5 py-1 rounded-lg font-mono text-[11px] text-slate-300 hover:text-white hover:bg-white/10 transition-all">
-              Expand
-            </button>
-            <button type="button" data-hero-mode="pulse" class="hero-mode-btn px-2.5 py-1 rounded-lg font-mono text-[11px] text-slate-300 hover:text-white hover:bg-white/10 transition-all">
-              Overdrive
-            </button>
-          </div>
+            <!-- Floating Card 1: Web Architecture (Tucked top-left, doesn't block center) -->
+            <div class="hero-float-card absolute top-1 left-1 sm:top-3 sm:left-0 lg:top-6 lg:-left-6 xl:-left-10 z-20 glass-pill rounded-xl sm:rounded-2xl p-2 sm:p-3.5 w-36 xs:w-42 sm:w-50 lg:w-56 animate-float-slow pointer-events-none select-none border border-white/20 shadow-xl">
+              <div class="flex items-center justify-between mb-1 sm:mb-2">
+                <span class="font-mono text-[9px] sm:text-[10px] uppercase tracking-wider text-electric-400 flex items-center gap-1 font-semibold">
+                  <span class="w-1.5 h-1.5 rounded-full bg-electric-400"></span> Architecture
+                </span>
+                <i data-lucide="layout" class="w-3 h-3 sm:w-3.5 sm:h-3.5 text-slate-400"></i>
+              </div>
+              <div class="text-[11px] sm:text-xs font-semibold text-white mb-1 truncate">Web &amp; SaaS Platforms</div>
+              <div class="w-full bg-white/10 h-1 sm:h-1.5 rounded-full overflow-hidden">
+                <div class="bg-gradient-to-r from-electric-400 to-cyan-400 h-full w-[94%] rounded-full"></div>
+              </div>
+            </div>
 
+            <!-- Floating Card 2: AI Automation (Tucked top-right, doesn't block center) -->
+            <div class="hero-float-card absolute top-1 right-1 sm:top-4 sm:right-0 lg:top-8 lg:-right-6 xl:-right-10 z-20 glass-pill rounded-xl sm:rounded-2xl p-2 sm:p-3.5 w-36 xs:w-42 sm:w-48 lg:w-52 animate-float-delayed pointer-events-none select-none border border-yukt-orange/40 shadow-xl">
+              <div class="flex items-center gap-2 sm:gap-2.5">
+                <div class="w-6 h-6 sm:w-8 sm:h-8 rounded-lg bg-yukt-orange/20 border border-yukt-orange/40 flex items-center justify-center text-yukt-orange shrink-0">
+                  <i data-lucide="bot" class="w-3.5 h-3.5 sm:w-4 sm:h-4"></i>
+                </div>
+                <div class="min-w-0">
+                  <div class="font-mono text-[8px] sm:text-[9px] text-yukt-orange uppercase font-semibold">Autonomous RAG</div>
+                  <div class="text-[11px] sm:text-xs font-semibold text-white truncate">AI Agent Workflows</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Card 3: Enterprise Telemetry (Desktop Only to keep mobile globe clear) -->
+            <div class="hero-float-card hidden lg:block absolute lg:bottom-12 lg:-left-6 xl:-left-10 z-20 glass-pill rounded-2xl p-3.5 w-56 xl:w-60 animate-float-delayed pointer-events-none select-none border border-emerald-400/30 shadow-xl">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-400 shrink-0">
+                    <i data-lucide="trending-up" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <div class="text-[11px] font-semibold text-white">Full-Stack Delivery</div>
+                    <div class="font-mono text-[10px] text-slate-400">Sub-100ms Latency</div>
+                  </div>
+                </div>
+                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px] font-bold">100% IP</span>
+              </div>
+            </div>
+
+            <!-- Interactive 3D Scene Mode Switcher Toolbar (Bottom Center of 3D Stage) -->
+            <div class="absolute bottom-2 left-1/2 -translate-x-1/2 z-30 glass-dark px-2 sm:px-2.5 py-1.5 rounded-xl border border-white/15 flex items-center gap-1 sm:gap-1.5 shadow-xl">
+              <span class="font-mono text-[9px] sm:text-[10px] text-slate-400 px-1.5 hidden xs:inline uppercase">3D CORE:</span>
+              <button type="button" data-hero-mode="orbit" class="hero-mode-btn px-2 sm:px-2.5 py-1 rounded-lg font-mono text-[10px] sm:text-[11px] bg-electric-500 text-white font-medium transition-all active:scale-95">
+                Orbit
+              </button>
+              <button type="button" data-hero-mode="exploded" class="hero-mode-btn px-2 sm:px-2.5 py-1 rounded-lg font-mono text-[10px] sm:text-[11px] text-slate-300 hover:text-white hover:bg-white/10 transition-all active:scale-95">
+                Expand
+              </button>
+              <button type="button" data-hero-mode="pulse" class="hero-mode-btn px-2 sm:px-2.5 py-1 rounded-lg font-mono text-[10px] sm:text-[11px] text-slate-300 hover:text-white hover:bg-white/10 transition-all active:scale-95">
+                Overdrive
+              </button>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Bottom Section Transition Curve/Divider -->
-    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-slate-50 pointer-events-none"></div>
+    <!-- Seamless Section Transition Bridge into Slate-50 -->
+    <div class="absolute bottom-0 left-0 right-0 h-8 sm:h-12 overflow-hidden pointer-events-none z-20">
+      <svg class="w-full h-full text-slate-50" viewBox="0 0 1440 48" fill="none" preserveAspectRatio="none">
+        <path d="M0,48 L1440,48 L1440,16 C1080,40 360,0 0,24 Z" fill="currentColor"/>
+      </svg>
+    </div>
   </section>
 
   <!-- ==========================================
        SECTION 2: SERVICES SECTION (LIGHT ARCHITECTURAL THEME)
   =========================================== -->
-  <section id="services" class="relative py-24 lg:py-32 bg-slate-50 text-slate-900 bg-grid-light overflow-hidden">
+  <section id="services" class="relative pt-10 pb-20 sm:pt-14 sm:pb-24 lg:py-28 bg-slate-50 text-slate-900 bg-grid-light overflow-hidden">
     <!-- Subtle Top Ambient Glow -->
     <div class="absolute top-0 right-1/4 w-96 h-96 bg-electric-400/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-10 left-10 w-96 h-96 bg-yukt-orange/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -1560,9 +1576,9 @@ require_once __DIR__ . '/includes/header.php';
         btn.addEventListener('click', () => {
           currentMode = btn.getAttribute('data-hero-mode');
           document.querySelectorAll('.hero-mode-btn').forEach(b => {
-            b.className = 'hero-mode-btn px-2.5 py-1 rounded-lg font-mono text-[11px] text-slate-300 hover:text-white hover:bg-white/10 transition-all';
+            b.className = 'hero-mode-btn px-2 sm:px-2.5 py-1 rounded-lg font-mono text-[10px] sm:text-[11px] text-slate-300 hover:text-white hover:bg-white/10 transition-all active:scale-95';
           });
-          btn.className = 'hero-mode-btn px-2.5 py-1 rounded-lg font-mono text-[11px] bg-electric-500 text-white font-medium transition-all';
+          btn.className = 'hero-mode-btn px-2 sm:px-2.5 py-1 rounded-lg font-mono text-[10px] sm:text-[11px] bg-electric-500 text-white font-medium transition-all active:scale-95';
 
           if (currentMode === 'orbit') {
             targetScale = 1;
@@ -1577,14 +1593,32 @@ require_once __DIR__ . '/includes/header.php';
         });
       });
 
-      // Responsive Resize
-      window.addEventListener('resize', () => {
+      // Adaptive Camera Distance & Responsive Resize
+      function updateCamera() {
         const w = container.clientWidth || 500;
         const h = container.clientHeight || 500;
         camera.aspect = w / h;
+        if (w < 400) {
+          camera.position.z = 7.8;
+        } else if (w < 640) {
+          camera.position.z = 7.5;
+        } else {
+          camera.position.z = 7.2;
+        }
         camera.updateProjectionMatrix();
         renderer.setSize(w, h);
-      });
+      }
+      updateCamera();
+
+      window.addEventListener('resize', updateCamera, { passive: true });
+      if (window.ResizeObserver) {
+        new ResizeObserver(updateCamera).observe(container);
+      }
+
+      // Respect prefers-reduced-motion
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        speedMultiplier = 0.15;
+      }
 
       // Animation Loop
       let clock = new THREE.Clock();
