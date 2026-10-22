@@ -75,10 +75,10 @@ require_once __DIR__ . '/includes/components/section-header.php';
         </div>
 
         <!-- Floating Glass Card 1: Ranjeet Direct Line (Top Left) -->
-        <a href="https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="absolute top-2 left-0 sm:-left-4 glass-pill rounded-2xl p-3.5 w-52 sm:w-56 animate-float-slow select-none border border-emerald-400/30 shadow-xl hover:border-emerald-400/60 transition-colors">
+        <a href="https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="absolute top-2 left-0 sm:-left-4 glass-pill rounded-2xl p-3.5 w-56 sm:w-60 animate-float-slow select-none border border-emerald-400/30 shadow-xl hover:border-emerald-400/60 transition-colors">
           <div class="flex items-center justify-between mb-1">
             <span class="font-mono text-[10px] text-emerald-400 uppercase tracking-wider flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Solutions Lead
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Co-Founder &bull; Solutions
             </span>
             <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
           </div>
@@ -87,10 +87,10 @@ require_once __DIR__ . '/includes/components/section-header.php';
         </a>
 
         <!-- Floating Glass Card 2: Ansar Direct Line (Top Right) -->
-        <a href="https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="absolute top-20 right-0 sm:-right-4 glass-pill rounded-2xl p-3.5 w-48 sm:w-52 animate-float-delayed select-none border border-yukt-orange/30 shadow-xl hover:border-yukt-orange/60 transition-colors">
+        <a href="https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="absolute top-20 right-0 sm:-right-4 glass-pill rounded-2xl p-3.5 w-52 sm:w-56 animate-float-delayed select-none border border-yukt-orange/30 shadow-xl hover:border-yukt-orange/60 transition-colors">
           <div class="flex items-center justify-between mb-1">
             <span class="font-mono text-[10px] text-yukt-orange uppercase tracking-wider flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-yukt-orange animate-ping"></span> Systems Lead
+              <span class="w-1.5 h-1.5 rounded-full bg-yukt-orange animate-ping"></span> Co-Founder &bull; Systems
             </span>
             <i data-lucide="message-circle" class="w-3.5 h-3.5 text-yukt-orange"></i>
           </div>
@@ -139,7 +139,7 @@ require_once __DIR__ . '/includes/components/section-header.php';
           <!-- Ranjeet WhatsApp Card -->
           <div class="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2 hover:border-electric-400 transition-colors">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase tracking-wider text-electric-600">Solutions Architecture</span>
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-electric-600">Co-Founder &amp; Solutions Architecture</span>
               <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Online
               </span>
@@ -169,7 +169,7 @@ require_once __DIR__ . '/includes/components/section-header.php';
           <!-- Ansar WhatsApp Card -->
           <div class="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2 hover:border-yukt-orange transition-colors">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase tracking-wider text-yukt-orange">Technical Architecture</span>
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-yukt-orange">Co-Founder &amp; Technical Architecture</span>
               <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Online
               </span>

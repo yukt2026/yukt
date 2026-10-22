@@ -7,9 +7,9 @@ require_once __DIR__ . '/includes/header.php';
 ?>
 
   <!-- ==========================================
-       SECTION 1: FULL-SCREEN INTERACTIVE 3D HERO
+       SECTION 1: FULL-SCREEN INTERACTIVE 3D HERO (WITH ADVERT WAVE SHADER)
   =========================================== -->
-  <section id="hero" class="relative pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20 lg:min-h-[calc(100vh-4.5rem)] lg:flex lg:items-center overflow-hidden bg-navy-950 bg-grid-dark">
+  <section id="hero" class="advert-wave-hero relative pt-20 pb-12 sm:pt-24 sm:pb-16 lg:pt-28 lg:pb-20 lg:min-h-[calc(100vh-4.5rem)] lg:flex lg:items-center overflow-hidden bg-navy-950 bg-grid-dark">
     <!-- Ambient Lighting Glows Behind 3D Visual -->
     <div class="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] bg-electric-500/18 rounded-full blur-[120px] pointer-events-none"></div>
     <div class="absolute top-1/2 right-10 sm:right-1/4 translate-x-1/4 -translate-y-1/2 w-[320px] sm:w-[480px] h-[320px] sm:h-[480px] bg-gradient-to-tr from-electric-600/20 via-cyan-500/15 to-yukt-orange/20 rounded-full blur-[130px] pointer-events-none"></div>
@@ -188,313 +188,486 @@ require_once __DIR__ . '/includes/header.php';
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
       <!-- Section Header -->
-      <div class="max-w-3xl mx-auto text-center space-y-4 mb-16 lg:mb-20 reveal-up">
+      <div class="max-w-3xl mx-auto text-center space-y-4 mb-14 lg:mb-16 reveal-up">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-electric-500/10 border border-electric-500/20 text-electric-600 font-mono text-xs uppercase tracking-widest">
           <i data-lucide="layers" class="w-3.5 h-3.5"></i>
-          <span>Enterprise-Grade Digital Capabilities</span>
+          <span>8 Core Technical Disciplines</span>
         </div>
         <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-slate-900">
           Solutions Engineered for <span class="text-gradient-brand">Exponential Growth</span>
         </h2>
         <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
-          Every digital product we craft combines modern software architecture, intelligent automation, and high-converting visual design. Hover over any solution to inspect and connect directly with our team.
+          Every digital product we craft combines modern software architecture, intelligent automation, and high-converting visual design. Click any capability to explore its architecture and live deliverables.
         </p>
       </div>
 
-      <!-- 6 Interactive 3D-Tilt Service Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-8" id="services-grid">
+      <!-- 8 Interactive 3D-Tilt Service Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-7" id="services-grid">
 
         <!-- Service 1: Website Development -->
-        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-7 sm:p-8 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-electric-500/10 hover:border-electric-500/40 transition-all flex flex-col justify-between">
-          <div class="tilt-card-inner space-y-6 relative z-10">
-            <!-- Interactive 3D-style SVG Visual Header -->
+        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-electric-500/10 hover:border-electric-500/40 transition-all flex flex-col justify-between">
+          <div class="tilt-card-inner space-y-5 relative z-10">
             <div class="flex items-center justify-between">
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-electric-500 to-blue-700 text-white flex items-center justify-center shadow-lg shadow-electric-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                <i data-lucide="globe" class="w-7 h-7"></i>
-              </div>
+              <a href="service-website-development.php" class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-electric-500 to-blue-700 text-white flex items-center justify-center shadow-lg shadow-electric-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300" aria-label="Website Development Overview">
+                <i data-lucide="globe" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+              </a>
               <span class="font-mono text-xs font-semibold text-slate-400 group-hover:text-electric-500 transition-colors">01 / WEB</span>
             </div>
 
             <div>
-              <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-900 mb-2.5 group-hover:text-electric-600 transition-colors">
-                Website Development
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2 group-hover:text-electric-600 transition-colors">
+                <a href="service-website-development.php" class="hover:underline">Website Development</a>
               </h3>
-              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Modern, fast, responsive business websites and web applications.
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                Modern, fast, responsive business websites, portals, and web applications.
               </p>
             </div>
 
             <!-- Interactive Mini Preview Graphic -->
-            <div class="p-3.5 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2 overflow-hidden">
+            <a href="service-website-development.php" class="block p-3 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2 overflow-hidden hover:border-electric-500/40 transition-colors" title="View Website Development Details">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
                 <span class="flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span> SSR / Edge Ready
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> SSR / Edge Ready
                 </span>
-                <span class="text-electric-400">yukt.online</span>
+                <span class="text-electric-400 font-medium">Explore &rarr;</span>
               </div>
-              <div class="grid grid-cols-3 gap-1.5 pt-1">
-                <div class="h-8 rounded bg-white/10 group-hover:bg-electric-500/30 transition-colors"></div>
-                <div class="h-8 rounded bg-white/5 group-hover:bg-yukt-orange/30 transition-colors"></div>
-                <div class="h-8 rounded bg-white/10 group-hover:bg-emerald-500/30 transition-colors"></div>
+              <div class="grid grid-cols-3 gap-1.5 pt-0.5">
+                <div class="h-6 rounded bg-white/10 group-hover:bg-electric-500/30 transition-colors"></div>
+                <div class="h-6 rounded bg-white/5 group-hover:bg-yukt-orange/30 transition-colors"></div>
+                <div class="h-6 rounded bg-white/10 group-hover:bg-emerald-500/30 transition-colors"></div>
               </div>
-            </div>
+            </a>
           </div>
 
-          <div class="pt-6 mt-6 border-t border-slate-100 relative z-10 flex items-center justify-between">
+          <div class="pt-5 mt-5 border-t border-slate-100 relative z-10 flex items-center justify-between gap-2">
+            <a 
+              href="service-website-development.php"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-electric-600 hover:text-yukt-orange transition-colors group/link"
+            >
+              <span>Explore</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform"></i>
+            </a>
             <a 
               href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I\'m interested in Website Development.'); ?>"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-electric-600 hover:text-yukt-orange transition-colors group/link"
+              class="px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-mono font-medium flex items-center gap-1.5 transition-colors"
+              title="Inquire on WhatsApp"
             >
-              <span>Inquire on WhatsApp</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+              <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>WhatsApp</span>
             </a>
-            <span class="text-[11px] font-mono text-slate-400">UI/UX + Full-Stack</span>
           </div>
         </article>
 
         <!-- Service 2: Software & App Development -->
-        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-7 sm:p-8 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-electric-500/10 hover:border-electric-500/40 transition-all flex flex-col justify-between">
-          <div class="tilt-card-inner space-y-6 relative z-10">
+        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-electric-500/10 hover:border-electric-500/40 transition-all flex flex-col justify-between">
+          <div class="tilt-card-inner space-y-5 relative z-10">
             <div class="flex items-center justify-between">
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-600 to-electric-500 text-white flex items-center justify-center shadow-lg shadow-indigo-500/30 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300">
-                <i data-lucide="code-2" class="w-7 h-7"></i>
-              </div>
+              <a href="service-software-applications.php" class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-indigo-600 to-electric-500 text-white flex items-center justify-center shadow-lg shadow-indigo-500/30 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300" aria-label="Software & Apps Overview">
+                <i data-lucide="code-2" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+              </a>
               <span class="font-mono text-xs font-semibold text-slate-400 group-hover:text-electric-500 transition-colors">02 / APPS</span>
             </div>
 
             <div>
-              <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-900 mb-2.5 group-hover:text-electric-600 transition-colors">
-                Software &amp; App Development
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2 group-hover:text-electric-600 transition-colors">
+                <a href="service-software-applications.php" class="hover:underline">Software &amp; Apps</a>
               </h3>
-              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Custom software, mobile apps, dashboards, and business platforms.
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                Custom software, mobile apps, dashboards, SaaS platforms, and enterprise ERPs.
               </p>
             </div>
 
             <!-- Interactive Mini Preview Graphic -->
-            <div class="p-3.5 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2">
+            <a href="service-software-applications.php" class="block p-3 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2 overflow-hidden hover:border-electric-500/40 transition-colors" title="View Software & App Development Details">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
-                <span>Cross-Platform &amp; Cloud</span>
-                <span class="text-amber-400">iOS &bull; Android &bull; Web</span>
+                <span>Cross-Platform &bull; Cloud</span>
+                <span class="text-amber-400 font-medium">Explore &rarr;</span>
               </div>
-              <div class="flex items-center gap-2 pt-1">
+              <div class="flex items-center gap-2 pt-0.5">
                 <div class="flex-1 h-2 rounded-full bg-white/10 overflow-hidden">
                   <div class="h-full w-4/5 bg-gradient-to-r from-indigo-400 to-electric-400 group-hover:w-full transition-all duration-500"></div>
                 </div>
                 <span class="font-mono text-[10px] text-electric-400">API v2</span>
               </div>
-            </div>
+            </a>
           </div>
 
-          <div class="pt-6 mt-6 border-t border-slate-100 relative z-10 flex items-center justify-between">
+          <div class="pt-5 mt-5 border-t border-slate-100 relative z-10 flex items-center justify-between gap-2">
+            <a 
+              href="service-software-applications.php"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-electric-600 hover:text-yukt-orange transition-colors group/link"
+            >
+              <span>Explore</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform"></i>
+            </a>
             <a 
               href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I\'m interested in Software & App Development.'); ?>"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-electric-600 hover:text-yukt-orange transition-colors group/link"
+              class="px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-mono font-medium flex items-center gap-1.5 transition-colors"
+              title="Inquire on WhatsApp"
             >
-              <span>Inquire on WhatsApp</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+              <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>WhatsApp</span>
             </a>
-            <span class="text-[11px] font-mono text-slate-400">Custom ERP / SaaS</span>
           </div>
         </article>
 
         <!-- Service 3: AI Automation -->
-        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-7 sm:p-8 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-yukt-orange/15 hover:border-yukt-orange/50 transition-all flex flex-col justify-between">
-          <div class="tilt-card-inner space-y-6 relative z-10">
+        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-yukt-orange/15 hover:border-yukt-orange/50 transition-all flex flex-col justify-between">
+          <div class="tilt-card-inner space-y-5 relative z-10">
             <div class="flex items-center justify-between">
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-yukt-orange to-amber-500 text-white flex items-center justify-center shadow-lg shadow-yukt-orange/30 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-                <i data-lucide="bot" class="w-7 h-7"></i>
-              </div>
+              <a href="service-ai-automation.php" class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-yukt-orange to-amber-500 text-white flex items-center justify-center shadow-lg shadow-yukt-orange/30 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" aria-label="AI Automation Overview">
+                <i data-lucide="bot" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+              </a>
               <span class="font-mono text-xs font-semibold text-yukt-orange">03 / AI SYSTEMS</span>
             </div>
 
             <div>
-              <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-900 mb-2.5 group-hover:text-yukt-orange transition-colors">
-                AI Automation
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2 group-hover:text-yukt-orange transition-colors">
+                <a href="service-ai-automation.php" class="hover:underline">AI Automation</a>
               </h3>
-              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Intelligent workflows, AI chatbots, and business process automation.
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                Intelligent workflows, LLM agents, AI chatbots, and business automation.
               </p>
             </div>
 
             <!-- Interactive Mini Preview Graphic -->
-            <div class="p-3.5 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2">
+            <a href="service-ai-automation.php" class="block p-3 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2 overflow-hidden hover:border-yukt-orange/40 transition-colors" title="View AI Automation Details">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
                 <span class="text-yukt-orangeLight">LLM Agents &amp; Webhooks</span>
-                <span>24/7 Active</span>
+                <span class="text-emerald-400 font-medium">Explore &rarr;</span>
               </div>
-              <div class="flex items-center justify-between gap-1 pt-1">
-                <span class="px-2 py-1 rounded bg-white/10 font-mono text-[10px]">Trigger</span>
+              <div class="flex items-center justify-between gap-1 pt-0.5">
+                <span class="px-2 py-0.5 rounded bg-white/10 font-mono text-[10px]">Trigger</span>
                 <i data-lucide="arrow-right" class="w-3 h-3 text-yukt-orange"></i>
-                <span class="px-2 py-1 rounded bg-yukt-orange/20 border border-yukt-orange/40 text-yukt-orangeLight font-mono text-[10px]">AI Agent</span>
+                <span class="px-2 py-0.5 rounded bg-yukt-orange/20 border border-yukt-orange/40 text-yukt-orangeLight font-mono text-[10px]">AI Agent</span>
                 <i data-lucide="arrow-right" class="w-3 h-3 text-yukt-orange"></i>
-                <span class="px-2 py-1 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px]">Execute</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono text-[10px]">Run</span>
               </div>
-            </div>
+            </a>
           </div>
 
-          <div class="pt-6 mt-6 border-t border-slate-100 relative z-10 flex items-center justify-between">
+          <div class="pt-5 mt-5 border-t border-slate-100 relative z-10 flex items-center justify-between gap-2">
+            <a 
+              href="service-ai-automation.php"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-yukt-orange hover:text-amber-600 transition-colors group/link"
+            >
+              <span>Explore</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform"></i>
+            </a>
             <a 
               href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I\'m interested in AI Automation solutions.'); ?>"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-yukt-orange hover:text-electric-600 transition-colors group/link"
+              class="px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-mono font-medium flex items-center gap-1.5 transition-colors"
+              title="Inquire on WhatsApp"
             >
-              <span>Inquire on WhatsApp</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+              <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>WhatsApp</span>
             </a>
-            <span class="text-[11px] font-mono text-slate-400">Smart Pipelines</span>
           </div>
         </article>
 
         <!-- Service 4: Digital Marketing -->
-        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-7 sm:p-8 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-electric-500/10 hover:border-electric-500/40 transition-all flex flex-col justify-between">
-          <div class="tilt-card-inner space-y-6 relative z-10">
+        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-emerald-500/10 hover:border-emerald-500/40 transition-all flex flex-col justify-between">
+          <div class="tilt-card-inner space-y-5 relative z-10">
             <div class="flex items-center justify-between">
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shadow-lg shadow-emerald-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                <i data-lucide="trending-up" class="w-7 h-7"></i>
-              </div>
+              <a href="service-digital-marketing.php" class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white flex items-center justify-center shadow-lg shadow-emerald-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300" aria-label="Digital Marketing Overview">
+                <i data-lucide="trending-up" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+              </a>
               <span class="font-mono text-xs font-semibold text-slate-400 group-hover:text-emerald-600 transition-colors">04 / GROWTH</span>
             </div>
 
             <div>
-              <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-900 mb-2.5 group-hover:text-electric-600 transition-colors">
-                Digital Marketing
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                <a href="service-digital-marketing.php" class="hover:underline">Digital Marketing</a>
               </h3>
-              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                SEO, paid advertising, social media campaigns, and lead generation.
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                SEO, high-ROI paid performance ads, lead funnels, and conversion optimization.
               </p>
             </div>
 
             <!-- Interactive Mini Preview Graphic -->
-            <div class="p-3.5 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2">
+            <a href="service-digital-marketing.php" class="block p-3 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2 overflow-hidden hover:border-emerald-500/40 transition-colors" title="View Digital Marketing Details">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
                 <span>Acquisition Funnels</span>
-                <span class="text-emerald-400">SEO &bull; PPC &bull; Social</span>
+                <span class="text-emerald-400 font-medium">Explore &rarr;</span>
               </div>
-              <div class="flex items-end gap-1.5 h-8 pt-1">
-                <div class="flex-1 bg-white/10 h-3 rounded-sm"></div>
-                <div class="flex-1 bg-white/20 h-4 rounded-sm"></div>
-                <div class="flex-1 bg-electric-500/50 h-6 rounded-sm"></div>
-                <div class="flex-1 bg-emerald-400 h-8 rounded-sm"></div>
+              <div class="flex items-end gap-1.5 h-6 pt-0.5">
+                <div class="flex-1 bg-white/10 h-2.5 rounded-sm"></div>
+                <div class="flex-1 bg-white/20 h-3.5 rounded-sm"></div>
+                <div class="flex-1 bg-electric-500/50 h-5 rounded-sm"></div>
+                <div class="flex-1 bg-emerald-400 h-6 rounded-sm"></div>
               </div>
-            </div>
+            </a>
           </div>
 
-          <div class="pt-6 mt-6 border-t border-slate-100 relative z-10 flex items-center justify-between">
+          <div class="pt-5 mt-5 border-t border-slate-100 relative z-10 flex items-center justify-between gap-2">
+            <a 
+              href="service-digital-marketing.php"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-electric-600 hover:text-yukt-orange transition-colors group/link"
+            >
+              <span>Explore</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform"></i>
+            </a>
             <a 
               href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I\'m interested in Digital Marketing services.'); ?>"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-electric-600 hover:text-yukt-orange transition-colors group/link"
+              class="px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-mono font-medium flex items-center gap-1.5 transition-colors"
+              title="Inquire on WhatsApp"
             >
-              <span>Inquire on WhatsApp</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+              <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>WhatsApp</span>
             </a>
-            <span class="text-[11px] font-mono text-slate-400">Performance ROI</span>
           </div>
         </article>
 
         <!-- Service 5: AI Marketing & Creative Studio -->
-        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-7 sm:p-8 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-purple-500/10 hover:border-purple-500/40 transition-all flex flex-col justify-between">
-          <div class="tilt-card-inner space-y-6 relative z-10">
+        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-purple-500/10 hover:border-purple-500/40 transition-all flex flex-col justify-between">
+          <div class="tilt-card-inner space-y-5 relative z-10">
             <div class="flex items-center justify-between">
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-600 via-fuchsia-600 to-yukt-orange text-white flex items-center justify-center shadow-lg shadow-purple-500/30 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300">
-                <i data-lucide="sparkles" class="w-7 h-7"></i>
-              </div>
+              <a href="service-ai-marketing.php" class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-purple-600 via-fuchsia-600 to-yukt-orange text-white flex items-center justify-center shadow-lg shadow-purple-500/30 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300" aria-label="AI Marketing Overview">
+                <i data-lucide="sparkles" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+              </a>
               <span class="font-mono text-xs font-semibold text-slate-400 group-hover:text-purple-600 transition-colors">05 / STUDIO</span>
             </div>
 
             <div>
-              <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-900 mb-2.5 group-hover:text-purple-600 transition-colors">
-                AI Marketing &amp; Creative Studio
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2 group-hover:text-purple-600 transition-colors">
+                <a href="service-ai-marketing.php" class="hover:underline">AI Marketing Studio</a>
               </h3>
-              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                AI-assisted marketing, graphics, video content, and creative campaigns.
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                AI-assisted marketing, graphics, 4K video rendering, and multi-channel creative.
               </p>
             </div>
 
             <!-- Interactive Mini Preview Graphic -->
-            <div class="p-3.5 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2">
+            <a href="service-ai-marketing.php" class="block p-3 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2 overflow-hidden hover:border-purple-500/40 transition-colors" title="View AI Marketing Studio Details">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
                 <span>Generative Media Engine</span>
-                <span class="text-fuchsia-400">4K Video &bull; Brand</span>
+                <span class="text-fuchsia-400 font-medium">Explore &rarr;</span>
               </div>
-              <div class="h-7 rounded-lg bg-gradient-to-r from-purple-500/30 via-fuchsia-500/30 to-yukt-orange/30 border border-white/10 flex items-center px-2.5 justify-between">
+              <div class="h-6 rounded-lg bg-gradient-to-r from-purple-500/30 via-fuchsia-500/30 to-yukt-orange/30 border border-white/10 flex items-center px-2.5 justify-between">
                 <span class="font-mono text-[10px] text-white">Render Pipeline</span>
                 <i data-lucide="play" class="w-3 h-3 text-yukt-orange fill-yukt-orange"></i>
               </div>
-            </div>
+            </a>
           </div>
 
-          <div class="pt-6 mt-6 border-t border-slate-100 relative z-10 flex items-center justify-between">
+          <div class="pt-5 mt-5 border-t border-slate-100 relative z-10 flex items-center justify-between gap-2">
+            <a 
+              href="service-ai-marketing.php"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-electric-600 hover:text-yukt-orange transition-colors group/link"
+            >
+              <span>Explore</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform"></i>
+            </a>
             <a 
               href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I\'m interested in AI Marketing & Creative Studio.'); ?>"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-electric-600 hover:text-yukt-orange transition-colors group/link"
+              class="px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-mono font-medium flex items-center gap-1.5 transition-colors"
+              title="Inquire on WhatsApp"
             >
-              <span>Inquire on WhatsApp</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+              <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>WhatsApp</span>
             </a>
-            <span class="text-[11px] font-mono text-slate-400">Visual Production</span>
           </div>
         </article>
 
         <!-- Service 6: IT Consulting & Training -->
-        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-7 sm:p-8 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-electric-500/10 hover:border-electric-500/40 transition-all flex flex-col justify-between">
-          <div class="tilt-card-inner space-y-6 relative z-10">
+        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-electric-500/10 hover:border-electric-500/40 transition-all flex flex-col justify-between">
+          <div class="tilt-card-inner space-y-5 relative z-10">
             <div class="flex items-center justify-between">
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-500 to-navy-800 text-white flex items-center justify-center shadow-lg shadow-sky-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                <i data-lucide="graduation-cap" class="w-7 h-7"></i>
-              </div>
+              <a href="service-it-consulting.php" class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-sky-500 to-navy-800 text-white flex items-center justify-center shadow-lg shadow-sky-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300" aria-label="IT Consulting Overview">
+                <i data-lucide="graduation-cap" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+              </a>
               <span class="font-mono text-xs font-semibold text-slate-400 group-hover:text-sky-600 transition-colors">06 / ADVISORY</span>
             </div>
 
             <div>
-              <h3 class="font-display font-bold text-xl sm:text-2xl text-slate-900 mb-2.5 group-hover:text-electric-600 transition-colors">
-                IT Consulting &amp; Training
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2 group-hover:text-electric-600 transition-colors">
+                <a href="service-it-consulting.php" class="hover:underline">IT Consulting &amp; Training</a>
               </h3>
-              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Technology consulting, digital transformation, and practical IT training.
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                Technology consulting, cloud architecture audits, and specialized engineering training.
               </p>
             </div>
 
             <!-- Interactive Mini Preview Graphic -->
-            <div class="p-3.5 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2">
+            <a href="service-it-consulting.php" class="block p-3 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2 overflow-hidden hover:border-electric-500/40 transition-colors" title="View IT Consulting Details">
               <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
-                <span>Architecture &amp; Upskilling</span>
-                <span class="text-sky-400">Roadmaps</span>
+                <span>Architecture &bull; Roadmaps</span>
+                <span class="text-sky-400 font-medium">Explore &rarr;</span>
               </div>
-              <div class="flex items-center gap-2 pt-1 font-mono text-[10px] text-slate-300">
-                <span class="px-2 py-0.5 rounded bg-white/10">Audit</span>
+              <div class="flex items-center gap-1.5 pt-0.5 font-mono text-[10px] text-slate-300">
+                <span class="px-1.5 py-0.5 rounded bg-white/10">Audit</span>
                 <span>&rarr;</span>
-                <span class="px-2 py-0.5 rounded bg-sky-500/20 text-sky-300">Modernize</span>
+                <span class="px-1.5 py-0.5 rounded bg-sky-500/20 text-sky-300">Scale</span>
                 <span>&rarr;</span>
-                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Train</span>
+                <span class="px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Train</span>
               </div>
-            </div>
+            </a>
           </div>
 
-          <div class="pt-6 mt-6 border-t border-slate-100 relative z-10 flex items-center justify-between">
+          <div class="pt-5 mt-5 border-t border-slate-100 relative z-10 flex items-center justify-between gap-2">
+            <a 
+              href="service-it-consulting.php"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-electric-600 hover:text-yukt-orange transition-colors group/link"
+            >
+              <span>Explore</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform"></i>
+            </a>
             <a 
               href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I\'m interested in IT Consulting & Training.'); ?>"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-sm font-semibold text-electric-600 hover:text-yukt-orange transition-colors group/link"
+              class="px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-mono font-medium flex items-center gap-1.5 transition-colors"
+              title="Inquire on WhatsApp"
             >
-              <span>Inquire on WhatsApp</span>
-              <i data-lucide="arrow-right" class="w-4 h-4 group-hover/link:translate-x-1 transition-transform"></i>
+              <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>WhatsApp</span>
             </a>
-            <span class="text-[11px] font-mono text-slate-400">Hands-On Mentorship</span>
+          </div>
+        </article>
+
+        <!-- Service 7: E-Commerce Solutions -->
+        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-emerald-500/10 hover:border-emerald-500/40 transition-all flex flex-col justify-between">
+          <div class="tilt-card-inner space-y-5 relative z-10">
+            <div class="flex items-center justify-between">
+              <a href="service-ecommerce-solutions.php" class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-700 text-white flex items-center justify-center shadow-lg shadow-emerald-600/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300" aria-label="E-Commerce Solutions Overview">
+                <i data-lucide="shopping-bag" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+              </a>
+              <span class="font-mono text-xs font-semibold text-emerald-600">07 / COMMERCE</span>
+            </div>
+
+            <div>
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                <a href="service-ecommerce-solutions.php" class="hover:underline">E-Commerce Solutions</a>
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                High-conversion online stores, frictionless checkouts, Shopify, WooCommerce &amp; headless.
+              </p>
+            </div>
+
+            <!-- Interactive Mini Preview Graphic -->
+            <a href="service-ecommerce-solutions.php" class="block p-3 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2 overflow-hidden hover:border-emerald-500/40 transition-colors" title="View E-Commerce Details">
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>Razorpay &bull; Stripe &bull; POS</span>
+                <span class="text-emerald-400 font-medium">Explore &rarr;</span>
+              </div>
+              <div class="flex items-center justify-between gap-1 pt-0.5 font-mono text-[10px]">
+                <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">Fast Store</span>
+                <i data-lucide="arrow-right" class="w-3 h-3 text-emerald-400"></i>
+                <span class="px-2 py-0.5 rounded bg-white/10 text-slate-200">Zero Drop-off</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-slate-100 relative z-10 flex items-center justify-between gap-2">
+            <a 
+              href="service-ecommerce-solutions.php"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-electric-600 hover:text-yukt-orange transition-colors group/link"
+            >
+              <span>Explore</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform"></i>
+            </a>
+            <a 
+              href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I\'m interested in E-Commerce Solutions.'); ?>"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-mono font-medium flex items-center gap-1.5 transition-colors"
+              title="Inquire on WhatsApp"
+            >
+              <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Service 8: Branding & Creative -->
+        <article class="tilt-card spotlight-card group bg-white rounded-3xl p-6 sm:p-7 border border-slate-200/90 shadow-xl shadow-slate-900/[0.04] hover:shadow-2xl hover:shadow-yukt-orange/15 hover:border-yukt-orange/50 transition-all flex flex-col justify-between">
+          <div class="tilt-card-inner space-y-5 relative z-10">
+            <div class="flex items-center justify-between">
+              <a href="service-branding-creative.php" class="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-gradient-to-br from-yukt-orange to-rose-600 text-white flex items-center justify-center shadow-lg shadow-yukt-orange/30 group-hover:scale-110 group-hover:-rotate-3 transition-transform duration-300" aria-label="Branding & Creative Overview">
+                <i data-lucide="palette" class="w-6 h-6 sm:w-7 sm:h-7"></i>
+              </a>
+              <span class="font-mono text-xs font-semibold text-yukt-orange">08 / IDENTITY</span>
+            </div>
+
+            <div>
+              <h3 class="font-display font-bold text-lg sm:text-xl text-slate-900 mb-2 group-hover:text-yukt-orange transition-colors">
+                <a href="service-branding-creative.php" class="hover:underline">Branding &amp; Creative</a>
+              </h3>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                Brand strategy, logo design, scalable design systems, and digital brand collateral.
+              </p>
+            </div>
+
+            <!-- Interactive Mini Preview Graphic -->
+            <a href="service-branding-creative.php" class="block p-3 rounded-2xl bg-slate-900 text-white border border-slate-800 space-y-2 overflow-hidden hover:border-yukt-orange/40 transition-colors" title="View Branding & Creative Details">
+              <div class="flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>Design System &bull; Assets</span>
+                <span class="text-yukt-orange font-medium">Explore &rarr;</span>
+              </div>
+              <div class="flex items-center gap-2 pt-1">
+                <div class="w-3.5 h-3.5 rounded-full bg-electric-500"></div>
+                <div class="w-3.5 h-3.5 rounded-full bg-yukt-orange"></div>
+                <div class="w-3.5 h-3.5 rounded-full bg-emerald-400"></div>
+                <div class="w-3.5 h-3.5 rounded-full bg-fuchsia-500"></div>
+                <div class="flex-1 h-1.5 rounded-full bg-white/10"></div>
+              </div>
+            </a>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-slate-100 relative z-10 flex items-center justify-between gap-2">
+            <a 
+              href="service-branding-creative.php"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-yukt-orange hover:text-amber-600 transition-colors group/link"
+            >
+              <span>Explore</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/link:translate-x-1 transition-transform"></i>
+            </a>
+            <a 
+              href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I\'m interested in Branding & Creative.'); ?>"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-mono font-medium flex items-center gap-1.5 transition-colors"
+              title="Inquire on WhatsApp"
+            >
+              <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600"></i>
+              <span>WhatsApp</span>
+            </a>
           </div>
         </article>
 
       </div>
+
+      <!-- Bottom Capabilities Strip -->
+      <div class="mt-12 p-6 sm:p-8 rounded-3xl bg-navy-950 text-white border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 reveal-up">
+        <div class="space-y-1 text-center md:text-left">
+          <div class="text-xs font-mono uppercase tracking-wider text-electric-400">Full-Stack Digital Engineering</div>
+          <h4 class="font-display font-bold text-lg sm:text-xl text-white">Need an integrated multi-discipline solution?</h4>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-2xl">
+            We provide synchronized engineering pods spanning software, web platforms, AI automation, and digital performance.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto flex-shrink-0">
+          <a href="services.php" class="w-full sm:w-auto px-5 py-3 rounded-xl font-display font-semibold text-xs sm:text-sm text-white bg-electric-500 hover:bg-electric-400 transition-all flex items-center justify-center gap-2 shadow-lg shadow-electric-500/25">
+            <span>View All 8 Disciplines</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+          <button type="button" class="open-quote-modal-btn w-full sm:w-auto px-5 py-3 rounded-xl font-display font-semibold text-xs sm:text-sm text-slate-200 bg-white/10 hover:bg-white/15 border border-white/15 transition-all flex items-center justify-center gap-2">
+            <i data-lucide="calculator" class="w-4 h-4 text-yukt-orange"></i>
+            <span>Instant Project Estimator</span>
+          </button>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -1196,7 +1369,128 @@ require_once __DIR__ . '/includes/header.php';
   </section>
 
   <!-- ==========================================
-       SECTION 6: CONTACT SECTION — WHATSAPP LEAD GENERATION
+       SECTION 6: VERIFIED LEADERSHIP & FOUNDERS
+       “Meet the Technical Architects Behind Yukt”
+  =========================================== -->
+  <section id="leadership" class="relative py-20 lg:py-28 bg-navy-950 text-white bg-grid-dark border-t border-white/10 overflow-hidden">
+    <!-- Ambient Lighting Glows Behind Cards -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-electric-500/15 rounded-full blur-[130px] pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-yukt-orange/15 rounded-full blur-[130px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+      
+      <div class="max-w-3xl mx-auto text-center space-y-3 mb-14 reveal-up">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-yukt-orange"></i>
+          <span>Verified Leadership</span>
+        </div>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-white">
+          Meet the <span class="bg-gradient-to-r from-electric-400 via-cyan-400 to-electric-500 bg-clip-text text-transparent">Technical Architects</span> Behind Yukt
+        </h2>
+        <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          Direct senior engineering access without junior hand-offs or middlemen. Connect directly with the Co-Founders and lead architects who design and deploy your solutions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Ranjeet Card (Co-Founder) -->
+        <div class="bg-navy-900/90 border border-white/15 rounded-3xl p-6 sm:p-8 text-white relative overflow-hidden shadow-2xl group hover:border-electric-400/60 transition-all reveal-up">
+          <div class="absolute -top-16 -right-16 w-40 h-40 bg-electric-500/20 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="flex items-start justify-between gap-4 relative z-10">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-electric-600 to-blue-700 flex items-center justify-center text-white font-display font-bold text-2xl shadow-lg shadow-electric-600/30 group-hover:scale-105 transition-transform">
+                RM
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Ranjeet</h3>
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold uppercase tracking-wider bg-electric-500/20 text-electric-300 border border-electric-400/30">Co-Founder</span>
+                </div>
+                <div class="text-xs font-mono text-electric-400 mt-0.5">Co-Founder &amp; Lead Solutions Architect</div>
+                <div class="text-xs text-slate-300 mt-1">Cloud Systems &bull; Full-Stack Architecture &bull; AI Pipelines</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-white/10 space-y-2.5 text-xs sm:text-sm relative z-10">
+            <div class="flex items-center justify-between">
+              <span class="text-slate-400 font-mono text-xs">Direct Line:</span>
+              <a href="tel:+917217645059" class="font-mono text-slate-200 hover:text-white transition-colors font-medium">+91 72176 45059</a>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-slate-400 font-mono text-xs">WhatsApp Desk:</span>
+              <a href="https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-mono text-xs flex items-center gap-1 font-semibold">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>Direct WhatsApp &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-white/10 flex flex-wrap items-center gap-2.5 relative z-10">
+            <a href="https://github.com/yukt2026" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors">
+              <i data-lucide="github" class="w-3.5 h-3.5 text-white"></i>
+              <span class="font-mono">github.com/yukt2026</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ranjeet-m-079777262/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-electric-500/20 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors">
+              <i data-lucide="linkedin" class="w-3.5 h-3.5 text-electric-400"></i>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ansar Card (Co-Founder) -->
+        <div class="bg-navy-900/90 border border-white/15 rounded-3xl p-6 sm:p-8 text-white relative overflow-hidden shadow-2xl group hover:border-yukt-orange/60 transition-all reveal-up">
+          <div class="absolute -top-16 -right-16 w-40 h-40 bg-yukt-orange/20 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="flex items-start justify-between gap-4 relative z-10">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-yukt-orange to-amber-600 flex items-center justify-center text-white font-display font-bold text-2xl shadow-lg shadow-yukt-orange/30 group-hover:scale-105 transition-transform">
+                AS
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Ansar Ali Shah</h3>
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold uppercase tracking-wider bg-yukt-orange/20 text-amber-300 border border-yukt-orange/30">Co-Founder</span>
+                </div>
+                <div class="text-xs font-mono text-yukt-orange mt-0.5">Co-Founder &amp; Lead Technical Architect</div>
+                <div class="text-xs text-slate-300 mt-1">Web Applications &bull; High-Performance Backends &bull; DevOps</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-5 border-t border-white/10 space-y-2.5 text-xs sm:text-sm relative z-10">
+            <div class="flex items-center justify-between">
+              <span class="text-slate-400 font-mono text-xs">Direct Line:</span>
+              <a href="tel:+919576338282" class="font-mono text-slate-200 hover:text-white transition-colors font-medium">+91 95763 38282</a>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-slate-400 font-mono text-xs">WhatsApp Desk:</span>
+              <a href="https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-mono text-xs flex items-center gap-1 font-semibold">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>Direct WhatsApp &rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-white/10 flex flex-wrap items-center gap-2.5 relative z-10">
+            <a href="https://github.com/ansaralisahh" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors">
+              <i data-lucide="github" class="w-3.5 h-3.5 text-white"></i>
+              <span class="font-mono">github.com/ansaralisahh</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ansaralisahh" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-blue-500/20 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors">
+              <i data-lucide="linkedin" class="w-3.5 h-3.5 text-blue-400"></i>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 7: CONTACT SECTION — WHATSAPP LEAD GENERATION
   =========================================== -->
   <section id="contact" class="relative py-24 lg:py-32 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950 text-white overflow-hidden">
     <!-- Dramatic Spotlight Glows -->

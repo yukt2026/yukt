@@ -82,7 +82,8 @@
     constructor(container) {
       this.container = container;
       this.canvas = document.createElement('canvas');
-      this.canvas.className = 'w-full h-full block absolute inset-0 pointer-events-none opacity-80';
+      this.canvas.className = 'w-full h-full block absolute inset-0 pointer-events-none opacity-75';
+      this.canvas.style.zIndex = '0';
       this.gl = this.canvas.getContext('webgl', { antialias: true, alpha: true });
       if (!this.gl) return;
 
