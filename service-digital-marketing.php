@@ -3,8 +3,8 @@ require_once __DIR__ . '/includes/config.php';
 
 $service = $SERVICES['digital-marketing'];
 
-$pageTitle = 'Digital Marketing & Growth Services — Yukt IT Solutions';
-$pageDesc = 'Performance-driven YouTube Ads, Meta Ads, LinkedIn B2B marketing, social media management, automated email & WhatsApp campaigns, CRO, and server-side tracking.';
+$pageTitle = 'Digital Marketing Services, SEO & Performance Ads | YUKT IT SOLUTIONS';
+$pageDesc = 'Data-driven digital marketing: SEO services, YouTube & Meta ad campaigns, LinkedIn B2B lead generation, social media marketing, and conversion optimization.';
 
 $capabilities = [
     [

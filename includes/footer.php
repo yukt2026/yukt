@@ -11,7 +11,7 @@
         <div class="lg:col-span-4 space-y-4">
           <div class="flex items-center gap-3">
             <div class="h-11 px-3 py-1 rounded-xl bg-white shadow-lg flex items-center justify-center">
-              <img src="assets/images/yukt-official-logo.png" alt="YUKT IT SOLUTIONS" class="h-8 w-auto object-contain">
+              <img src="assets/images/yukt-official-logo.png" alt="YUKT IT SOLUTIONS Official Logo" width="160" height="40" loading="lazy" decoding="async" class="h-8 w-auto object-contain">
             </div>
             <div>
               <span class="font-display font-bold text-lg text-white tracking-tight block">YUKT IT SOLUTIONS</span>
@@ -53,28 +53,54 @@
           </div>
         </div>
 
-        <!-- Services Quick WhatsApp Links (5 Cols) -->
+        <!-- Core Engineering Services (5 Cols) -->
         <div class="lg:col-span-5 space-y-3">
-          <div class="font-mono text-xs uppercase tracking-widest text-white">Direct Service Inquiries</div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs sm:text-sm">
-            <a href="https://wa.me/917217645059?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20Website%20Development." target="_blank" rel="noopener noreferrer" class="hover:text-electric-400 transition-colors">Website Development</a>
-            <a href="https://wa.me/917217645059?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20Software%20%26%20App%20Development." target="_blank" rel="noopener noreferrer" class="hover:text-electric-400 transition-colors">Software &amp; App Development</a>
-            <a href="https://wa.me/917217645059?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20AI%20Automation%20solutions." target="_blank" rel="noopener noreferrer" class="hover:text-electric-400 transition-colors">AI Automation</a>
-            <a href="https://wa.me/917217645059?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20Digital%20Marketing%20services." target="_blank" rel="noopener noreferrer" class="hover:text-electric-400 transition-colors">Digital Marketing</a>
-            <a href="https://wa.me/917217645059?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20AI%20Marketing%20%26%20Creative%20Studio." target="_blank" rel="noopener noreferrer" class="hover:text-electric-400 transition-colors">AI Marketing &amp; Creative Studio</a>
-            <a href="https://wa.me/917217645059?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20IT%20Consulting%20%26%20Training." target="_blank" rel="noopener noreferrer" class="hover:text-electric-400 transition-colors">IT Consulting &amp; Training</a>
+          <div class="font-mono text-xs uppercase tracking-widest text-white">Engineering Services</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm">
+            <a href="service-website-development.php" class="hover:text-electric-400 transition-colors flex items-center gap-1.5">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
+              <span>Website Development</span>
+            </a>
+            <a href="service-software-applications.php" class="hover:text-electric-400 transition-colors flex items-center gap-1.5">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
+              <span>Software &amp; Apps</span>
+            </a>
+            <a href="service-ai-automation.php" class="hover:text-electric-400 transition-colors flex items-center gap-1.5">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
+              <span>AI Automation &amp; Bots</span>
+            </a>
+            <a href="service-digital-marketing.php" class="hover:text-electric-400 transition-colors flex items-center gap-1.5">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
+              <span>Digital Marketing &amp; SEO</span>
+            </a>
+            <a href="service-ai-marketing.php" class="hover:text-electric-400 transition-colors flex items-center gap-1.5">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
+              <span>AI-Powered Marketing</span>
+            </a>
+            <a href="service-branding-creative.php" class="hover:text-electric-400 transition-colors flex items-center gap-1.5">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
+              <span>Branding &amp; UI/UX</span>
+            </a>
+            <a href="service-ecommerce-solutions.php" class="hover:text-electric-400 transition-colors flex items-center gap-1.5">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
+              <span>E-Commerce Solutions</span>
+            </a>
+            <a href="service-it-consulting.php" class="hover:text-electric-400 transition-colors flex items-center gap-1.5">
+              <i data-lucide="chevron-right" class="w-3 h-3 text-slate-500"></i>
+              <span>IT Consulting &amp; Pods</span>
+            </a>
           </div>
         </div>
 
         <!-- Navigation & Action (3 Cols) -->
         <div class="lg:col-span-3 space-y-3">
-          <div class="font-mono text-xs uppercase tracking-widest text-white">Navigation</div>
-          <ul class="space-y-2 text-sm">
-            <li><a href="index.php#hero" class="hover:text-white transition-colors">3D Hero Experience</a></li>
-            <li><a href="index.php#services" class="hover:text-white transition-colors">Our Services</a></li>
-            <li><a href="index.php#process" class="hover:text-white transition-colors">4-Stage Process</a></li>
-            <li><a href="index.php#portfolio" class="hover:text-white transition-colors">Concept Portfolio</a></li>
-            <li><a href="index.php#why-yukt" class="hover:text-white transition-colors">Why Choose YUKT</a></li>
+          <div class="font-mono text-xs uppercase tracking-widest text-white">Company &amp; Work</div>
+          <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="services.php" class="hover:text-white transition-colors">All Services Hub</a></li>
+            <li><a href="about.php" class="hover:text-white transition-colors">About YUKT &amp; Founders</a></li>
+            <li><a href="portfolio.php" class="hover:text-white transition-colors">Client Work &amp; Case Studies</a></li>
+            <li><a href="contact.php" class="hover:text-white transition-colors">Contact &amp; Scoping Desk</a></li>
+            <li><a href="index.php#services" class="hover:text-white transition-colors">3D Interactive Showcase</a></li>
           </ul>
         </div>
 

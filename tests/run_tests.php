@@ -108,6 +108,13 @@ foreach ($routes as $path => $name) {
     logTest("Route: $name ($path)", $isOk && $hasTitle, "HTTP " . $res['code']);
 }
 
+// Test 404 Error Page Handling
+$res404 = fetchUrl($baseUrl . '/404.php');
+$is404Ok = ($res404['code'] === 404);
+$has404NoIndex = strpos($res404['body'], 'content="noindex, nofollow"') !== false;
+$has404Title = strpos($res404['body'], '404') !== false;
+logTest("Route: Custom 404 Page (/404.php)", $is404Ok && $has404NoIndex && $has404Title, "HTTP " . $res404['code'] . " (noindex, nofollow verified)");
+
 echo "\n3. Testing Database & API Validation Endpoints...\n";
 
 // -------------------------------------------------------------------------

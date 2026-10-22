@@ -1,7 +1,7 @@
 <?php
 $activePage = 'home';
-$pageTitle = 'YUKT IT SOLUTIONS | Technology That Moves Your Business Forward';
-$pageDesc = 'YUKT IT SOLUTIONS builds intelligent digital experiences, powerful software, websites, and AI-driven solutions that help businesses grow faster.';
+$pageTitle = 'YUKT IT SOLUTIONS | Website Development, Software & AI Solutions';
+$pageDesc = 'YUKT IT SOLUTIONS builds modern websites, custom software, mobile apps, AI automation, and digital marketing solutions to help businesses grow.';
 
 require_once __DIR__ . '/includes/header.php';
 ?>

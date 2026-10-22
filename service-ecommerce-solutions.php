@@ -3,8 +3,8 @@ require_once __DIR__ . '/includes/config.php';
 
 $service = $SERVICES['ecommerce-solutions'];
 
-$pageTitle = 'E-Commerce Solutions & Storefront Engineering — Yukt IT Solutions';
-$pageDesc = 'Custom Shopify Plus, WooCommerce, and headless commerce stores, multi-vendor marketplaces, Indian payment gateways (Razorpay, UPI), automated logistics, and AI shopping assistants.';
+$pageTitle = 'E-Commerce Website Development & Solutions | YUKT IT SOLUTIONS';
+$pageDesc = 'Custom e-commerce development: Shopify Plus storefronts, WooCommerce setups, bespoke Laravel stores, UPI/Razorpay payment gateway integration, and logistics sync.';
 
 $capabilities = [
     [

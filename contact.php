@@ -1,7 +1,7 @@
 <?php
 $activePage = 'contact';
-$pageTitle = 'Contact Us — YUKT IT SOLUTIONS | Direct Engineering Consultation';
-$pageDesc = 'Get in touch with YUKT IT SOLUTIONS. Discuss your web development, custom software, AI automation, or digital marketing requirements directly with a senior solutions architect.';
+$pageTitle = 'Contact YUKT IT SOLUTIONS | Project Scoping & Tech Consultation';
+$pageDesc = 'Contact YUKT IT SOLUTIONS for custom web development, software engineering, AI automation, and digital marketing. Speak directly with a solutions architect today.';
 
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/components/section-header.php';

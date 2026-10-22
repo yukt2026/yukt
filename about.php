@@ -1,7 +1,7 @@
 <?php
 $activePage = 'about';
-$pageTitle = 'About Us — YUKT IT SOLUTIONS | Engineering Clarity for Ambitious Enterprises';
-$pageDesc = 'Learn about YUKT IT SOLUTIONS: our Sanskrit engineering roots, mission, working principles, cohesive technology mesh, and verified engineering pod architecture.';
+$pageTitle = 'About YUKT IT SOLUTIONS | Technology Company & Engineering Pods';
+$pageDesc = 'Learn about YUKT IT SOLUTIONS: our engineering ethos, mission, technical leadership led by Founder Ansar Ali Shah and Co-Founder Ranjeet, and full-stack delivery model.';
 
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/components/section-header.php';

@@ -1,7 +1,7 @@
 <?php
 $activePage = 'services';
-$pageTitle = 'Services & Digital Capabilities — YUKT IT SOLUTIONS';
-$pageDesc = 'Explore full-cycle technology and digital services by YUKT IT SOLUTIONS: Website Development, Custom Software, AI & Automation, Digital Marketing, AI Marketing, Branding, E-Commerce, and IT Consulting.';
+$pageTitle = 'IT Services & Digital Engineering Solutions | YUKT IT SOLUTIONS';
+$pageDesc = 'Explore full-cycle digital engineering services by YUKT IT SOLUTIONS: Custom Websites, Enterprise Software, Mobile Apps, AI Automation, Digital Marketing, and IT Consulting.';
 
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/components/section-header.php';

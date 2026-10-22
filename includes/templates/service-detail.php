@@ -281,10 +281,10 @@ require_once __DIR__ . '/../components/section-header.php';
     <div class="max-w-3xl mx-auto space-y-4">
       <?php foreach ($faqs as $faq): ?>
         <div class="p-6 rounded-2xl border border-slate-200 bg-white hover:border-electric-400 transition-colors shadow-sm reveal-up">
-          <h4 class="font-display font-bold text-base sm:text-lg text-slate-900 flex items-center gap-2.5">
+          <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 flex items-center gap-2.5">
             <span class="text-electric-600 font-mono font-bold">Q.</span>
             <span><?php echo htmlspecialchars($faq['q']); ?></span>
-          </h4>
+          </h3>
           <p class="text-xs sm:text-sm text-slate-600 mt-2.5 pl-6 leading-relaxed">
             <?php echo htmlspecialchars($faq['a']); ?>
           </p>
@@ -295,6 +295,51 @@ require_once __DIR__ . '/../components/section-header.php';
   </div>
 </section>
 <?php endif; ?>
+
+<!-- ==========================================================================
+     RELATED SERVICES (INTERNAL SEO LINKING & CROSS-DISCIPLINARY DISCOVERY)
+========================================================================== -->
+<section class="py-16 sm:py-20 bg-slate-100 text-slate-900 border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-widest text-electric-600 font-semibold">Cross-Disciplinary Mesh</span>
+        <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 tracking-tight mt-1">Related Engineering Services</h2>
+      </div>
+      <a href="services.php" class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-electric-600 hover:text-electric-700 transition-colors">
+        <span>View all 8 services</span>
+        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <?php
+      $relatedCount = 0;
+      foreach ($SERVICES as $relKey => $relService):
+        if ($relKey === $service['id']) continue;
+        if ($relatedCount >= 3) break;
+        $relatedCount++;
+      ?>
+        <a href="<?php echo htmlspecialchars($relService['url']); ?>" class="group block p-6 rounded-2xl bg-white border border-slate-200 hover:border-electric-500/50 hover:shadow-xl transition-all duration-300">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-10 h-10 rounded-xl bg-electric-500/10 text-electric-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="<?php echo $relService['icon']; ?>" class="w-5 h-5"></i>
+            </div>
+            <span class="text-xs font-mono text-slate-400 group-hover:text-electric-600 transition-colors flex items-center gap-1">
+              Explore <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            </span>
+          </div>
+          <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-electric-600 transition-colors mb-2">
+            <?php echo htmlspecialchars($relService['title']); ?>
+          </h3>
+          <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed">
+            <?php echo htmlspecialchars($relService['tagline']); ?>
+          </p>
+        </a>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
 
 <!-- ==========================================================================
      CONSISTENT BOTTOM CTA BANNER

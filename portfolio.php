@@ -1,7 +1,7 @@
 <?php
 $activePage = 'portfolio';
-$pageTitle = 'Portfolio & Architecture Case Studies — YUKT IT SOLUTIONS';
-$pageDesc = 'Explore technical case studies and architectural reference blueprints engineered by YUKT IT SOLUTIONS across Websites, Software, AI, E-Commerce, and Marketing.';
+$pageTitle = 'Client Work & Case Studies | YUKT IT SOLUTIONS';
+$pageDesc = 'Explore verified production case studies, cloud software architectures, SaaS platforms, and AI automation solutions engineered by YUKT IT SOLUTIONS.';
 
 require_once __DIR__ . '/includes/header.php';
 require_once __DIR__ . '/includes/components/section-header.php';

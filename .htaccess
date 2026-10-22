@@ -2,10 +2,31 @@
 # YUKT IT SOLUTIONS — Production Apache Configuration (.htaccess)
 # ==========================================================================
 
-# 1. Prevent Directory Browsing
+# 1. Prevent Directory Browsing & Configure 404
 Options -Indexes
+ErrorDocument 404 /404.php
 
-# 2. Character Encoding & MIME Types
+# 2. Canonical URLs & 301 Redirects
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Force HTTPS on live domain
+    RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP_HOST} ^(www\.)?yukt\.online$ [NC]
+    RewriteRule ^(.*)$ https://yukt.online/$1 [R=301,L]
+
+    # Force non-www on live domain
+    RewriteCond %{HTTP_HOST} ^www\.yukt\.online$ [NC]
+    RewriteRule ^(.*)$ https://yukt.online/$1 [R=301,L]
+
+    # Normalize direct /index.php requests to root on live domain
+    RewriteCond %{HTTP_HOST} ^(www\.)?yukt\.online$ [NC]
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php [NC]
+    RewriteRule ^index\.php$ https://yukt.online/ [R=301,L]
+</IfModule>
+
+# 3. Character Encoding & MIME Types
 AddDefaultCharset UTF-8
 <IfModule mod_mime.c>
     AddType image/svg+xml .svg .svgz

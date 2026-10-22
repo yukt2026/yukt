@@ -3,8 +3,8 @@ require_once __DIR__ . '/includes/config.php';
 
 $service = $SERVICES['branding-creative'];
 
-$pageTitle = 'Branding & Creative Design Services — Yukt IT Solutions';
-$pageDesc = 'Bespoke logo design, comprehensive brand identity systems, human-centric UI/UX design in Figma, corporate brochures, graphics, promotional videos, and video editing.';
+$pageTitle = 'Brand Identity, UI/UX Design & Creative Services | YUKT IT SOLUTIONS';
+$pageDesc = 'Strategic branding & creative services: distinctive logo design, full brand identity guidelines, interactive Figma UI/UX prototypes, and promotional videos.';
 
 $capabilities = [
     [

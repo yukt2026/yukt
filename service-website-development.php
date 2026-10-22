@@ -3,8 +3,8 @@ require_once __DIR__ . '/includes/config.php';
 
 $service = $SERVICES['website-development'];
 
-$pageTitle = 'Website Design & Development Services — Yukt IT Solutions';
-$pageDesc = 'Bespoke corporate websites, e-commerce storefronts, high-converting landing pages, React/Next.js and Laravel web apps, redesigns, and ongoing maintenance.';
+$pageTitle = 'Custom Website Development & Web Design Services | YUKT IT SOLUTIONS';
+$pageDesc = 'Bespoke corporate websites, e-commerce storefronts, high-converting landing pages, Next.js and Laravel web apps, redesigns, and continuous maintenance.';
 
 $capabilities = [
     [

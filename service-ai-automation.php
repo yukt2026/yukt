@@ -3,8 +3,8 @@ require_once __DIR__ . '/includes/config.php';
 
 $service = $SERVICES['ai-automation'];
 
-$pageTitle = 'AI & Automation Engineering — Yukt IT Solutions';
-$pageDesc = 'Custom AI chatbots, WhatsApp Business automation, autonomous task agents, optical document processing, LLM integrations, RAG knowledge bases, and voice assistants.';
+$pageTitle = 'AI Automation Services & AI Chatbot Development | YUKT IT SOLUTIONS';
+$pageDesc = 'Intelligent AI automation: custom AI chatbots, WhatsApp Business API automation, autonomous workflow agents, OCR document processing, and RAG systems.';
 
 $capabilities = [
     [

@@ -20,7 +20,11 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
   <title><?php echo htmlspecialchars($pageTitle); ?></title>
   <meta name="description" content="<?php echo htmlspecialchars($pageDesc); ?>">
   <link rel="canonical" href="<?php echo htmlspecialchars($canonicalUrl); ?>">
+<?php if ($activePage === '404'): ?>
+  <meta name="robots" content="noindex, nofollow">
+<?php else: ?>
   <meta name="robots" content="index, follow">
+<?php endif; ?>
   <meta name="theme-color" content="#040914">
   
   <!-- Open Graph / Meta -->
@@ -29,11 +33,11 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
   <meta property="og:description" content="<?php echo htmlspecialchars($pageDesc); ?>">
   <meta property="og:url" content="<?php echo htmlspecialchars($canonicalUrl); ?>">
   <meta property="og:site_name" content="<?php echo COMPANY_NAME; ?>">
-  <meta property="og:image" content="<?php echo COMPANY_URL; ?>/assets/images/yukt-logo.svg">
+  <meta property="og:image" content="<?php echo COMPANY_URL; ?>/assets/images/yukt-official-logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<?php echo htmlspecialchars($pageTitle); ?>">
   <meta name="twitter:description" content="<?php echo htmlspecialchars($pageDesc); ?>">
-  <meta name="twitter:image" content="<?php echo COMPANY_URL; ?>/assets/images/yukt-logo.svg">
+  <meta name="twitter:image" content="<?php echo COMPANY_URL; ?>/assets/images/yukt-official-logo.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -58,44 +62,160 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
   <!-- Three.js r128 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-  <!-- Schema.org Organization & WebSite Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "<?php echo COMPANY_URL; ?>/#organization",
-        "name": "<?php echo COMPANY_NAME; ?>",
-        "legalName": "<?php echo COMPANY_LEGAL_NAME; ?>",
-        "url": "<?php echo COMPANY_URL; ?>",
-        "logo": "<?php echo COMPANY_URL; ?>/assets/images/yukt-logo.svg",
-        "description": "<?php echo addslashes($pageDesc); ?>",
-        "telephone": "<?php echo PHONE_NUMBER; ?>",
-        "email": "<?php echo EMAIL_PRIMARY; ?>",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Sector 62",
-          "addressLocality": "Noida",
-          "addressRegion": "NCR",
-          "addressCountry": "IN"
-        },
-        "sameAs": [
-          "<?php echo LINKEDIN_URL; ?>",
-          "<?php echo TWITTER_URL; ?>"
+<?php
+// Build Dynamic Schema.org Graph
+$schemaGraph = [
+    [
+        "@type" => "Organization",
+        "@id" => COMPANY_URL . "/#organization",
+        "name" => COMPANY_NAME,
+        "legalName" => COMPANY_LEGAL_NAME,
+        "url" => COMPANY_URL,
+        "logo" => COMPANY_URL . "/assets/images/yukt-official-logo.png",
+        "description" => $pageDesc,
+        "telephone" => PHONE_NUMBER,
+        "email" => EMAIL_PRIMARY,
+        "address" => [
+            "@type" => "PostalAddress",
+            "streetAddress" => "Sector 62",
+            "addressLocality" => "Noida",
+            "addressRegion" => "NCR",
+            "postalCode" => "201301",
+            "addressCountry" => "IN"
+        ],
+        "sameAs" => [
+            LINKEDIN_URL,
+            TWITTER_URL,
+            GITHUB_URL,
+            INSTAGRAM_URL
+        ],
+        "founder" => [
+            [
+                "@type" => "Person",
+                "name" => "Ansar Ali Shah",
+                "jobTitle" => "Founder & Lead Technical Architect",
+                "sameAs" => ANSAR_LINKEDIN
+            ],
+            [
+                "@type" => "Person",
+                "name" => "Ranjeet",
+                "jobTitle" => "Co-Founder & Lead Solutions Architect",
+                "sameAs" => RANJEET_LINKEDIN
+            ]
+        ],
+        "contactPoint" => [
+            [
+                "@type" => "ContactPoint",
+                "telephone" => PHONE_NUMBER,
+                "contactType" => "sales",
+                "areaServed" => ["IN", "US", "GB", "AE"],
+                "availableLanguage" => ["English", "Hindi"]
+            ]
         ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "<?php echo COMPANY_URL; ?>/#website",
-        "url": "<?php echo COMPANY_URL; ?>",
-        "name": "<?php echo COMPANY_NAME; ?>",
-        "publisher": {
-          "@id": "<?php echo COMPANY_URL; ?>/#organization"
-        }
-      }
+    ],
+    [
+        "@type" => "WebSite",
+        "@id" => COMPANY_URL . "/#website",
+        "url" => COMPANY_URL,
+        "name" => COMPANY_NAME,
+        "publisher" => [
+            "@id" => COMPANY_URL . "/#organization"
+        ]
     ]
-  }
+];
+
+// Breadcrumbs Schema (for all indexable subpages)
+if ($currentScript !== 'index.php' && $activePage !== '404') {
+    $breadcrumbItems = [
+        [
+            "@type" => "ListItem",
+            "position" => 1,
+            "name" => "Home",
+            "item" => COMPANY_URL . "/"
+        ]
+    ];
+    if (isset($service) && !empty($service)) {
+        $breadcrumbItems[] = [
+            "@type" => "ListItem",
+            "position" => 2,
+            "name" => "Services",
+            "item" => COMPANY_URL . "/services.php"
+        ];
+        $breadcrumbItems[] = [
+            "@type" => "ListItem",
+            "position" => 3,
+            "name" => $service['title'],
+            "item" => $canonicalUrl
+        ];
+    } elseif (isset($project) && !empty($project)) {
+        $breadcrumbItems[] = [
+            "@type" => "ListItem",
+            "position" => 2,
+            "name" => "Portfolio",
+            "item" => COMPANY_URL . "/portfolio.php"
+        ];
+        $breadcrumbItems[] = [
+            "@type" => "ListItem",
+            "position" => 3,
+            "name" => $project['title'],
+            "item" => $canonicalUrl
+        ];
+    } else {
+        $breadcrumbItems[] = [
+            "@type" => "ListItem",
+            "position" => 2,
+            "name" => ucfirst($activePage),
+            "item" => $canonicalUrl
+        ];
+    }
+    $schemaGraph[] = [
+        "@type" => "BreadcrumbList",
+        "@id" => $canonicalUrl . "/#breadcrumb",
+        "itemListElement" => $breadcrumbItems
+    ];
+}
+
+// Service Schema (for dedicated service pages)
+if (isset($service) && !empty($service)) {
+    $schemaGraph[] = [
+        "@type" => "Service",
+        "@id" => $canonicalUrl . "/#service",
+        "name" => $service['title'],
+        "serviceType" => $service['tagline'],
+        "description" => $service['desc'],
+        "provider" => [
+            "@id" => COMPANY_URL . "/#organization"
+        ],
+        "areaServed" => [
+            ["@type" => "Country", "name" => "India"],
+            ["@type" => "Country", "name" => "United States"],
+            ["@type" => "Country", "name" => "United Kingdom"],
+            ["@type" => "Country", "name" => "United Arab Emirates"]
+        ]
+    ];
+}
+
+// FAQPage Schema (when FAQs exist on the page)
+if (!empty($faqs) && is_array($faqs)) {
+    $schemaGraph[] = [
+        "@type" => "FAQPage",
+        "@id" => $canonicalUrl . "/#faq",
+        "mainEntity" => array_map(function($faq) {
+            return [
+                "@type" => "Question",
+                "name" => $faq['q'],
+                "acceptedAnswer" => [
+                    "@type" => "Answer",
+                    "text" => $faq['a']
+                ]
+            ];
+        }, $faqs)
+    ];
+}
+?>
+  <!-- Schema.org Organization, WebSite, Breadcrumb, Service & FAQ Structured Data -->
+  <script type="application/ld+json">
+  <?php echo json_encode(["@context" => "https://schema.org", "@graph" => $schemaGraph], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE); ?>
   </script>
 </head>
 <body class="bg-navy-950 text-slate-100 antialiased selection:bg-electric-500 selection:text-white flex flex-col min-h-screen">
@@ -115,7 +235,7 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
         <!-- Brand Logo Badge -->
         <a href="index.php" class="flex items-center gap-2 sm:gap-3 group focus:outline-none flex-shrink-0" aria-label="YUKT IT SOLUTIONS Home">
           <div class="h-9 sm:h-11 px-2 sm:px-2.5 py-1 rounded-xl bg-white shadow-md shadow-black/40 flex items-center justify-center group-hover:scale-105 transition-transform border border-white/40 flex-shrink-0">
-            <img src="assets/images/yukt-official-logo.png" alt="YUKT IT SOLUTIONS Official Logo" class="h-6 sm:h-8 w-auto object-contain flex-shrink-0">
+            <img src="assets/images/yukt-official-logo.png" alt="YUKT IT SOLUTIONS Official Logo" width="160" height="40" class="h-6 sm:h-8 w-auto object-contain flex-shrink-0">
           </div>
           <div class="flex flex-col leading-none">
             <div class="flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
