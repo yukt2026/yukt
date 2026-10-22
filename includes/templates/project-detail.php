@@ -17,9 +17,9 @@ require_once __DIR__ . '/../components/section-header.php';
 ?>
 
 <!-- ==========================================================================
-     PROJECT DETAIL HERO & BREADCRUMBS
+     PROJECT DETAIL HERO & BREADCRUMBS (COMPACT & ANIMATED)
 ========================================================================== -->
-<section class="bg-canvas-subtle border-b border-canvas-border py-14 lg:py-20 bg-grid-pattern relative">
+<section class="stripe-ambient-canvas border-b border-canvas-border pt-10 pb-12 sm:pt-12 sm:pb-14 bg-grid-pattern relative">
   <div class="container-custom relative z-10">
     
     <!-- Breadcrumbs -->

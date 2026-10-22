@@ -8,39 +8,39 @@ require_once __DIR__ . '/includes/components/section-header.php';
 ?>
 
 <!-- ==========================================================================
-     PORTFOLIO HERO & CATEGORY FILTERS
+     PORTFOLIO HERO & CATEGORY FILTERS (COMPACT & ANIMATED)
 ========================================================================== -->
-<section class="bg-canvas-subtle border-b border-canvas-border py-16 lg:py-20 bg-grid-pattern relative">
+<section class="stripe-ambient-canvas border-b border-canvas-border pt-10 pb-12 sm:pt-14 sm:pb-16 bg-grid-pattern relative">
   <div class="container-custom relative z-10">
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-electric-50 text-electric-700 border border-electric-200 mb-4">
+    <div class="max-w-3xl animate-hero-fade">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-electric-50 text-electric-700 border border-electric-200 mb-3">
         <span class="w-2 h-2 rounded-full bg-electric-600"></span> Verified Technical Blueprints
       </div>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-tight">
-        Engineered Solutions &amp; System Blueprints.
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-800 tracking-tight leading-tight">
+        Engineered Solutions &amp; System <span class="stripe-gradient-text">Blueprints.</span>
       </h1>
-      <p class="text-lg text-navy-600 mt-4 leading-relaxed font-normal">
+      <p class="text-base sm:text-lg text-navy-600 mt-3 leading-relaxed font-normal">
         Explore representative architectural blueprints, technical case studies, and engineering implementations across web platforms, custom SaaS systems, AI automation, and performance marketing.
       </p>
 
       <!-- Category Filter Tabs -->
-      <div class="pt-8 flex flex-wrap items-center gap-2" id="portfolioFilterNav" role="tablist">
-        <button type="button" data-filter="all" class="portfolio-filter-btn px-4 py-2 rounded-btn text-xs font-bold transition-all bg-navy-900 text-white shadow-xs" role="tab" aria-selected="true">
+      <div class="pt-6 flex flex-wrap items-center gap-2" id="portfolioFilterNav" role="tablist">
+        <button type="button" data-filter="all" class="portfolio-filter-btn px-3.5 py-1.5 rounded-btn text-xs font-bold transition-all bg-navy-900 text-white shadow-xs" role="tab" aria-selected="true">
           All Projects (<?php echo count($CASE_STUDIES); ?>)
         </button>
-        <button type="button" data-filter="websites" class="portfolio-filter-btn px-4 py-2 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
+        <button type="button" data-filter="websites" class="portfolio-filter-btn px-3.5 py-1.5 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
           Websites
         </button>
-        <button type="button" data-filter="software" class="portfolio-filter-btn px-4 py-2 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
+        <button type="button" data-filter="software" class="portfolio-filter-btn px-3.5 py-1.5 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
           Software &amp; SaaS
         </button>
-        <button type="button" data-filter="ai" class="portfolio-filter-btn px-4 py-2 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
+        <button type="button" data-filter="ai" class="portfolio-filter-btn px-3.5 py-1.5 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
           AI &amp; Automation
         </button>
-        <button type="button" data-filter="ecommerce" class="portfolio-filter-btn px-4 py-2 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
+        <button type="button" data-filter="ecommerce" class="portfolio-filter-btn px-3.5 py-1.5 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
           E-Commerce
         </button>
-        <button type="button" data-filter="marketing" class="portfolio-filter-btn px-4 py-2 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
+        <button type="button" data-filter="marketing" class="portfolio-filter-btn px-3.5 py-1.5 rounded-btn text-xs font-semibold transition-all bg-white text-navy-700 hover:text-navy-900 border border-canvas-border hover:border-slate-300" role="tab" aria-selected="false">
           Marketing
         </button>
       </div>
@@ -51,14 +51,14 @@ require_once __DIR__ . '/includes/components/section-header.php';
 
 
 <!-- ==========================================================================
-     PORTFOLIO GRID
+     PORTFOLIO GRID (COMPACT)
 ========================================================================== -->
 <section class="section-padding bg-white border-b border-canvas-border">
   <div class="container-custom">
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolioGrid">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6" id="portfolioGrid">
       <?php foreach ($CASE_STUDIES as $case): ?>
-        <article class="portfolio-item bg-white border border-canvas-border rounded-card p-6 sm:p-8 flex flex-col justify-between hover:border-electric-300 hover:shadow-card-hover transition-all duration-300" data-category="<?php echo $case['category_slug']; ?>">
+        <article class="portfolio-item bg-white border border-canvas-border rounded-xl p-5 sm:p-6 flex flex-col justify-between hover:border-electric-300 hover:shadow-card-hover transition-all duration-300 stripe-card-interactive reveal-on-scroll" data-category="<?php echo $case['category_slug']; ?>">
           
           <div>
             <!-- Header Tag Strip -->

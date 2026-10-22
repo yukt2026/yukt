@@ -8,25 +8,25 @@ require_once __DIR__ . '/includes/components/section-header.php';
 ?>
 
 <!-- ==========================================================================
-     CONTACT HERO
+     CONTACT HERO (COMPACT & ANIMATED)
 ========================================================================== -->
-<section class="bg-canvas-subtle border-b border-canvas-border py-16 lg:py-20 bg-grid-pattern relative">
+<section class="stripe-ambient-canvas border-b border-canvas-border pt-10 pb-12 sm:pt-14 sm:pb-16 bg-grid-pattern relative">
   <div class="container-custom relative z-10">
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-electric-50 text-electric-700 border border-electric-200 mb-4">
+    <div class="max-w-3xl animate-hero-fade">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-electric-50 text-electric-700 border border-electric-200 mb-3">
         <span class="w-2 h-2 rounded-full bg-electric-600"></span> Direct Engineering Communication
       </div>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-tight">
-        Let’s Discuss Your Technical Roadmap.
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-800 tracking-tight leading-tight">
+        Let’s Discuss Your Technical <span class="stripe-gradient-text">Roadmap.</span>
       </h1>
-      <p class="text-lg text-navy-600 mt-4 leading-relaxed font-normal">
+      <p class="text-base sm:text-lg text-navy-600 mt-3 leading-relaxed font-normal">
         Connect directly with our senior solutions architecture team. We review your specifications, evaluate technical feasibility, and return a scoped proposal within 24 business hours.
       </p>
 
-      <div class="pt-6 flex flex-wrap items-center gap-6 text-xs text-slate-500">
+      <div class="pt-5 flex flex-wrap items-center gap-5 text-xs text-slate-500">
         <span class="flex items-center gap-2 font-medium">
           <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-          Response within 24 Business Hours
+          Response within 24 Hours
         </span>
         <span class="flex items-center gap-2 font-medium">
           <span class="w-2 h-2 rounded-full bg-electric-500"></span>
@@ -43,25 +43,25 @@ require_once __DIR__ . '/includes/components/section-header.php';
 
 
 <!-- ==========================================================================
-     MAIN CONTACT SECTION (FORM & DIRECT CHANNELS)
+     MAIN CONTACT SECTION (COMPACT & ANIMATED)
 ========================================================================== -->
 <section class="section-padding bg-white border-b border-canvas-border">
   <div class="container-custom">
     
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
       
       <!-- Left Column: Direct Contact Cards & Channels (5 Cols) -->
-      <div class="lg:col-span-5 space-y-6">
+      <div class="lg:col-span-5 space-y-4 sm:space-y-5 reveal-on-scroll">
         <div>
           <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Direct Contact Channels</span>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight mt-1">Speak with an Engineer</h2>
-          <p class="text-sm text-navy-600 mt-2 leading-relaxed">
+          <p class="text-sm text-navy-600 mt-1.5 leading-relaxed">
             Reach out via phone, direct WhatsApp, or email. We are available for discovery calls Monday through Saturday.
           </p>
         </div>
 
-        <!-- WhatsApp CTA Card (Prominent) -->
-        <div class="p-6 rounded-card bg-emerald-50 border border-emerald-200 space-y-3">
+        <!-- WhatsApp CTA Card (Prominent & Compact) -->
+        <div class="p-5 rounded-xl bg-emerald-50 border border-emerald-200 space-y-2.5 stripe-card-interactive">
           <div class="flex items-center gap-2 text-emerald-800 font-bold text-sm">
             <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
             <span>Instant Technical Scoping via WhatsApp</span>
@@ -76,8 +76,8 @@ require_once __DIR__ . '/includes/components/section-header.php';
           </a>
         </div>
 
-        <!-- Contact Detail Cards -->
-        <div class="space-y-4">
+        <!-- Contact Detail Cards (Compact) -->
+        <div class="space-y-3">
           
           <!-- Phone Card -->
           <div class="flex items-start gap-3.5 p-4 rounded-card bg-canvas-subtle border border-canvas-border">
@@ -128,8 +128,8 @@ require_once __DIR__ . '/includes/components/section-header.php';
       </div>
 
       <!-- Right Column: Professional Inquiry Form (7 Cols) -->
-      <div class="lg:col-span-7">
-        <div class="bg-white border border-canvas-border rounded-card p-6 sm:p-10 shadow-card">
+      <div class="lg:col-span-7 reveal-on-scroll reveal-delay-100">
+        <div class="bg-white border border-canvas-border rounded-xl p-6 sm:p-8 shadow-card">
           
           <div class="mb-6">
             <span class="text-xs font-bold uppercase tracking-wider text-electric-600">Confidential Scoping</span>

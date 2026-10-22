@@ -8,25 +8,25 @@ require_once __DIR__ . '/includes/components/section-header.php';
 ?>
 
 <!-- ==========================================================================
-     ABOUT HERO SECTION
+     ABOUT HERO SECTION (COMPACT & ANIMATED)
 ========================================================================== -->
-<section class="bg-canvas-subtle border-b border-canvas-border py-16 lg:py-20 bg-grid-pattern relative">
+<section class="stripe-ambient-canvas border-b border-canvas-border pt-10 pb-12 sm:pt-14 sm:pb-16 bg-grid-pattern relative">
   <div class="container-custom relative z-10">
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-electric-50 text-electric-700 border border-electric-200 mb-4">
+    <div class="max-w-3xl animate-hero-fade">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-electric-50 text-electric-700 border border-electric-200 mb-3">
         <span class="w-2 h-2 rounded-full bg-electric-600"></span> Corporate Identity &amp; Philosophy
       </div>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-tight">
-        Engineering Clarity for Ambitious Enterprises.
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-800 tracking-tight leading-tight">
+        Engineering Clarity for Ambitious <span class="stripe-gradient-text">Enterprises.</span>
       </h1>
-      <p class="text-lg text-navy-600 mt-4 leading-relaxed font-normal">
+      <p class="text-base sm:text-lg text-navy-600 mt-3 leading-relaxed font-normal">
         Founded on transparent agile execution, <strong class="text-navy-900">YUKT IT SOLUTIONS Private Limited</strong> is an Indian digital engineering studio bridging the gap between clean enterprise software, autonomous AI systems, and high-growth digital marketing.
       </p>
 
-      <div class="pt-6 flex flex-wrap items-center gap-6 text-xs text-slate-500">
+      <div class="pt-5 flex flex-wrap items-center gap-5 text-xs text-slate-500">
         <span class="flex items-center gap-2 font-medium">
           <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-          Incorporated &bull; NCR &amp; Bengaluru Hubs
+          NCR &amp; Bengaluru Hubs
         </span>
         <span class="flex items-center gap-2 font-medium">
           <span class="w-2 h-2 rounded-full bg-electric-500"></span>
@@ -43,59 +43,59 @@ require_once __DIR__ . '/includes/components/section-header.php';
 
 
 <!-- ==========================================================================
-     COMPANY INTRODUCTION & THE MEANING OF "YUKT"
+     COMPANY INTRODUCTION & THE MEANING OF "YUKT" (COMPACT)
 ========================================================================== -->
 <section class="section-padding bg-white border-b border-canvas-border">
   <div class="container-custom">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
       
       <!-- Left Column: Sanskrit Roots & Story (6 Cols) -->
-      <div class="lg:col-span-6 space-y-5">
+      <div class="lg:col-span-6 space-y-4 reveal-on-scroll">
         <span class="text-xs font-bold uppercase tracking-wider text-electric-600">Our Heritage &amp; Ethos</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight leading-tight">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight leading-tight">
           What does <span class="text-electric-600">“YUKT”</span> mean?
         </h2>
         
-        <p class="text-base text-navy-700 leading-relaxed font-normal">
+        <p class="text-sm sm:text-base text-navy-700 leading-relaxed font-normal">
           Our name is derived from the classical Sanskrit word <strong class="text-navy-900 font-semibold font-serif text-lg">युक्त (Yukt)</strong> — meaning <em class="text-navy-900 font-medium">connected, equipped, skilled, and engineered with precision</em>.
         </p>
 
-        <p class="text-base text-navy-600 leading-relaxed font-normal">
+        <p class="text-sm sm:text-base text-navy-600 leading-relaxed font-normal">
           In an industry often marred by bloated agencies, unvetted outsourcing chains, and fragile template shortcuts, Yukt was established to operate differently: as a focused, disciplined engineering pod where senior architects work directly with founders and technical leaders.
         </p>
 
-        <p class="text-base text-navy-600 leading-relaxed font-normal">
+        <p class="text-sm sm:text-base text-navy-600 leading-relaxed font-normal">
           We believe that code quality and business velocity are not mutually exclusive. By pairing rigorous software architecture with modern agile release cadences, we deliver software that stands the test of transaction scale and time.
         </p>
       </div>
 
       <!-- Right Column: Visual Philosophy Card (6 Cols) -->
-      <div class="lg:col-span-6">
-        <div class="bg-canvas-subtle border border-canvas-border rounded-card p-8 lg:p-10 shadow-card space-y-6">
-          <div class="flex items-center justify-between pb-4 border-b border-canvas-border">
+      <div class="lg:col-span-6 reveal-on-scroll reveal-delay-100">
+        <div class="bg-canvas-subtle border border-canvas-border rounded-xl p-6 sm:p-7 shadow-card space-y-5 stripe-card-interactive">
+          <div class="flex items-center justify-between pb-3 border-b border-canvas-border">
             <span class="text-xs font-mono font-bold text-navy-900">YUKT IT SOLUTIONS ETHOS</span>
             <span class="text-xs font-mono text-electric-600 font-semibold">EST. 2021</span>
           </div>
 
           <!-- Vision Box -->
-          <div class="space-y-2">
+          <div class="space-y-1.5">
             <div class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
               <span class="w-2 h-2 rounded bg-electric-600"></span>
               <span>Our Vision</span>
             </div>
-            <h3 class="text-xl font-bold text-navy-900">To be the most dependable digital engineering partner for modern businesses.</h3>
+            <h3 class="text-lg font-bold text-navy-900">To be the most dependable digital engineering partner for modern businesses.</h3>
             <p class="text-xs sm:text-sm text-navy-600 leading-relaxed font-normal">
               Empowering organizations in India and across the globe to compete, scale, and innovate through resilient software architecture, transparent operations, and zero vendor lock-in.
             </p>
           </div>
 
           <!-- Mission Box -->
-          <div class="space-y-2 pt-4 border-t border-canvas-border">
+          <div class="space-y-1.5 pt-3.5 border-t border-canvas-border">
             <div class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center gap-2">
               <span class="w-2 h-2 rounded bg-brandOrange-500"></span>
               <span>Our Mission</span>
             </div>
-            <h3 class="text-xl font-bold text-navy-900">Delivering high-speed platforms with 100% intellectual property ownership.</h3>
+            <h3 class="text-lg font-bold text-navy-900">Delivering high-speed platforms with 100% intellectual property ownership.</h3>
             <p class="text-xs sm:text-sm text-navy-600 leading-relaxed font-normal">
               To design, engineer, and deploy secure web applications, custom enterprise systems, and autonomous AI agents while transferring full source code ownership and technical autonomy to our clients.
             </p>
@@ -109,7 +109,7 @@ require_once __DIR__ . '/includes/components/section-header.php';
 
 
 <!-- ==========================================================================
-     WORKING PRINCIPLES & APPROACH TO TECHNOLOGY
+     WORKING PRINCIPLES & APPROACH TO TECHNOLOGY (COMPACT & ANIMATED)
 ========================================================================== -->
 <section class="section-padding bg-canvas-subtle border-b border-canvas-border">
   <div class="container-custom">
@@ -121,57 +121,60 @@ require_once __DIR__ . '/includes/components/section-header.php';
       true
     ); ?>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
       
       <!-- Principle 1 -->
-      <div class="bg-white border border-canvas-border rounded-card p-6 sm:p-8 shadow-subtle hover:border-electric-300 hover:shadow-card transition-all">
-        <div class="w-10 h-10 rounded-lg bg-electric-50 text-electric-600 border border-electric-200 flex items-center justify-center mb-4">
-          <?php echo getIconSvg('cpu', 'w-5 h-5'); ?>
+      <div class="bg-white border border-canvas-border rounded-xl p-5 sm:p-6 shadow-subtle hover:border-electric-300 hover:shadow-card transition-all stripe-card-interactive reveal-on-scroll reveal-delay-50">
+        <div class="w-9 h-9 rounded-lg bg-electric-50 text-electric-600 border border-electric-200 flex items-center justify-center mb-3">
+          <?php echo getIconSvg('cpu', 'w-4 h-4'); ?>
         </div>
         <div class="text-xs font-mono font-bold text-slate-400 mb-1">01 / ARCHITECTURE</div>
-        <h3 class="text-lg font-bold text-navy-900">Senior Architecture First</h3>
-        <p class="text-xs sm:text-sm text-navy-600 mt-2 leading-relaxed">
+        <h3 class="text-base font-bold text-navy-900">Senior Architecture First</h3>
+        <p class="text-xs sm:text-sm text-navy-600 mt-1.5 leading-relaxed">
           Every project is scoped, structured, and reviewed by senior engineers. We never hand off mission-critical logic to unvetted third parties.
         </p>
       </div>
 
       <!-- Principle 2 -->
-      <div class="bg-white border border-canvas-border rounded-card p-6 sm:p-8 shadow-subtle hover:border-brandOrange-300 hover:shadow-card transition-all">
-        <div class="w-10 h-10 rounded-lg bg-brandOrange-50 text-brandOrange-600 border border-brandOrange-200 flex items-center justify-center mb-4">
-          <?php echo getIconSvg('trending-up', 'w-5 h-5'); ?>
+      <div class="bg-white border border-canvas-border rounded-xl p-5 sm:p-6 shadow-subtle hover:border-brandOrange-300 hover:shadow-card transition-all stripe-card-interactive reveal-on-scroll reveal-delay-100">
+        <div class="w-9 h-9 rounded-lg bg-brandOrange-50 text-brandOrange-600 border border-brandOrange-200 flex items-center justify-center mb-3">
+          <?php echo getIconSvg('trending-up', 'w-4 h-4'); ?>
         </div>
         <div class="text-xs font-mono font-bold text-slate-400 mb-1">02 / VISIBILITY</div>
-        <h3 class="text-lg font-bold text-navy-900">Agile Bi-Weekly Cadence</h3>
-        <p class="text-xs sm:text-sm text-navy-600 mt-2 leading-relaxed">
+        <h3 class="text-base font-bold text-navy-900">Agile Bi-Weekly Cadence</h3>
+        <p class="text-xs sm:text-sm text-navy-600 mt-1.5 leading-relaxed">
           Two-week sprint cadences with live staging environment access, regular video reviews, and continuous Git commit transparency.
         </p>
       </div>
 
       <!-- Principle 3 -->
-      <div class="bg-white border border-canvas-border rounded-card p-6 sm:p-8 shadow-subtle hover:border-electric-300 hover:shadow-card transition-all">
-        <div class="w-10 h-10 rounded-lg bg-electric-50 text-electric-600 border border-electric-200 flex items-center justify-center mb-4">
-          <?php echo getIconSvg('code', 'w-5 h-5'); ?>
+      <div class="bg-white border border-canvas-border rounded-xl p-5 sm:p-6 shadow-subtle hover:border-electric-300 hover:shadow-card transition-all stripe-card-interactive reveal-on-scroll reveal-delay-150">
+        <div class="w-9 h-9 rounded-lg bg-electric-50 text-electric-600 border border-electric-200 flex items-center justify-center mb-3">
+          <?php echo getIconSvg('code', 'w-4 h-4'); ?>
         </div>
         <div class="text-xs font-mono font-bold text-slate-400 mb-1">03 / SUSTAINABILITY</div>
-        <h3 class="text-lg font-bold text-navy-900">Clean Code Standards</h3>
-        <p class="text-xs sm:text-sm text-navy-600 mt-2 leading-relaxed">
+        <h3 class="text-base font-bold text-navy-900">Clean Code Standards</h3>
+        <p class="text-xs sm:text-sm text-navy-600 mt-1.5 leading-relaxed">
           We write modular, human-readable code following strict linting, automated testing, and comprehensive documentation to eliminate technical debt.
         </p>
       </div>
 
       <!-- Principle 4 -->
-      <div class="bg-white border border-canvas-border rounded-card p-6 sm:p-8 shadow-subtle hover:border-emerald-300 hover:shadow-card transition-all">
-        <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mb-4">
-          <?php echo getIconSvg('shield-check', 'w-5 h-5'); ?>
+      <div class="bg-white border border-canvas-border rounded-xl p-5 sm:p-6 shadow-subtle hover:border-emerald-300 hover:shadow-card transition-all stripe-card-interactive reveal-on-scroll reveal-delay-200">
+        <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 border border-emerald-200 flex items-center justify-center mb-3">
+          <?php echo getIconSvg('shield-check', 'w-4 h-4'); ?>
         </div>
         <div class="text-xs font-mono font-bold text-slate-400 mb-1">04 / AUTONOMY</div>
-        <h3 class="text-lg font-bold text-navy-900">100% Client IP Ownership</h3>
-        <p class="text-xs sm:text-sm text-navy-600 mt-2 leading-relaxed">
+        <h3 class="text-base font-bold text-navy-900">100% Client IP Ownership</h3>
+        <p class="text-xs sm:text-sm text-navy-600 mt-1.5 leading-relaxed">
           You own everything we build. All Git repos, database schemas, Figma files, and server configurations are transferred upon milestone delivery.
         </p>
       </div>
 
     </div>
+
+  </div>
+</section>
 
   </div>
 </section>

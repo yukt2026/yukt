@@ -1,9 +1,9 @@
   </main>
 
-  <!-- Global Footer (Redesigned Linear / Stripe Style Dark Navy Section) -->
-  <footer class="bg-navy-900 text-slate-300 border-t border-slate-800 pt-16 pb-12 mt-20">
+  <!-- Global Footer (Compact Linear / Stripe Style Dark Navy Section) -->
+  <footer class="bg-navy-900 text-slate-300 border-t border-slate-800 pt-10 sm:pt-12 pb-8 mt-8 sm:mt-12">
     <div class="container-custom">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-16 border-b border-slate-800">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 pb-10 sm:pb-12 border-b border-slate-800">
         
         <!-- Column 1: Brand & Identity (4 Cols) -->
         <div class="lg:col-span-4 space-y-5">

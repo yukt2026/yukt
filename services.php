@@ -9,24 +9,24 @@ require_once __DIR__ . '/includes/components/badge.php';
 ?>
 
 <!-- ==========================================================================
-     SERVICES OVERVIEW HERO
+     SERVICES OVERVIEW HERO (COMPACT & ANIMATED)
 ========================================================================== -->
-<section class="bg-canvas-subtle border-b border-canvas-border py-16 lg:py-20 bg-grid-pattern relative">
+<section class="stripe-ambient-canvas border-b border-canvas-border pt-10 pb-12 sm:pt-14 sm:pb-16 bg-grid-pattern relative">
   <div class="container-custom relative z-10">
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-electric-50 text-electric-700 border border-electric-200 mb-4">
+    <div class="max-w-3xl animate-hero-fade">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-electric-50 text-electric-700 border border-electric-200 mb-3">
         <span class="w-2 h-2 rounded-full bg-electric-600"></span> Full-Cycle Digital Engineering
       </div>
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy-900 tracking-tight leading-tight">
-        Disciplined Capabilities for Growing Enterprises.
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy-800 tracking-tight leading-tight">
+        Disciplined Capabilities for Growing <span class="stripe-gradient-text">Enterprises.</span>
       </h1>
-      <p class="text-lg text-navy-600 mt-4 leading-relaxed font-normal">
+      <p class="text-base sm:text-lg text-navy-600 mt-3 leading-relaxed font-normal">
         From sub-second web platforms and multi-tenant SaaS architectures to autonomous AI workflow agents and performance marketing, we engineer measurable business impact across 8 focused disciplines.
       </p>
 
       <!-- Quick Category Jump Navigation -->
-      <div class="pt-8">
-        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Jump to Capability</div>
+      <div class="pt-6">
+        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Jump to Capability</div>
         <div class="flex flex-wrap gap-2">
           <?php foreach ($SERVICES as $s): ?>
             <a href="#<?php echo $s['id']; ?>" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-btn bg-white hover:bg-electric-50 text-xs font-semibold text-navy-800 hover:text-electric-600 border border-canvas-border hover:border-electric-200 shadow-xs transition-all">
@@ -42,45 +42,49 @@ require_once __DIR__ . '/includes/components/badge.php';
 
 
 <!-- ==========================================================================
-     CORE SERVICES DIRECTORY (ALL 8 CATEGORIES)
+     CORE SERVICES DIRECTORY (COMPACT & ANIMATED)
 ========================================================================== -->
-<div class="container-custom py-16 space-y-16">
+<div class="container-custom py-10 sm:py-12 space-y-6 sm:space-y-8">
 
   <?php 
   $serviceNum = 1;
   foreach ($SERVICES as $serviceKey => $service): 
   ?>
-    <section id="<?php echo $service['id']; ?>" class="scroll-mt-28 bg-white border border-canvas-border rounded-xl p-7 sm:p-10 shadow-card hover:border-electric-300 hover:shadow-card-hover transition-all duration-200">
+    <section id="<?php echo $service['id']; ?>" class="scroll-mt-28 bg-white border border-canvas-border rounded-xl p-5 sm:p-7 shadow-card hover:border-electric-300 hover:shadow-card-hover transition-all duration-200 stripe-card-interactive reveal-on-scroll">
       
       <!-- Category Header Row -->
-      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-6 pb-8 border-b border-canvas-border">
+      <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-5 pb-6 border-b border-canvas-border">
         <div class="flex items-start gap-4">
-          <div class="w-14 h-14 rounded-xl <?php echo ($service['accent'] === 'orange') ? 'bg-brandOrange-50 text-brandOrange-600' : 'bg-electric-50 text-electric-600'; ?> flex items-center justify-center flex-shrink-0">
-            <?php echo getIconSvg($service['icon'], 'w-7 h-7'); ?>
+          <div class="w-12 h-12 rounded-xl <?php echo ($service['accent'] === 'orange') ? 'bg-brandOrange-50 text-brandOrange-600' : 'bg-electric-50 text-electric-600'; ?> flex items-center justify-center flex-shrink-0">
+            <?php echo getIconSvg($service['icon'], 'w-6 h-6'); ?>
           </div>
           <div>
             <div class="flex items-center gap-3 mb-1">
               <span class="text-xs font-mono font-bold text-slate-400">0<?php echo $serviceNum++; ?></span>
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium <?php echo ($service['accent'] === 'orange') ? 'bg-brandOrange-50 text-brandOrange-700 border border-brandOrange-200' : 'bg-electric-50 text-electric-700 border border-electric-200'; ?>">
+              <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium <?php echo ($service['accent'] === 'orange') ? 'bg-brandOrange-50 text-brandOrange-700 border border-brandOrange-200' : 'bg-electric-50 text-electric-700 border border-electric-200'; ?>">
                 <?php echo htmlspecialchars($service['badge']); ?>
               </span>
             </div>
-            <h2 class="text-2xl sm:text-3xl font-bold text-navy-800 tracking-tight">
+            <h2 class="text-xl sm:text-2xl font-bold text-navy-800 tracking-tight">
               <a href="<?php echo $service['url']; ?>" class="hover:text-electric-600 transition-colors">
                 <?php echo htmlspecialchars($service['title']); ?>
               </a>
             </h2>
-            <p class="text-sm font-medium text-navy-500 mt-1"><?php echo htmlspecialchars($service['tagline']); ?></p>
+            <p class="text-xs sm:text-sm font-medium text-navy-500 mt-0.5"><?php echo htmlspecialchars($service['tagline']); ?></p>
           </div>
         </div>
 
         <!-- Quick Action Buttons -->
-        <div class="flex items-center gap-3 flex-shrink-0">
-          <button type="button" class="btn-primary open-quote-modal-btn" data-service="<?php echo htmlspecialchars($service['title']); ?>">
-            <span>Get a Quote</span>
-            <?php echo getIconSvg('arrow-right', 'w-4 h-4'); ?>
+        <div class="flex items-center gap-2.5 flex-shrink-0">
+          <a href="<?php echo getWhatsAppUrl('Hi Yukt IT Solutions, I would like to scope a project for ' . $service['title'] . '.'); ?>" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 hover:bg-emerald-100 transition-colors">
+            <?php echo getIconSvg('whatsapp', 'w-3.5 h-3.5 text-emerald-600'); ?>
+            <span>WhatsApp</span>
+          </a>
+          <button type="button" class="btn-primary h-10 px-4 text-xs open-quote-modal-btn" data-service="<?php echo htmlspecialchars($service['title']); ?>">
+            <span>Get Quote</span>
+            <?php echo getIconSvg('arrow-right', 'w-3.5 h-3.5'); ?>
           </button>
-          <a href="<?php echo $service['url']; ?>" class="btn-secondary">
+          <a href="<?php echo $service['url']; ?>" class="btn-secondary h-10 px-4 text-xs">
             <span>Explore Details</span>
           </a>
         </div>
