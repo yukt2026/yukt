@@ -86,6 +86,17 @@
     -webkit-backdrop-filter: blur(16px);
   }
 
+  /* Mobile Services Accordion Transitions & States */
+  #mobileServicesToggle svg,
+  #mobileServicesToggle i {
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  #mobileServicesToggle[aria-expanded="true"] svg,
+  #mobileServicesToggle[aria-expanded="true"] i,
+  #mobileServicesToggle[aria-expanded="true"] #mobileServicesChevron {
+    transform: rotate(180deg) !important;
+  }
+
   .dropdown-mega-panel {
     background-color: #070E20 !important;
     background: #070E20 !important;

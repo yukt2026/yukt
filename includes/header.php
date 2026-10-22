@@ -254,6 +254,7 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
       <div 
         id="mobileDrawer" 
         class="hidden lg:hidden mt-2 dropdown-mega-panel rounded-2xl p-4 sm:p-5 shadow-2xl shadow-black/95 max-h-[calc(100dvh-5.25rem)] overflow-y-auto overscroll-contain"
+        style="-webkit-overflow-scrolling: touch;"
       >
         <div class="flex flex-col space-y-1.5">
           <!-- Home Link -->
@@ -266,37 +267,45 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
           </a>
           
           <!-- Collapsible Services Accordion Section -->
-          <div class="rounded-xl overflow-hidden bg-white/[0.03] border border-white/10 transition-all">
+          <div id="mobileServicesContainer" class="rounded-xl overflow-hidden bg-white/[0.03] border border-white/10 transition-all">
             <button 
               type="button" 
               id="mobileServicesToggle"
-              class="w-full px-3.5 py-2.5 text-sm font-medium text-slate-200 hover:text-white hover:bg-white/5 flex items-center justify-between transition-colors cursor-pointer select-none"
+              onclick="window.toggleMobileServices && window.toggleMobileServices(event)"
+              class="w-full px-3.5 py-3 text-sm font-medium text-slate-200 hover:text-white hover:bg-white/5 active:bg-white/10 flex items-center justify-between transition-all cursor-pointer select-none group"
               aria-expanded="false"
+              aria-controls="mobileServicesMenu"
             >
-              <div class="flex items-center gap-2.5">
-                <i data-lucide="layers" class="w-4 h-4 text-electric-400"></i>
+              <div class="flex items-center gap-2.5 pointer-events-none">
+                <i data-lucide="layers" class="w-4 h-4 text-electric-400 group-hover:scale-110 transition-transform"></i>
                 <span class="font-semibold text-white">Services</span>
                 <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-electric-500/15 text-electric-400 border border-electric-400/25">8 Disciplines</span>
               </div>
-              <i data-lucide="chevron-down" id="mobileServicesChevron" class="w-4 h-4 text-slate-400 transition-transform duration-200"></i>
+              <div class="pointer-events-none p-1 rounded-lg bg-white/5 text-slate-300">
+                <i data-lucide="chevron-down" id="mobileServicesChevron" class="w-4 h-4 transition-transform duration-300"></i>
+              </div>
             </button>
             
             <!-- Collapsible Submenu (Hidden by default, toggled via JS) -->
-            <div id="mobileServicesMenu" class="hidden px-2 pb-2.5 space-y-1 border-t border-white/10 pt-2 bg-black/20">
-              <div class="flex items-center justify-between px-3 py-1 text-[11px] font-mono border-b border-white/5 mb-1 pb-1.5">
-                <a href="services.php" class="text-yukt-orange hover:text-amber-400 font-semibold flex items-center gap-1">
-                  <span>View All 8 Services &rarr;</span>
+            <div id="mobileServicesMenu" class="hidden px-2 pb-3 space-y-1 border-t border-white/10 pt-2.5 bg-black/30">
+              <div class="flex items-center justify-between px-3 py-1.5 text-[11px] font-mono border-b border-white/5 mb-1.5 pb-2">
+                <a href="services.php" class="text-yukt-orange hover:text-amber-400 font-semibold flex items-center gap-1.5 transition-colors">
+                  <i data-lucide="arrow-right-circle" class="w-3.5 h-3.5"></i>
+                  <span>All 8 Services Overview &rarr;</span>
                 </a>
-                <a href="index.php#services" class="text-slate-400 hover:text-white flex items-center gap-1">
+                <a href="index.php#services" class="text-slate-400 hover:text-white flex items-center gap-1 transition-colors">
                   <i data-lucide="sparkles" class="w-3 h-3 text-electric-400"></i>
                   <span>3D View</span>
                 </a>
               </div>
               <div class="grid grid-cols-1 gap-1">
                 <?php foreach ($SERVICES as $s): ?>
-                  <a href="<?php echo $s['url']; ?>" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs text-slate-300 hover:text-white hover:bg-white/10 transition-colors">
-                    <span class="w-1.5 h-1.5 rounded-full <?php echo ($s['accent'] === 'orange') ? 'bg-yukt-orange' : 'bg-electric-400'; ?> shrink-0"></span>
-                    <span class="font-medium truncate"><?php echo htmlspecialchars($s['title']); ?></span>
+                  <a href="<?php echo $s['url']; ?>" class="flex items-center justify-between px-3 py-2.5 rounded-xl text-xs text-slate-300 hover:text-white hover:bg-white/10 active:bg-white/15 transition-all group">
+                    <span class="flex items-center gap-2.5 truncate">
+                      <span class="w-2 h-2 rounded-full <?php echo ($s['accent'] === 'orange') ? 'bg-yukt-orange' : 'bg-electric-400'; ?> shrink-0 group-hover:scale-125 transition-transform"></span>
+                      <span class="font-medium truncate"><?php echo htmlspecialchars($s['title']); ?></span>
+                    </span>
+                    <i data-lucide="arrow-right" class="w-3 h-3 text-slate-500 group-hover:text-white group-hover:translate-x-0.5 transition-all shrink-0"></i>
                   </a>
                 <?php endforeach; ?>
               </div>
@@ -367,6 +376,37 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
           </div>
         </div>
       </div>
+
+      <!-- Direct Inline Helper for Instant Mobile Services Submenu Toggle -->
+      <script>
+        window.toggleMobileServices = function(e) {
+          if (e) {
+            if (e.preventDefault) e.preventDefault();
+            if (e.stopPropagation) e.stopPropagation();
+          }
+          var toggle = document.getElementById('mobileServicesToggle');
+          var menu = document.getElementById('mobileServicesMenu');
+          var container = document.getElementById('mobileServicesContainer');
+          if (!menu || !toggle) return;
+
+          var isHidden = menu.classList.contains('hidden');
+          if (isHidden) {
+            menu.classList.remove('hidden');
+            toggle.setAttribute('aria-expanded', 'true');
+            toggle.classList.add('bg-white/[0.08]');
+            if (container) container.classList.add('border-electric-400/40');
+            var chevron = toggle.querySelector('[data-lucide="chevron-down"], svg.lucide-chevron-down, #mobileServicesChevron');
+            if (chevron) chevron.style.transform = 'rotate(180deg)';
+          } else {
+            menu.classList.add('hidden');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.classList.remove('bg-white/[0.08]');
+            if (container) container.classList.remove('border-electric-400/40');
+            var chevron = toggle.querySelector('[data-lucide="chevron-down"], svg.lucide-chevron-down, #mobileServicesChevron');
+            if (chevron) chevron.style.transform = 'rotate(0deg)';
+          }
+        };
+      </script>
     </div>
   </header>
 

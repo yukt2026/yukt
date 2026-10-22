@@ -3,14 +3,20 @@
  * Clean, lightweight, zero-bloat vanilla ES6+ interactions
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+function bootApp() {
   initMobileMenu();
   initQuoteModal();
   initNewsletterForm();
   initScrollHeader();
   initScrollReveal();
   initContactForm();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', bootApp);
+} else {
+  bootApp();
+}
 
 /**
  * Scroll Reveal Observer & Immediate Viewport Activator
@@ -155,23 +161,14 @@ function initMobileMenu() {
   // Collapsible Services Accordion inside Mobile Drawer
   const servicesToggle = document.getElementById('mobileServicesToggle');
   const servicesMenu = document.getElementById('mobileServicesMenu');
-  const servicesChevron = document.getElementById('mobileServicesChevron');
 
   if (servicesToggle && servicesMenu) {
-    servicesToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      const isExpanded = !servicesMenu.classList.contains('hidden');
-      if (isExpanded) {
-        servicesMenu.classList.add('hidden');
-        servicesChevron?.classList.remove('rotate-180');
-        servicesToggle.setAttribute('aria-expanded', 'false');
-      } else {
-        servicesMenu.classList.remove('hidden');
-        servicesChevron?.classList.add('rotate-180');
-        servicesToggle.setAttribute('aria-expanded', 'true');
+    // Single consolidated handler ensuring no duplicate toggling
+    servicesToggle.onclick = function(e) {
+      if (typeof window.toggleMobileServices === 'function') {
+        window.toggleMobileServices(e);
       }
-    });
+    };
   }
 
   // Close on Escape
