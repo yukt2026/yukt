@@ -110,7 +110,7 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
   =========================================== -->
   <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-2.5 px-3 sm:py-3.5 sm:px-6 lg:px-10">
     <div class="max-w-7xl mx-auto">
-      <nav class="bg-navy-950/92 backdrop-blur-xl rounded-2xl px-3 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between shadow-2xl shadow-black/50 border border-white/15">
+      <nav class="navbar-container rounded-2xl px-3 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between shadow-2xl shadow-black/50 border border-white/15">
         
         <!-- Brand Logo Badge -->
         <a href="index.php" class="flex items-center gap-2 sm:gap-3 group focus:outline-none flex-shrink-0" aria-label="YUKT IT SOLUTIONS Home">
@@ -139,9 +139,9 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
               <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400 group-hover/menu:text-white transition-transform group-hover/menu:rotate-180"></i>
             </a>
 
-            <!-- Dropdown Menu Container with Hover Bridge & Opaque High-Contrast Surface -->
+            <!-- Dropdown Menu Container with Hover Bridge & 100% Solid Opaque Panel -->
             <div class="absolute top-full left-0 pt-2 opacity-0 translate-y-2 pointer-events-none group-hover/menu:opacity-100 group-hover/menu:translate-y-0 group-hover/menu:pointer-events-auto transition-all duration-200 z-50">
-              <div class="w-[680px] bg-navy-950/98 backdrop-blur-2xl rounded-2xl p-5 border border-white/20 shadow-2xl shadow-black/90 text-white">
+              <div class="w-[680px] dropdown-mega-panel rounded-2xl p-5 shadow-2xl shadow-black/95 text-white">
                 <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/10 text-xs">
                   <span class="font-mono uppercase tracking-wider text-slate-300 font-semibold">8 Core Capabilities</span>
                   <div class="flex items-center gap-3">
@@ -158,7 +158,7 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
                 </div>
                 <div class="grid grid-cols-2 gap-2 text-left">
                   <?php foreach ($SERVICES as $s): ?>
-                    <a href="<?php echo $s['url']; ?>" class="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/5 hover:border-electric-400/30 transition-all group/item">
+                    <a href="<?php echo $s['url']; ?>" class="dropdown-item-card flex items-start gap-3 p-3 rounded-xl transition-all group/item">
                       <div class="w-9 h-9 rounded-xl <?php echo ($s['accent'] === 'orange') ? 'bg-yukt-orange/20 text-yukt-orange border border-yukt-orange/30' : 'bg-electric-500/20 text-electric-400 border border-electric-400/30'; ?> flex items-center justify-center flex-shrink-0 mt-0.5">
                         <i data-lucide="<?php echo $s['icon']; ?>" class="w-4 h-4"></i>
                       </div>
@@ -253,7 +253,7 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
       <!-- Mobile Navigation Drawer with Responsive Max Height & Smooth Scrolling -->
       <div 
         id="mobileDrawer" 
-        class="hidden lg:hidden mt-2 bg-navy-950/98 backdrop-blur-2xl rounded-2xl p-4 sm:p-5 border border-white/20 shadow-2xl shadow-black/95 max-h-[calc(100dvh-5.25rem)] overflow-y-auto overscroll-contain"
+        class="hidden lg:hidden mt-2 dropdown-mega-panel rounded-2xl p-4 sm:p-5 shadow-2xl shadow-black/95 max-h-[calc(100dvh-5.25rem)] overflow-y-auto overscroll-contain"
       >
         <div class="flex flex-col space-y-1.5">
           <!-- Home Link -->
