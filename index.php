@@ -1388,7 +1388,7 @@ require_once __DIR__ . '/includes/header.php';
           Meet the <span class="bg-gradient-to-r from-electric-400 via-cyan-400 to-electric-500 bg-clip-text text-transparent">Technical Architects</span> Behind Yukt
         </h2>
         <p class="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Direct senior engineering access without junior hand-offs or middlemen. Connect directly with the Co-Founders and lead architects who design and deploy your solutions.
+          Direct senior engineering access without junior hand-offs or middlemen. Connect directly with the Founders and lead architects who design and deploy your solutions.
         </p>
       </div>
 
@@ -1439,7 +1439,7 @@ require_once __DIR__ . '/includes/header.php';
           </div>
         </div>
 
-        <!-- Ansar Card (Co-Founder) -->
+        <!-- Ansar Card (Founder) -->
         <div class="bg-navy-900/90 border border-white/15 rounded-3xl p-6 sm:p-8 text-white relative overflow-hidden shadow-2xl group hover:border-yukt-orange/60 transition-all reveal-up">
           <div class="absolute -top-16 -right-16 w-40 h-40 bg-yukt-orange/20 rounded-full blur-3xl pointer-events-none"></div>
           
@@ -1451,9 +1451,9 @@ require_once __DIR__ . '/includes/header.php';
               <div>
                 <div class="flex items-center gap-2">
                   <h3 class="font-display font-bold text-xl sm:text-2xl text-white">Ansar Ali Shah</h3>
-                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold uppercase tracking-wider bg-yukt-orange/20 text-amber-300 border border-yukt-orange/30">Co-Founder</span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold uppercase tracking-wider bg-yukt-orange/20 text-amber-300 border border-yukt-orange/30">Founder</span>
                 </div>
-                <div class="text-xs font-mono text-yukt-orange mt-0.5">Co-Founder &amp; Lead Technical Architect</div>
+                <div class="text-xs font-mono text-yukt-orange mt-0.5">Founder &amp; Lead Technical Architect</div>
                 <div class="text-xs text-slate-300 mt-1">Web Applications &bull; High-Performance Backends &bull; DevOps</div>
               </div>
             </div>

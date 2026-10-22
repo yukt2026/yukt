@@ -463,7 +463,10 @@ require_once __DIR__ . '/includes/components/section-header.php';
                 RM
               </div>
               <div>
-                <h4 class="font-display font-bold text-xl text-white">Ranjeet</h4>
+                <div class="flex items-center gap-2">
+                  <h4 class="font-display font-bold text-xl text-white">Ranjeet</h4>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-semibold uppercase tracking-wider bg-electric-500/20 text-electric-300 border border-electric-400/30">Co-Founder</span>
+                </div>
                 <div class="text-xs font-mono text-electric-400 mt-0.5">Co-Founder &amp; Lead Solutions Architect</div>
                 <div class="text-xs text-slate-400 mt-1">Cloud Systems &bull; Full-Stack Architecture &bull; AI Pipelines</div>
               </div>
@@ -506,8 +509,11 @@ require_once __DIR__ . '/includes/components/section-header.php';
                 AS
               </div>
               <div>
-                <h4 class="font-display font-bold text-xl text-white">Ansar Ali Shah</h4>
-                <div class="text-xs font-mono text-yukt-orange mt-0.5">Co-Founder &amp; Lead Technical Architect</div>
+                <div class="flex items-center gap-2">
+                  <h4 class="font-display font-bold text-xl text-white">Ansar Ali Shah</h4>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-mono font-semibold uppercase tracking-wider bg-yukt-orange/20 text-amber-300 border border-yukt-orange/30">Founder</span>
+                </div>
+                <div class="text-xs font-mono text-yukt-orange mt-0.5">Founder &amp; Lead Technical Architect</div>
                 <div class="text-xs text-slate-400 mt-1">Web Applications &bull; High-Performance Backends &bull; DevOps</div>
               </div>
             </div>

@@ -90,7 +90,7 @@ require_once __DIR__ . '/includes/components/section-header.php';
         <a href="https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="absolute top-20 right-0 sm:-right-4 glass-pill rounded-2xl p-3.5 w-52 sm:w-56 animate-float-delayed select-none border border-yukt-orange/30 shadow-xl hover:border-yukt-orange/60 transition-colors">
           <div class="flex items-center justify-between mb-1">
             <span class="font-mono text-[10px] text-yukt-orange uppercase tracking-wider flex items-center gap-1">
-              <span class="w-1.5 h-1.5 rounded-full bg-yukt-orange animate-ping"></span> Co-Founder &bull; Systems
+              <span class="w-1.5 h-1.5 rounded-full bg-yukt-orange animate-ping"></span> Founder &bull; Systems
             </span>
             <i data-lucide="message-circle" class="w-3.5 h-3.5 text-yukt-orange"></i>
           </div>
@@ -147,7 +147,8 @@ require_once __DIR__ . '/includes/components/section-header.php';
             <div class="flex items-center justify-between gap-3">
               <div>
                 <h4 class="font-display font-bold text-base text-slate-900">Ranjeet</h4>
-                <a href="tel:+917217645059" class="text-xs font-mono text-slate-600 hover:text-slate-900 block">+91 72176 45059</a>
+                <div class="text-[11px] font-mono text-electric-600 font-medium mt-0.5">Co-Founder &amp; Lead Solutions Architect</div>
+                <a href="tel:+917217645059" class="text-xs font-mono text-slate-600 hover:text-slate-900 block mt-0.5">+91 72176 45059</a>
               </div>
               <a href="https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20would%20like%20to%20discuss%20a%20project%20scope%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl text-xs font-medium bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 transition-colors shadow-sm">
                 <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
@@ -169,7 +170,7 @@ require_once __DIR__ . '/includes/components/section-header.php';
           <!-- Ansar WhatsApp Card -->
           <div class="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-2 hover:border-yukt-orange transition-colors">
             <div class="flex items-center justify-between">
-              <span class="text-xs font-mono font-bold uppercase tracking-wider text-yukt-orange">Co-Founder &amp; Technical Architecture</span>
+              <span class="text-xs font-mono font-bold uppercase tracking-wider text-yukt-orange">Founder &amp; Technical Architecture</span>
               <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span> Online
               </span>
@@ -177,7 +178,8 @@ require_once __DIR__ . '/includes/components/section-header.php';
             <div class="flex items-center justify-between gap-3">
               <div>
                 <h4 class="font-display font-bold text-base text-slate-900">Ansar Ali Shah</h4>
-                <a href="tel:+919576338282" class="text-xs font-mono text-slate-600 hover:text-slate-900 block">+91 95763 38282</a>
+                <div class="text-[11px] font-mono text-yukt-orange font-medium mt-0.5">Founder &amp; Lead Technical Architect</div>
+                <a href="tel:+919576338282" class="text-xs font-mono text-slate-600 hover:text-slate-900 block mt-0.5">+91 95763 38282</a>
               </div>
               <a href="https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20would%20like%20to%20discuss%20a%20project%20scope%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl text-xs font-medium bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 transition-colors shadow-sm">
                 <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>

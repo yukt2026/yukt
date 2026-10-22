@@ -75,7 +75,7 @@ if (!defined('COMPANY_NAME')) {
         ],
         [
             'name' => 'Ansar Ali Shah',
-            'role' => 'Co-Founder & Lead Technical Architect',
+            'role' => 'Founder & Lead Technical Architect',
             'focus' => 'Web Applications, High-Performance Backends & Systems',
             'phone' => '+91 95763 38282',
             'phone_raw' => '919576338282',
