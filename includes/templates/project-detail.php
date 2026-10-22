@@ -17,9 +17,9 @@ require_once __DIR__ . '/../components/section-header.php';
 ?>
 
 <!-- ==========================================================================
-     PROJECT DETAIL HERO & BREADCRUMBS (FUTURISTIC 3D BRAND THEME)
+     PROJECT DETAIL HERO & BREADCRUMBS (FUTURISTIC 3D BRAND THEME + ADVERT WAVE SHADER)
 ========================================================================== -->
-<section class="relative pt-12 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
+<section class="advert-wave-hero relative pt-12 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
   <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-electric-500/15 rounded-full blur-[130px] pointer-events-none"></div>
   <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-yukt-orange/15 rounded-full blur-[130px] pointer-events-none"></div>
 
@@ -36,8 +36,8 @@ require_once __DIR__ . '/../components/section-header.php';
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
       
-      <!-- Left Column: Title & Overview (8 Cols) -->
-      <div class="lg:col-span-8 space-y-5 reveal-up">
+      <!-- Left Column: Title & Overview (7 Cols) -->
+      <div class="lg:col-span-7 space-y-5 reveal-up">
         <div class="flex flex-wrap items-center gap-3">
           <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono uppercase bg-electric-500/15 text-electric-400 border border-electric-400/30">
             <span class="w-1.5 h-1.5 rounded-full bg-electric-400"></span>
@@ -58,7 +58,7 @@ require_once __DIR__ . '/../components/section-header.php';
 
         <!-- CTAs -->
         <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-          <button type="button" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-electric-500 hover:bg-electric-400 transition-all open-quote-modal-btn shadow-lg shadow-electric-500/25 flex items-center justify-center gap-2" data-service="<?php echo htmlspecialchars($project['category']); ?>">
+          <button type="button" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-electric-600 to-blue-700 hover:from-electric-500 hover:to-blue-600 transition-all open-quote-modal-btn shadow-lg shadow-electric-600/30 flex items-center justify-center gap-2" data-service="<?php echo htmlspecialchars($project['category']); ?>">
             <span>Request Similar Architecture Scope</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </button>
@@ -69,9 +69,10 @@ require_once __DIR__ . '/../components/section-header.php';
         </div>
       </div>
 
-      <!-- Right Column: Meta Overview Card (4 Cols) -->
-      <div class="lg:col-span-4 reveal-up">
-        <div class="glass-dark rounded-3xl p-6 sm:p-7 border border-white/15 shadow-2xl space-y-4 text-xs font-mono text-white">
+      <!-- Right Column: Meta Overview Card with 3D Depth (5 Cols) -->
+      <div class="lg:col-span-5 relative reveal-up">
+        <div class="absolute -inset-1 bg-gradient-to-r from-electric-500/25 via-navy-900/40 to-yukt-orange/25 rounded-3xl blur-xl opacity-70"></div>
+        <div class="relative glass-dark rounded-3xl p-6 sm:p-7 border border-white/15 shadow-2xl space-y-4 text-xs font-mono text-white">
           <div class="text-xs font-mono uppercase tracking-wider text-slate-400 pb-2 border-b border-white/10">
             Technical Specification
           </div>

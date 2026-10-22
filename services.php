@@ -9,37 +9,110 @@ require_once __DIR__ . '/includes/components/badge.php';
 ?>
 
 <!-- ==========================================================================
-     SERVICES OVERVIEW HERO (FUTURISTIC 3D BRAND THEME)
+     SERVICES OVERVIEW HERO (FUTURISTIC 3D BRAND THEME + ADVERT WAVE SHADER)
 ========================================================================== -->
-<section class="relative pt-12 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
+<section class="advert-wave-hero relative pt-14 pb-16 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
   <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-electric-500/15 rounded-full blur-[130px] pointer-events-none"></div>
   <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-yukt-orange/15 rounded-full blur-[130px] pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-    <div class="max-w-3xl space-y-5 reveal-up">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
-        <span class="w-2 h-2 rounded-full bg-electric-400 animate-ping"></span>
-        <span>Full-Cycle Digital Engineering</span>
-      </div>
-      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1]">
-        Disciplined Capabilities for Growing <span class="text-gradient-electric">Enterprises.</span>
-      </h1>
-      <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-        From sub-second web platforms and multi-tenant SaaS architectures to autonomous AI workflow agents and performance marketing, we engineer measurable business impact across 8 focused disciplines.
-      </p>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      
+      <!-- Left Column: High-Impact Copy & Actions (7 Cols) -->
+      <div class="lg:col-span-7 space-y-6 reveal-up">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-electric-400 animate-ping"></span>
+          <span>8 Core Technical Disciplines</span>
+        </div>
+        
+        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
+          Disciplined Capabilities for Growing <span class="text-gradient-electric">Enterprises.</span>
+        </h1>
+        
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
+          From sub-second web platforms and multi-tenant SaaS architectures to autonomous AI workflow agents and full-funnel digital growth, we engineer measurable business impact across 8 focused disciplines.
+        </p>
 
-      <!-- Quick Category Jump Navigation -->
-      <div class="pt-4 border-t border-white/10">
-        <div class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-2.5">Jump to Capability</div>
-        <div class="flex flex-wrap gap-2">
-          <?php foreach ($SERVICES as $s): ?>
-            <a href="#<?php echo $s['id']; ?>" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.06] hover:bg-white/10 text-xs font-medium text-slate-200 hover:text-white border border-white/10 transition-all">
-              <span class="w-1.5 h-1.5 rounded-full <?php echo ($s['accent'] === 'orange') ? 'bg-yukt-orange' : 'bg-electric-400'; ?>"></span>
-              <span><?php echo htmlspecialchars($s['short']); ?></span>
-            </a>
-          <?php endforeach; ?>
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-1">
+          <button type="button" class="open-quote-modal-btn px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-electric-600 to-blue-700 hover:from-electric-500 hover:to-blue-600 shadow-xl shadow-electric-600/30 transition-all flex items-center justify-center gap-2">
+            <span>Request Scoping Document</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+          <a href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I would like to scope a project across your 8 service disciplines.'); ?>" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-yukt-orange to-amber-600 hover:from-yukt-orangeLight hover:to-yukt-orange shadow-xl shadow-yukt-orange/25 transition-all flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Instant WhatsApp Desk</span>
+          </a>
+        </div>
+
+        <!-- Quick Category Jump Navigation -->
+        <div class="pt-4 border-t border-white/10">
+          <div class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-2.5">Jump to Capability:</div>
+          <div class="flex flex-wrap gap-2">
+            <?php foreach ($SERVICES as $s): ?>
+              <a href="#<?php echo $s['id']; ?>" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/[0.06] hover:bg-white/15 text-xs font-medium text-slate-200 hover:text-white border border-white/10 transition-all">
+                <span class="w-1.5 h-1.5 rounded-full <?php echo ($s['accent'] === 'orange') ? 'bg-yukt-orange' : 'bg-electric-400'; ?>"></span>
+                <span><?php echo htmlspecialchars($s['short']); ?></span>
+              </a>
+            <?php endforeach; ?>
+          </div>
         </div>
       </div>
+
+      <!-- Right Column: 3D Perspective Floating UI Stage (5 Cols) -->
+      <div class="lg:col-span-5 relative h-[380px] sm:h-[420px] w-full flex items-center justify-center reveal-up">
+        
+        <!-- Central Glowing Core Engine -->
+        <div class="relative w-44 h-44 rounded-full bg-gradient-to-tr from-electric-500/30 via-navy-900 to-yukt-orange/30 p-[2px] shadow-2xl shadow-electric-500/20 flex items-center justify-center animate-pulse">
+          <div class="w-full h-full rounded-full bg-navy-950/90 backdrop-blur-md flex flex-col items-center justify-center text-center p-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-electric-500 to-yukt-orange flex items-center justify-center text-white mb-2 shadow-lg shadow-electric-500/30">
+              <i data-lucide="layers" class="w-6 h-6"></i>
+            </div>
+            <span class="font-display font-bold text-xs text-white">YUKT 8-CORE</span>
+            <span class="font-mono text-[9px] text-electric-400">Production Ready</span>
+          </div>
+        </div>
+
+        <!-- Floating Glass Card 1: Cloud & Web Platforms (Top Left) -->
+        <div class="absolute top-2 left-0 sm:-left-4 glass-pill rounded-2xl p-3.5 w-52 sm:w-56 animate-float-slow select-none border border-white/20 shadow-xl">
+          <div class="flex items-center justify-between mb-2">
+            <span class="font-mono text-[10px] uppercase tracking-wider text-electric-400 flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-electric-400"></span> High Performance
+            </span>
+            <i data-lucide="globe" class="w-3.5 h-3.5 text-slate-400"></i>
+          </div>
+          <div class="text-xs font-semibold text-white mb-1.5">Web &amp; SaaS Platforms</div>
+          <div class="w-full bg-white/10 h-1.5 rounded-full overflow-hidden">
+            <div class="bg-gradient-to-r from-electric-400 to-electric-500 h-full w-[96%] rounded-full"></div>
+          </div>
+        </div>
+
+        <!-- Floating Glass Card 2: AI & LLM Automation (Top Right) -->
+        <div class="absolute top-16 right-0 sm:-right-4 glass-pill rounded-2xl p-3.5 w-48 sm:w-52 animate-float-delayed select-none border border-yukt-orange/40 shadow-xl">
+          <div class="flex items-center gap-2.5">
+            <div class="w-8 h-8 rounded-lg bg-yukt-orange/20 border border-yukt-orange/40 flex items-center justify-center text-yukt-orange shrink-0">
+              <i data-lucide="bot" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <div class="font-mono text-[9px] text-yukt-orange">RAG Workflows</div>
+              <div class="text-xs font-semibold text-white">Autonomous Agents</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Glass Card 3: 100% IP Transfer & Code Autonomy (Bottom Left) -->
+        <div class="absolute bottom-4 left-4 sm:left-2 glass-pill rounded-2xl p-3 w-48 sm:w-52 animate-float-slow select-none border border-emerald-400/30 shadow-xl">
+          <div class="flex items-center gap-2">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+            <div>
+              <span class="font-mono text-[9px] text-slate-400 block">Intellectual Property</span>
+              <span class="text-xs font-bold text-white">100% Code Ownership</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </section>

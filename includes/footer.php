@@ -149,6 +149,9 @@
   <!-- Reusable Quote Estimate Modal Component -->
   <?php require_once __DIR__ . '/components/modal-quote.php'; ?>
 
+  <!-- Interactive 3D WebGL Wave Engine (AdvertResources Shader) -->
+  <script src="assets/js/advert-wave.js"></script>
+
   <!-- App Core JavaScript -->
   <script src="assets/js/app.js"></script>
 

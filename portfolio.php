@@ -8,45 +8,109 @@ require_once __DIR__ . '/includes/components/section-header.php';
 ?>
 
 <!-- ==========================================================================
-     PORTFOLIO HERO & CATEGORY FILTERS (FUTURISTIC 3D BRAND THEME)
+     PORTFOLIO HERO & CATEGORY FILTERS (FUTURISTIC 3D BRAND THEME + ADVERT WAVE SHADER)
 ========================================================================== -->
-<section class="relative pt-12 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
+<section class="advert-wave-hero relative pt-14 pb-16 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
   <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-electric-500/15 rounded-full blur-[130px] pointer-events-none"></div>
   <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-yukt-orange/15 rounded-full blur-[130px] pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-    <div class="max-w-3xl space-y-5 reveal-up">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
-        <span class="w-2 h-2 rounded-full bg-electric-400 animate-ping"></span>
-        <span>Verified Technical Blueprints</span>
-      </div>
-      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1]">
-        Engineered Solutions &amp; System <span class="text-gradient-electric">Blueprints.</span>
-      </h1>
-      <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-        Explore representative architectural blueprints, technical case studies, and engineering implementations across web platforms, custom SaaS systems, AI automation, and performance marketing.
-      </p>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      
+      <!-- Left Column: High-Impact Copy & Actions (7 Cols) -->
+      <div class="lg:col-span-7 space-y-6 reveal-up">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-electric-400 animate-ping"></span>
+          <span>Verified Deployments &amp; Production Blueprints</span>
+        </div>
 
-      <!-- Category Filter Tabs -->
-      <div class="pt-4 border-t border-white/10 flex flex-wrap items-center gap-2" id="portfolioFilterNav" role="tablist">
-        <button type="button" data-filter="all" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-electric-500 text-white shadow-md transition-all" role="tab" aria-selected="true">
-          All Projects (<?php echo count($CASE_STUDIES); ?>)
-        </button>
-        <button type="button" data-filter="websites" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
-          Websites
-        </button>
-        <button type="button" data-filter="software" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
-          Software &amp; SaaS
-        </button>
-        <button type="button" data-filter="ai" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
-          AI &amp; Automation
-        </button>
-        <button type="button" data-filter="ecommerce" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
-          E-Commerce
-        </button>
-        <button type="button" data-filter="marketing" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
-          Marketing
-        </button>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
+          Engineered Solutions &amp; System <span class="text-gradient-electric">Blueprints.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
+          Explore representative architectural blueprints, technical case studies, and our registry of 42+ live commercial deployments engineered across web platforms, custom SaaS systems, AI automation, and performance marketing.
+        </p>
+
+        <!-- Category Filter Tabs -->
+        <div class="pt-2">
+          <div class="text-xs font-mono uppercase tracking-wider text-slate-400 mb-2.5">Filter Architectural Case Studies:</div>
+          <div class="flex flex-wrap items-center gap-2" id="portfolioFilterNav" role="tablist">
+            <button type="button" data-filter="all" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-electric-500 text-white shadow-md transition-all" role="tab" aria-selected="true">
+              All Case Studies (<?php echo count($CASE_STUDIES); ?>)
+            </button>
+            <button type="button" data-filter="websites" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
+              Websites
+            </button>
+            <button type="button" data-filter="software" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
+              Software &amp; SaaS
+            </button>
+            <button type="button" data-filter="ai" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
+              AI &amp; Automation
+            </button>
+            <button type="button" data-filter="ecommerce" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
+              E-Commerce
+            </button>
+            <button type="button" data-filter="marketing" class="portfolio-filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/[0.06] hover:bg-white/10 text-slate-300 hover:text-white border border-white/10 transition-all" role="tab" aria-selected="false">
+              Marketing
+            </button>
+          </div>
+        </div>
+
+        <!-- Jump to 42 Live Deployments Link -->
+        <div class="pt-3 border-t border-white/10 flex items-center gap-3">
+          <a href="#live-registry" class="inline-flex items-center gap-2 text-xs font-mono font-semibold text-emerald-400 hover:text-emerald-300 transition-colors">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span>Jump to 42+ Live Client Production Registry &darr;</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: 3D Perspective Floating UI Stage (5 Cols) -->
+      <div class="lg:col-span-5 relative h-[380px] sm:h-[420px] w-full flex items-center justify-center reveal-up">
+        
+        <!-- Central Glowing Core Engine -->
+        <div class="relative w-44 h-44 rounded-full bg-gradient-to-tr from-electric-500/30 via-navy-900 to-emerald-500/30 p-[2px] shadow-2xl shadow-electric-500/20 flex items-center justify-center animate-pulse">
+          <div class="w-full h-full rounded-full bg-navy-950/90 backdrop-blur-md flex flex-col items-center justify-center text-center p-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-electric-500 to-emerald-500 flex items-center justify-center text-white mb-2 shadow-lg shadow-electric-500/30">
+              <i data-lucide="check-circle" class="w-6 h-6"></i>
+            </div>
+            <span class="font-display font-bold text-xs text-white">42+ DEPLOYED</span>
+            <span class="font-mono text-[9px] text-emerald-400">Production Active</span>
+          </div>
+        </div>
+
+        <!-- Floating Glass Card 1: Live Registry Counter (Top Left) -->
+        <div class="absolute top-2 left-0 sm:-left-4 glass-pill rounded-2xl p-3.5 w-52 sm:w-56 animate-float-slow select-none border border-emerald-400/30 shadow-xl">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span class="font-mono text-[10px] text-emerald-400 uppercase tracking-wider">Live Production</span>
+          </div>
+          <div class="text-xs font-semibold text-white">42+ Client Deployments</div>
+          <p class="text-[10px] text-slate-400 mt-0.5">E-Commerce, Logistics &amp; Health</p>
+        </div>
+
+        <!-- Floating Glass Card 2: Sub-100ms API Latency (Top Right) -->
+        <div class="absolute top-16 right-0 sm:-right-4 glass-pill rounded-2xl p-3.5 w-48 sm:w-52 animate-float-delayed select-none border border-electric-400/30 shadow-xl">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="w-2 h-2 rounded-full bg-electric-400"></span>
+            <span class="font-mono text-[10px] text-electric-400 uppercase tracking-wider">Performance</span>
+          </div>
+          <div class="text-xs font-semibold text-white">Sub-100ms Latency</div>
+          <p class="text-[10px] text-slate-400 mt-0.5">Optimized Core Web Vitals</p>
+        </div>
+
+        <!-- Floating Glass Card 3: Deep Architecture Blueprints (Bottom Left) -->
+        <div class="absolute bottom-4 left-4 sm:left-2 glass-pill rounded-2xl p-3 w-48 sm:w-52 animate-float-slow select-none border border-yukt-orange/30 shadow-xl">
+          <div class="flex items-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4 text-yukt-orange"></i>
+            <div>
+              <span class="font-mono text-[9px] text-slate-400 block">System Specs</span>
+              <span class="text-xs font-bold text-white">6 Hardened Blueprints</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>

@@ -8,39 +8,103 @@ require_once __DIR__ . '/includes/components/section-header.php';
 ?>
 
 <!-- ==========================================================================
-     ABOUT HERO SECTION (FUTURISTIC 3D BRAND THEME)
-========================================================================== -->
-<section class="relative pt-12 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
+     ABOUT HERO SECTION (FUTURISTIC 3D BRAND THEME + ADVERT WAVE SHADER)
+========================================================================= -->
+<section class="advert-wave-hero relative pt-14 pb-16 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
   <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-electric-500/15 rounded-full blur-[130px] pointer-events-none"></div>
   <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-yukt-orange/15 rounded-full blur-[130px] pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-    <div class="max-w-3xl space-y-5 reveal-up">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
-        <span class="w-2 h-2 rounded-full bg-yukt-orange animate-ping"></span>
-        <span>Corporate Identity &amp; Engineering Ethos</span>
-      </div>
-      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1]">
-        Engineering Clarity for Ambitious <span class="text-gradient-electric">Enterprises.</span>
-      </h1>
-      <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-        Founded on transparent agile execution, <strong class="text-white font-semibold">YUKT IT SOLUTIONS Private Limited</strong> is an Indian digital engineering studio bridging the gap between clean enterprise software, autonomous AI systems, and high-growth digital marketing.
-      </p>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      
+      <!-- Left Column: High-Impact Copy & Actions (7 Cols) -->
+      <div class="lg:col-span-7 space-y-6 reveal-up">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-yukt-orange animate-ping"></span>
+          <span>Corporate Identity &amp; Engineering Ethos</span>
+        </div>
+        
+        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
+          Engineering Clarity for Ambitious <span class="text-gradient-electric">Enterprises.</span>
+        </h1>
+        
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
+          Founded on transparent agile execution, <strong class="text-white font-semibold">YUKT IT SOLUTIONS Private Limited</strong> is an Indian digital engineering studio bridging the gap between clean enterprise software, autonomous AI systems, and high-growth digital marketing.
+        </p>
 
-      <div class="pt-4 flex flex-wrap items-center gap-5 text-xs text-slate-400 border-t border-white/10">
-        <span class="flex items-center gap-2 font-medium">
-          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-          NCR &amp; Bengaluru Hubs
-        </span>
-        <span class="flex items-center gap-2 font-medium">
-          <span class="w-2 h-2 rounded-full bg-electric-400"></span>
-          Direct Senior Architecture
-        </span>
-        <span class="flex items-center gap-2 font-medium">
-          <span class="w-2 h-2 rounded-full bg-yukt-orange"></span>
-          100% Client Code Ownership
-        </span>
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-1">
+          <a href="#principles" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-electric-600 to-blue-700 hover:from-electric-500 hover:to-blue-600 shadow-xl shadow-electric-600/30 transition-all flex items-center justify-center gap-2">
+            <span>Explore Working Principles</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+          <a href="<?php echo getWhatsAppUrl('Hi Ranjeet and Ansar, I would like to learn more about partnering with Yukt.'); ?>" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-yukt-orange to-amber-600 hover:from-yukt-orangeLight hover:to-yukt-orange shadow-xl shadow-yukt-orange/25 transition-all flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Talk to the Founders</span>
+          </a>
+        </div>
+
+        <div class="pt-4 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-slate-400 border-t border-white/10 font-mono">
+          <span class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            NCR &amp; Bengaluru Hubs
+          </span>
+          <span class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-electric-400"></span>
+            Direct Senior Pods
+          </span>
+          <span class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-yukt-orange"></span>
+            100% Client Code Ownership
+          </span>
+        </div>
       </div>
+
+      <!-- Right Column: 3D Perspective Floating UI Stage (5 Cols) -->
+      <div class="lg:col-span-5 relative h-[380px] sm:h-[420px] w-full flex items-center justify-center reveal-up">
+        
+        <!-- Central Glowing Sanskrit Node -->
+        <div class="relative w-44 h-44 rounded-full bg-gradient-to-tr from-yukt-orange/40 via-navy-900 to-electric-500/40 p-[2px] shadow-2xl shadow-yukt-orange/20 flex items-center justify-center animate-pulse">
+          <div class="w-full h-full rounded-full bg-navy-950/90 backdrop-blur-md flex flex-col items-center justify-center text-center p-4">
+            <span class="font-serif font-bold text-3xl text-white">युक्त</span>
+            <span class="font-display font-semibold text-xs text-yukt-orange mt-1">YUKT IT</span>
+            <span class="font-mono text-[9px] text-slate-400">Connected &bull; Unified</span>
+          </div>
+        </div>
+
+        <!-- Floating Glass Card 1: Sanskrit Meaning (Top Left) -->
+        <div class="absolute top-2 left-0 sm:-left-4 glass-pill rounded-2xl p-3.5 w-52 sm:w-56 animate-float-slow select-none border border-white/20 shadow-xl">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="w-2 h-2 rounded-full bg-yukt-orange"></span>
+            <span class="font-mono text-[10px] text-yukt-orange uppercase tracking-wider">Philosophical Root</span>
+          </div>
+          <div class="text-xs font-semibold text-white">Precision &amp; Synergy</div>
+          <p class="text-[10px] text-slate-400 mt-0.5">Equipped with strategic technical mastery</p>
+        </div>
+
+        <!-- Floating Glass Card 2: Founders & Architects (Top Right) -->
+        <div class="absolute top-20 right-0 sm:-right-4 glass-pill rounded-2xl p-3.5 w-48 sm:w-52 animate-float-delayed select-none border border-electric-400/30 shadow-xl">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="w-2 h-2 rounded-full bg-electric-400"></span>
+            <span class="font-mono text-[10px] text-electric-400 uppercase tracking-wider">Leadership Pod</span>
+          </div>
+          <div class="text-xs font-semibold text-white">Ranjeet &amp; Ansar</div>
+          <p class="text-[10px] text-slate-400 mt-0.5">Zero account management fluff</p>
+        </div>
+
+        <!-- Floating Glass Card 3: 2-Week Agile Delivery (Bottom Left) -->
+        <div class="absolute bottom-4 left-4 sm:left-2 glass-pill rounded-2xl p-3 w-48 sm:w-52 animate-float-slow select-none border border-emerald-400/30 shadow-xl">
+          <div class="flex items-center gap-2">
+            <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+            <div>
+              <span class="font-mono text-[9px] text-slate-400 block">Sprint Execution</span>
+              <span class="text-xs font-bold text-white">Continuous Git Staging</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </section>

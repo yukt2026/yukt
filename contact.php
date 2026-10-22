@@ -8,39 +8,109 @@ require_once __DIR__ . '/includes/components/section-header.php';
 ?>
 
 <!-- ==========================================================================
-     CONTACT HERO (FUTURISTIC 3D BRAND THEME)
+     CONTACT HERO (FUTURISTIC 3D BRAND THEME + ADVERT WAVE SHADER)
 ========================================================================== -->
-<section class="relative pt-12 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
+<section class="advert-wave-hero relative pt-14 pb-16 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
   <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-electric-500/15 rounded-full blur-[130px] pointer-events-none"></div>
   <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-yukt-orange/15 rounded-full blur-[130px] pointer-events-none"></div>
 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-    <div class="max-w-3xl space-y-5 reveal-up">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-        <span>Direct Engineering Communication</span>
-      </div>
-      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1]">
-        Let’s Discuss Your Technical <span class="text-gradient-electric">Roadmap.</span>
-      </h1>
-      <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-        Connect directly with our senior solutions architecture team. We review your specifications, evaluate technical feasibility, and return a scoped proposal within 24 business hours.
-      </p>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      
+      <!-- Left Column: High-Impact Copy & Actions (7 Cols) -->
+      <div class="lg:col-span-7 space-y-6 reveal-up">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.05] border border-white/10 text-electric-400 font-mono text-xs uppercase tracking-widest">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>Direct Engineering Communication</span>
+        </div>
 
-      <div class="pt-4 flex flex-wrap items-center gap-5 text-xs text-slate-400 border-t border-white/10">
-        <span class="flex items-center gap-2 font-medium">
-          <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-          Response within 24 Hours
-        </span>
-        <span class="flex items-center gap-2 font-medium">
-          <span class="w-2 h-2 rounded-full bg-electric-400"></span>
-          Mutual NDA Safeguards
-        </span>
-        <span class="flex items-center gap-2 font-medium">
-          <span class="w-2 h-2 rounded-full bg-yukt-orange"></span>
-          Zero Sales Pressure
-        </span>
+        <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.08]">
+          Let’s Discuss Your Technical <span class="text-gradient-electric">Roadmap.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
+          Connect directly with our senior solutions architecture team. We review your specifications, evaluate technical feasibility, and return a scoped proposal within 24 business hours.
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-1">
+          <a href="#contactPageForm" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-electric-600 to-blue-700 hover:from-electric-500 hover:to-blue-600 shadow-xl shadow-electric-600/30 transition-all flex items-center justify-center gap-2">
+            <span>Fill Scoping Form</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+          <a href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I would like to discuss our project scope directly.'); ?>" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 shadow-xl shadow-emerald-600/25 transition-all flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Instant WhatsApp Desk</span>
+          </a>
+        </div>
+
+        <div class="pt-4 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-slate-400 border-t border-white/10 font-mono">
+          <span class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Response within 24 Hours
+          </span>
+          <span class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-electric-400"></span>
+            Mutual NDA Safeguards
+          </span>
+          <span class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-yukt-orange"></span>
+            Zero Sales Pressure
+          </span>
+        </div>
       </div>
+
+      <!-- Right Column: 3D Perspective Floating UI Stage (5 Cols) -->
+      <div class="lg:col-span-5 relative h-[380px] sm:h-[420px] w-full flex items-center justify-center reveal-up">
+        
+        <!-- Central Glowing Communication Orb -->
+        <div class="relative w-44 h-44 rounded-full bg-gradient-to-tr from-emerald-500/30 via-navy-900 to-electric-500/30 p-[2px] shadow-2xl shadow-emerald-500/20 flex items-center justify-center animate-pulse">
+          <div class="w-full h-full rounded-full bg-navy-950/90 backdrop-blur-md flex flex-col items-center justify-center text-center p-4">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white mb-2 shadow-lg shadow-emerald-500/30">
+              <i data-lucide="headphones" class="w-6 h-6"></i>
+            </div>
+            <span class="font-display font-bold text-xs text-white">TECH DESK</span>
+            <span class="font-mono text-[9px] text-emerald-400">Online &bull; Available</span>
+          </div>
+        </div>
+
+        <!-- Floating Glass Card 1: Ranjeet Direct Line (Top Left) -->
+        <a href="https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="absolute top-2 left-0 sm:-left-4 glass-pill rounded-2xl p-3.5 w-52 sm:w-56 animate-float-slow select-none border border-emerald-400/30 shadow-xl hover:border-emerald-400/60 transition-colors">
+          <div class="flex items-center justify-between mb-1">
+            <span class="font-mono text-[10px] text-emerald-400 uppercase tracking-wider flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Solutions Lead
+            </span>
+            <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-400"></i>
+          </div>
+          <div class="text-xs font-semibold text-white">Ranjeet (+91 72176 45059)</div>
+          <p class="text-[10px] text-slate-400 mt-0.5">Click for direct WhatsApp scoping</p>
+        </a>
+
+        <!-- Floating Glass Card 2: Ansar Direct Line (Top Right) -->
+        <a href="https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="absolute top-20 right-0 sm:-right-4 glass-pill rounded-2xl p-3.5 w-48 sm:w-52 animate-float-delayed select-none border border-yukt-orange/30 shadow-xl hover:border-yukt-orange/60 transition-colors">
+          <div class="flex items-center justify-between mb-1">
+            <span class="font-mono text-[10px] text-yukt-orange uppercase tracking-wider flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-yukt-orange animate-ping"></span> Systems Lead
+            </span>
+            <i data-lucide="message-circle" class="w-3.5 h-3.5 text-yukt-orange"></i>
+          </div>
+          <div class="text-xs font-semibold text-white">Ansar (+91 95763 38282)</div>
+          <p class="text-[10px] text-slate-400 mt-0.5">Click for direct WhatsApp scoping</p>
+        </a>
+
+        <!-- Floating Glass Card 3: 24-Hour Scope Delivery (Bottom Left) -->
+        <div class="absolute bottom-4 left-4 sm:left-2 glass-pill rounded-2xl p-3 w-48 sm:w-52 animate-float-slow select-none border border-electric-400/30 shadow-xl">
+          <div class="flex items-center gap-2">
+            <i data-lucide="clock" class="w-4 h-4 text-electric-400"></i>
+            <div>
+              <span class="font-mono text-[9px] text-slate-400 block">Turnaround Time</span>
+              <span class="text-xs font-bold text-white">24-Hour Scoped Plan</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </section>
@@ -176,12 +246,16 @@ require_once __DIR__ . '/includes/components/section-header.php';
 
       <!-- Right Column: Formal Specification Form (7 Cols) -->
       <div class="lg:col-span-7 reveal-up">
-        <div class="bg-white border border-slate-200/90 rounded-3xl p-7 sm:p-9 shadow-xl space-y-6">
+        <div class="bg-white border-2 border-slate-200 rounded-3xl p-7 sm:p-9 shadow-2xl space-y-6">
           
-          <div class="border-b border-slate-100 pb-5">
-            <h3 class="font-display font-bold text-2xl text-slate-900">Project Specification &amp; Scoping Form</h3>
-            <p class="text-xs sm:text-sm text-slate-500 mt-1">
-              Provide your details below to receive a scoped technical architecture plan and timeline estimate.
+          <div class="border-b border-slate-200 pb-5">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric-500/10 text-electric-600 border border-electric-500/20 text-xs font-mono font-semibold mb-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>
+              Direct Engineering Scoping
+            </span>
+            <h3 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 tracking-tight">Project Specification &amp; Scoping Form</h3>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">
+              Provide your details below to receive a scoped technical architecture plan and milestone timeline estimate.
             </p>
           </div>
 
@@ -195,27 +269,27 @@ require_once __DIR__ . '/includes/components/section-header.php';
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label for="contactName" class="block text-xs font-mono uppercase tracking-wider text-slate-700 mb-1.5">Full Name <span class="text-yukt-orange">*</span></label>
-                <input type="text" id="contactName" name="full_name" required placeholder="e.g. Ramesh Krishnan" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-electric-500 focus:bg-white transition-all">
+                <label for="contactName" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-1.5">Full Name <span class="text-yukt-orange">*</span></label>
+                <input type="text" id="contactName" name="full_name" required placeholder="e.g. Ramesh Krishnan" class="w-full px-4 py-3 rounded-xl bg-white border-2 border-slate-300 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-electric-600 focus:ring-4 focus:ring-electric-500/15 shadow-xs transition-all">
                 <span class="text-[11px] text-red-600 hidden mt-1" id="errName">Please enter your name.</span>
               </div>
 
               <div>
-                <label for="contactEmail" class="block text-xs font-mono uppercase tracking-wider text-slate-700 mb-1.5">Business Email <span class="text-yukt-orange">*</span></label>
-                <input type="email" id="contactEmail" name="email" required placeholder="ramesh@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-electric-500 focus:bg-white transition-all">
+                <label for="contactEmail" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-1.5">Business Email <span class="text-yukt-orange">*</span></label>
+                <input type="email" id="contactEmail" name="email" required placeholder="ramesh@company.com" class="w-full px-4 py-3 rounded-xl bg-white border-2 border-slate-300 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-electric-600 focus:ring-4 focus:ring-electric-500/15 shadow-xs transition-all">
                 <span class="text-[11px] text-red-600 hidden mt-1" id="errEmail">Please enter a valid business email.</span>
               </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label for="contactPhone" class="block text-xs font-mono uppercase tracking-wider text-slate-700 mb-1.5">Phone Number / WhatsApp <span class="text-slate-400 text-[11px]">(Optional)</span></label>
-                <input type="tel" id="contactPhone" name="phone" placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-electric-500 focus:bg-white transition-all">
+                <label for="contactPhone" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-1.5">Phone Number / WhatsApp <span class="text-slate-500 text-[11px] font-normal">(Optional)</span></label>
+                <input type="tel" id="contactPhone" name="phone" placeholder="+91 98765 43210" class="w-full px-4 py-3 rounded-xl bg-white border-2 border-slate-300 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-electric-600 focus:ring-4 focus:ring-electric-500/15 shadow-xs transition-all">
               </div>
 
               <div>
-                <label for="contactService" class="block text-xs font-mono uppercase tracking-wider text-slate-700 mb-1.5">Service Category <span class="text-yukt-orange">*</span></label>
-                <select id="contactService" name="service_needed" required class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 focus:outline-none focus:border-electric-500 focus:bg-white transition-all">
+                <label for="contactService" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-1.5">Service Category <span class="text-yukt-orange">*</span></label>
+                <select id="contactService" name="service_needed" required class="w-full px-4 py-3 rounded-xl bg-white border-2 border-slate-300 text-sm font-medium text-slate-900 focus:outline-none focus:border-electric-600 focus:ring-4 focus:ring-electric-500/15 shadow-xs transition-all cursor-pointer">
                   <option value="">Select Primary Requirement</option>
                   <option value="Website Design & Development">Website Design &amp; Development</option>
                   <option value="Software & Applications">Software &amp; Applications</option>
@@ -232,8 +306,8 @@ require_once __DIR__ . '/includes/components/section-header.php';
             </div>
 
             <div>
-              <label for="contactBudget" class="block text-xs font-mono uppercase tracking-wider text-slate-700 mb-1.5">Estimated Budget Range</label>
-              <select id="contactBudget" name="budget" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 focus:outline-none focus:border-electric-500 focus:bg-white transition-all">
+              <label for="contactBudget" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-1.5">Estimated Budget Range</label>
+              <select id="contactBudget" name="budget" class="w-full px-4 py-3 rounded-xl bg-white border-2 border-slate-300 text-sm font-medium text-slate-900 focus:outline-none focus:border-electric-600 focus:ring-4 focus:ring-electric-500/15 shadow-xs transition-all cursor-pointer">
                 <option value="Not Specified">Select Indicative Range (Optional)</option>
                 <option value="₹50,000 – ₹1,50,000">₹50,000 – ₹1,50,000</option>
                 <option value="₹1,50,000 – ₹5,00,000" selected>₹1,50,000 – ₹5,00,000</option>
@@ -244,21 +318,21 @@ require_once __DIR__ . '/includes/components/section-header.php';
             </div>
 
             <div>
-              <label for="contactMessage" class="block text-xs font-mono uppercase tracking-wider text-slate-700 mb-1.5">Project Description &amp; Requirements <span class="text-yukt-orange">*</span></label>
-              <textarea id="contactMessage" name="message" rows="4" required placeholder="Describe what you want to build, existing systems in place, and your target timeline..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-electric-500 focus:bg-white transition-all"></textarea>
+              <label for="contactMessage" class="block text-xs font-mono font-bold uppercase tracking-wider text-slate-900 mb-1.5">Project Description &amp; Requirements <span class="text-yukt-orange">*</span></label>
+              <textarea id="contactMessage" name="message" rows="4" required placeholder="Describe what you want to build, existing systems in place, and your target timeline..." class="w-full px-4 py-3 rounded-xl bg-white border-2 border-slate-300 text-sm font-medium text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-electric-600 focus:ring-4 focus:ring-electric-500/15 shadow-xs transition-all resize-y"></textarea>
               <span class="text-[11px] text-red-600 hidden mt-1" id="errMessage">Please provide a brief project description.</span>
             </div>
 
             <!-- AJAX Status Feedback Container -->
             <div id="contactFormFeedback" class="hidden text-sm p-4 rounded-xl"></div>
 
-            <div class="pt-3 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
-              <span class="text-xs text-slate-500 flex items-center gap-1.5">
+            <div class="pt-3 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <span class="text-xs text-slate-600 flex items-center gap-1.5 font-medium">
                 <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
                 Confidential NDA Protected
               </span>
 
-              <button type="submit" id="contactSubmitBtn" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-electric-500 hover:bg-electric-400 transition-all flex items-center justify-center gap-2 shadow-lg shadow-electric-500/25">
+              <button type="submit" id="contactSubmitBtn" class="w-full sm:w-auto px-8 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-electric-600 to-blue-700 hover:from-electric-500 hover:to-blue-600 transition-all flex items-center justify-center gap-2 shadow-xl shadow-electric-600/30">
                 <span>Submit Inquiry</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </button>
@@ -272,7 +346,7 @@ require_once __DIR__ . '/includes/components/section-header.php';
             </div>
 
             <!-- Privacy Notice -->
-            <p class="text-[11px] text-slate-400 leading-relaxed pt-2">
+            <p class="text-[11px] text-slate-500 leading-relaxed pt-2">
               <strong>Privacy Notice:</strong> We respect your corporate confidentiality. Under our strict NDA and privacy policy, your contact details, project specifications, and business logic are never shared, sold, or distributed to third parties.
             </p>
 

@@ -17,9 +17,9 @@ require_once __DIR__ . '/../components/section-header.php';
 ?>
 
 <!-- ==========================================================================
-     SERVICE DETAIL HERO & BREADCRUMBS (FUTURISTIC 3D BRAND THEME)
+     SERVICE DETAIL HERO & BREADCRUMBS (FUTURISTIC 3D BRAND THEME + ADVERT WAVE SHADER)
 ========================================================================== -->
-<section class="relative pt-12 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
+<section class="advert-wave-hero relative pt-12 pb-14 sm:pt-16 sm:pb-20 lg:pt-20 lg:pb-24 bg-navy-950 bg-grid-dark text-white overflow-hidden border-b border-white/10">
   <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-electric-500/15 rounded-full blur-[130px] pointer-events-none"></div>
   <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-yukt-orange/15 rounded-full blur-[130px] pointer-events-none"></div>
 
@@ -36,8 +36,8 @@ require_once __DIR__ . '/../components/section-header.php';
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
       
-      <!-- Left Column: Title & CTAs (8 Cols) -->
-      <div class="lg:col-span-8 space-y-5 reveal-up">
+      <!-- Left Column: Title & CTAs (7 Cols) -->
+      <div class="lg:col-span-7 space-y-5 reveal-up">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono uppercase tracking-widest <?php echo ($service['accent'] === 'orange') ? 'bg-yukt-orange/15 text-yukt-orangeDark border border-yukt-orange/30' : 'bg-electric-500/15 text-electric-400 border border-electric-400/30'; ?>">
           <span class="w-2 h-2 rounded-full <?php echo ($service['accent'] === 'orange') ? 'bg-yukt-orange' : 'bg-electric-400'; ?>"></span>
           <span><?php echo htmlspecialchars($service['badge']); ?></span>
@@ -57,7 +57,7 @@ require_once __DIR__ . '/../components/section-header.php';
 
         <!-- CTA Buttons -->
         <div class="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-          <button type="button" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-electric-500 hover:bg-electric-400 transition-all open-quote-modal-btn shadow-lg shadow-electric-500/25 flex items-center justify-center gap-2" data-service="<?php echo htmlspecialchars($service['title']); ?>">
+          <button type="button" class="px-7 py-3.5 rounded-xl font-display font-semibold text-sm text-white bg-gradient-to-r from-electric-600 to-blue-700 hover:from-electric-500 hover:to-blue-600 transition-all open-quote-modal-btn shadow-lg shadow-electric-600/30 flex items-center justify-center gap-2" data-service="<?php echo htmlspecialchars($service['title']); ?>">
             <span>Get a Quote for <?php echo htmlspecialchars($service['short']); ?></span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </button>
@@ -84,9 +84,10 @@ require_once __DIR__ . '/../components/section-header.php';
         </div>
       </div>
 
-      <!-- Right Column: Quick Scope Card (4 Cols) -->
-      <div class="lg:col-span-4 reveal-up">
-        <div class="glass-dark rounded-3xl p-6 sm:p-8 border border-white/15 shadow-2xl space-y-5 text-white">
+      <!-- Right Column: Quick Scope Card with 3D Depth (5 Cols) -->
+      <div class="lg:col-span-5 relative reveal-up">
+        <div class="absolute -inset-1 bg-gradient-to-r from-electric-500/25 via-navy-900/40 to-yukt-orange/25 rounded-3xl blur-xl opacity-70"></div>
+        <div class="relative glass-dark rounded-3xl p-6 sm:p-8 border border-white/15 shadow-2xl space-y-5 text-white">
           <div class="flex items-center gap-3 pb-4 border-b border-white/10">
             <div class="w-12 h-12 rounded-2xl <?php echo ($service['accent'] === 'orange') ? 'bg-yukt-orange/20 text-yukt-orange border border-yukt-orange/40' : 'bg-electric-500/20 text-electric-400 border border-electric-400/40'; ?> flex items-center justify-center flex-shrink-0">
               <i data-lucide="<?php echo $service['icon']; ?>" class="w-6 h-6"></i>
@@ -117,7 +118,7 @@ require_once __DIR__ . '/../components/section-header.php';
           </div>
 
           <div class="pt-3 border-t border-white/10 space-y-2.5">
-            <button type="button" class="w-full py-3 px-4 rounded-xl font-display font-semibold text-xs text-white bg-electric-500 hover:bg-electric-400 transition-all open-quote-modal-btn shadow-md shadow-electric-500/20 flex items-center justify-center gap-2" data-service="<?php echo htmlspecialchars($service['title']); ?>">
+            <button type="button" class="w-full py-3 px-4 rounded-xl font-display font-semibold text-xs text-white bg-gradient-to-r from-electric-600 to-blue-700 hover:from-electric-500 hover:to-blue-600 transition-all open-quote-modal-btn shadow-md shadow-electric-600/25 flex items-center justify-center gap-2" data-service="<?php echo htmlspecialchars($service['title']); ?>">
               <span>Request Scoping Document</span>
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </button>
