@@ -12,21 +12,22 @@ if (!defined('COMPANY_NAME')) {
     define('COMPANY_DOMAIN', 'yukt.online');
     define('COMPANY_URL', 'https://yukt.online');
     define('COMPANY_ESTABLISHED', '2021');
+    define('APP_VERSION', '2.5.0');
 
     // Contact & Location (Indian IT Powerhouse)
-    define('PHONE_NUMBER', '+91 72176 45059');
-    define('PHONE_RAW', '917217645059');
-    define('PHONE_SECONDARY', '+91 95763 38282');
-    define('PHONE_SECONDARY_RAW', '919576338282');
-    define('PHONE_RANJEET', '+91 72176 45059');
-    define('PHONE_RANJEET_RAW', '917217645059');
+    define('PHONE_NUMBER', '+91 95763 38282');
+    define('PHONE_RAW', '919576338282');
+    define('PHONE_SECONDARY', '+91 72176 45059');
+    define('PHONE_SECONDARY_RAW', '917217645059');
     define('PHONE_ANSAR', '+91 95763 38282');
     define('PHONE_ANSAR_RAW', '919576338282');
+    define('PHONE_RANJEET', '+91 72176 45059');
+    define('PHONE_RANJEET_RAW', '917217645059');
 
-    define('WHATSAPP_NUMBER', '917217645059');
-    define('WHATSAPP_FORMATTED', '+91 72176 45059');
-    define('WHATSAPP_BASE_URL', 'https://wa.me/917217645059');
-    define('WHATSAPP_URL', 'https://wa.me/917217645059?text=Hi%20Yukt%20IT%20Solutions%2C%20I%20would%20like%20to%20discuss%20a%20project.');
+    define('WHATSAPP_NUMBER', '919576338282');
+    define('WHATSAPP_FORMATTED', '+91 95763 38282');
+    define('WHATSAPP_BASE_URL', 'https://wa.me/919576338282');
+    define('WHATSAPP_URL', 'https://wa.me/919576338282?text=Hi%20Yukt%20IT%20Solutions%2C%20I%20would%20like%20to%20discuss%20a%20project.');
     define('WHATSAPP_ANSAR_URL', 'https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Yukt%20IT%20Solutions.');
     define('WHATSAPP_RANJEET_URL', 'https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Yukt%20IT%20Solutions.');
 
@@ -37,9 +38,9 @@ if (!defined('COMPANY_NAME')) {
     define('OFFICE_SECONDARY', 'HSR Layout, Bengaluru, Karnataka, India');
     define('WORKING_HOURS', 'Mon – Sat: 9:30 AM – 7:30 PM IST');
 
-    // Helper function to generate tailored WhatsApp URLs with prefilled messages
+    // Helper function to generate tailored WhatsApp URLs with prefilled messages (Default: Ansar Ali Shah)
     if (!function_exists('getWhatsAppUrl')) {
-        function getWhatsAppUrl($message = '', $rawPhone = '917217645059') {
+        function getWhatsAppUrl($message = '', $rawPhone = '919576338282') {
             $base = 'https://wa.me/' . $rawPhone;
             if (!empty($message)) {
                 return $base . '?text=' . rawurlencode($message);
@@ -60,19 +61,8 @@ if (!defined('COMPANY_NAME')) {
     define('ANSAR_GITHUB', 'https://github.com/ansaralisahh');
     define('ANSAR_LINKEDIN', 'https://www.linkedin.com/in/ansaralisahh');
 
-    // Verified Engineering Leadership Pod
+    // Verified Engineering Leadership Pod (Ansar Ali Shah: Founder, Ranjeet: Co-Founder)
     $LEADERSHIP_TEAM = [
-        [
-            'name' => 'Ranjeet',
-            'role' => 'Co-Founder & Lead Solutions Architect',
-            'focus' => 'Cloud Systems, Full-Stack Architecture & AI Integration',
-            'phone' => '+91 72176 45059',
-            'phone_raw' => '917217645059',
-            'whatsapp_url' => 'https://wa.me/917217645059?text=' . rawurlencode('Hi Ranjeet, I would like to discuss a project with Yukt IT Solutions.'),
-            'github' => 'https://github.com/yukt2026',
-            'linkedin' => 'https://www.linkedin.com/in/ranjeet-m-079777262/?isSelfProfile=true',
-            'avatar_initials' => 'RM'
-        ],
         [
             'name' => 'Ansar Ali Shah',
             'role' => 'Founder & Lead Technical Architect',
@@ -83,6 +73,17 @@ if (!defined('COMPANY_NAME')) {
             'github' => 'https://github.com/ansaralisahh',
             'linkedin' => 'https://www.linkedin.com/in/ansaralisahh',
             'avatar_initials' => 'AS'
+        ],
+        [
+            'name' => 'Ranjeet',
+            'role' => 'Co-Founder & Lead Solutions Architect',
+            'focus' => 'Cloud Systems, Full-Stack Architecture & AI Integration',
+            'phone' => '+91 72176 45059',
+            'phone_raw' => '917217645059',
+            'whatsapp_url' => 'https://wa.me/917217645059?text=' . rawurlencode('Hi Ranjeet, I would like to discuss a project with Yukt IT Solutions.'),
+            'github' => 'https://github.com/yukt2026',
+            'linkedin' => 'https://www.linkedin.com/in/ranjeet-m-079777262/?isSelfProfile=true',
+            'avatar_initials' => 'RM'
         ]
     ];
 

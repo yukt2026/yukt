@@ -1,4 +1,11 @@
 <?php
+// Prevent aggressive browser/proxy caching for dynamic HTML/PHP pages
+if (!headers_sent()) {
+    header("Cache-Control: no-cache, no-store, must-revalidate, max-age=0, post-check=0, pre-check=0");
+    header("Pragma: no-cache");
+    header("Expires: Wed, 11 Jan 1984 05:00:00 GMT");
+}
+
 require_once __DIR__ . '/config.php';
 require_once __DIR__ . '/components/icons.php';
 require_once __DIR__ . '/components/button.php';
@@ -7,7 +14,7 @@ require_once __DIR__ . '/components/badge.php';
 $activePage = $activePage ?? 'home';
 $pageTitle = $pageTitle ?? (COMPANY_NAME . ' | Technology That Moves Your Business Forward');
 $pageDesc = $pageDesc ?? 'YUKT IT SOLUTIONS builds intelligent digital experiences, powerful software, websites, and AI-driven solutions that help businesses grow faster.';
-$cssVersion = file_exists(__DIR__ . '/../assets/css/main.css') ? filemtime(__DIR__ . '/../assets/css/main.css') : time();
+$cssVersion = defined('APP_VERSION') ? APP_VERSION . '.' . (file_exists(__DIR__ . '/../assets/css/main.css') ? filemtime(__DIR__ . '/../assets/css/main.css') : time()) : time();
 
 $currentScript = basename($_SERVER['PHP_SELF']);
 $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_URL . '/' . $currentScript;
@@ -17,6 +24,12 @@ $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_U
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Cache Control Directives (Ensures Browsers Always Pull Fresh Updates) -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
   <title><?php echo htmlspecialchars($pageTitle); ?></title>
   <meta name="description" content="<?php echo htmlspecialchars($pageDesc); ?>">
   <link rel="canonical" href="<?php echo htmlspecialchars($canonicalUrl); ?>">

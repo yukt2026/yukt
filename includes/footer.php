@@ -28,11 +28,11 @@
             </div>
             <div class="flex items-center gap-2">
               <i data-lucide="phone" class="w-3.5 h-3.5 text-yukt-orange"></i>
-              <a href="https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20want%20to%20discuss%20a%20project%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Ranjeet: +91 72176 45059</a>
+              <a href="https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20want%20to%20discuss%20a%20project%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Ansar: +91 95763 38282</a>
             </div>
             <div class="flex items-center gap-2">
               <i data-lucide="phone" class="w-3.5 h-3.5 text-electric-400"></i>
-              <a href="https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20want%20to%20discuss%20a%20project%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Ansar: +91 95763 38282</a>
+              <a href="https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20want%20to%20discuss%20a%20project%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Ranjeet: +91 72176 45059</a>
             </div>
           </div>
 
@@ -130,19 +130,19 @@
       </div>
       <p class="text-xs text-slate-300">Choose an engineering lead or topic to chat immediately:</p>
       <div class="space-y-1.5 text-xs">
-        <a href="https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20YUKT." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-3 py-2 rounded-xl bg-white/5 hover:bg-electric-500/30 border border-white/10 transition-colors">
-          <span class="flex items-center gap-1.5 font-medium">💬 Chat with Ranjeet</span>
-          <span class="text-[10px] text-slate-400 font-mono">+91 72176 45059</span>
-        </a>
         <a href="https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20YUKT." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-3 py-2 rounded-xl bg-white/5 hover:bg-electric-500/30 border border-white/10 transition-colors">
-          <span class="flex items-center gap-1.5 font-medium">💬 Chat with Ansar</span>
+          <span class="flex items-center gap-1.5 font-medium">💬 Chat with Ansar (Founder)</span>
           <span class="text-[10px] text-slate-400 font-mono">+91 95763 38282</span>
         </a>
+        <a href="https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20YUKT." target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-3 py-2 rounded-xl bg-white/5 hover:bg-electric-500/30 border border-white/10 transition-colors">
+          <span class="flex items-center gap-1.5 font-medium">💬 Chat with Ranjeet (Co-Founder)</span>
+          <span class="text-[10px] text-slate-400 font-mono">+91 72176 45059</span>
+        </a>
         <div class="pt-1 border-t border-white/10"></div>
-        <a href="https://wa.me/917217645059?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20Website%20or%20Software%20Development." target="_blank" rel="noopener noreferrer" class="block px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors">
+        <a href="https://wa.me/919576338282?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20Website%20or%20Software%20Development." target="_blank" rel="noopener noreferrer" class="block px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors">
           💻 Website / Software Development
         </a>
-        <a href="https://wa.me/917217645059?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20AI%20Automation%20%26%20Marketing." target="_blank" rel="noopener noreferrer" class="block px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors">
+        <a href="https://wa.me/919576338282?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20AI%20Automation%20%26%20Marketing." target="_blank" rel="noopener noreferrer" class="block px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors">
           🤖 AI Automation &amp; Digital Growth
         </a>
       </div>
@@ -161,10 +161,10 @@
       </button>
 
       <a 
-        href="https://wa.me/917217645059?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%20want%20to%20discuss%20a%20project."
+        href="https://wa.me/919576338282?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%20want%20to%20discuss%20a%20project."
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat on WhatsApp with YUKT IT SOLUTIONS (+91 72176 45059)"
+        aria-label="Chat on WhatsApp with YUKT IT SOLUTIONS (+91 95763 38282)"
         class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-emerald-500 text-white flex items-center justify-center shadow-2xl shadow-emerald-500/40 border border-emerald-300/40 transition-transform hover:scale-105"
       >
         <i data-lucide="message-circle" class="w-7 h-7"></i>
@@ -175,11 +175,17 @@
   <!-- Reusable Quote Estimate Modal Component -->
   <?php require_once __DIR__ . '/components/modal-quote.php'; ?>
 
-  <!-- Interactive 3D WebGL Wave Engine (AdvertResources Shader) -->
-  <script src="assets/js/advert-wave.js"></script>
+  <?php
+  $waveFile = __DIR__ . '/../assets/js/advert-wave.js';
+  $waveVersion = defined('APP_VERSION') ? APP_VERSION . '.' . (file_exists($waveFile) ? filemtime($waveFile) : time()) : time();
+  $appFile = __DIR__ . '/../assets/js/app.js';
+  $appVersion = defined('APP_VERSION') ? APP_VERSION . '.' . (file_exists($appFile) ? filemtime($appFile) : time()) : time();
+  ?>
+  <!-- Interactive 3D WebGL Wave Engine (AdvertResources Shader with Cache Busting) -->
+  <script src="assets/js/advert-wave.js?v=<?php echo $waveVersion; ?>"></script>
 
-  <!-- App Core JavaScript -->
-  <script src="assets/js/app.js"></script>
+  <!-- App Core JavaScript (with Dynamic Cache Busting) -->
+  <script src="assets/js/app.js?v=<?php echo $appVersion; ?>"></script>
 
   <!-- Global Widget Handlers & Lucide Icon Renderer -->
   <script>
