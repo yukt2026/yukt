@@ -37,7 +37,7 @@
             <div class="flex items-center gap-2">
               <i data-lucide="map-pin" class="w-3.5 h-3.5 text-red-400"></i>
               <a href="<?php echo defined('GOOGLE_MAPS_VIEW_URL') ? GOOGLE_MAPS_VIEW_URL : 'https://maps.google.com/?cid=7252994966779493168'; ?>" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors flex items-center gap-1">
-                <span>NCR Hub on Google Maps</span>
+                <span>Delhi Office on Google Maps</span>
                 <i data-lucide="external-link" class="w-3 h-3 text-slate-500"></i>
               </a>
             </div>

@@ -98,4 +98,4 @@ node render.js
 - **Primary WhatsApp / Co-Founder:** `+91 72176 45059` (Ranjeet)
 - **Technical Architect Desk / Founder:** `+91 95763 38282` (Ansar Ali Shah)
 - **Electronic Mail:** `contact@yukt.online`
-- **Delivery Hubs:** Sector 62, Noida, NCR &amp; HSR Layout, Bengaluru, Karnataka
+- **Delivery Hubs:** Block A, Ram Datt Enclave, Uttam Nagar, Delhi, 110059 &amp; HSR Layout, Bengaluru, Karnataka

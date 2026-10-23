@@ -245,7 +245,7 @@ require_once __DIR__ . '/includes/components/section-header.php';
                 <i data-lucide="map-pin" class="w-5 h-5"></i>
               </div>
               <div class="flex-1 min-w-0">
-                <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Primary Delivery Hub (NCR)</div>
+                <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Headquarters &bull; New Delhi</div>
                 <div class="text-sm font-bold text-slate-900"><?php echo OFFICE_PRIMARY; ?></div>
                 <div class="text-xs text-slate-500 mt-0.5">Secondary Hub: <?php echo OFFICE_SECONDARY; ?></div>
               </div>
@@ -397,7 +397,7 @@ require_once __DIR__ . '/includes/components/section-header.php';
         Visit Our Delivery Hub on <span class="text-gradient-brand">Google Maps</span>
       </h2>
       <p class="text-slate-600 text-base sm:text-lg">
-        Located in the National Capital Region (NCR), our engineering studio houses our cloud, software architecture, and AI automation teams.
+        Located in Uttam Nagar, New Delhi (NCR), our engineering studio houses our cloud, software architecture, and AI automation teams.
       </p>
     </div>
 
@@ -426,7 +426,8 @@ require_once __DIR__ . '/includes/components/section-header.php';
                 <i data-lucide="map-pin" class="w-4 h-4 text-electric-600 mt-1 shrink-0"></i>
                 <div>
                   <strong class="text-slate-900 block font-medium">Physical Address:</strong>
-                  <span class="text-slate-600"><?php echo OFFICE_PRIMARY; ?></span>
+                  <span class="text-slate-800 font-medium block"><?php echo OFFICE_PRIMARY; ?></span>
+                  <span class="text-slate-500 text-xs block mt-0.5 font-normal"><?php echo OFFICE_PRIMARY_HINDI; ?></span>
                 </div>
               </div>
 
@@ -502,7 +503,7 @@ require_once __DIR__ . '/includes/components/section-header.php';
           <div class="px-5 py-3 bg-slate-900 text-white flex items-center justify-between text-xs font-mono shrink-0">
             <div class="flex items-center gap-2 truncate">
               <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
-              <span class="font-medium text-slate-200">Google Maps &bull; Yukt IT Solutions</span>
+              <span class="font-medium text-slate-200">Google Maps &bull; Yukt IT Solutions (Uttam Nagar, Delhi)</span>
             </div>
             <a 
               href="<?php echo GOOGLE_MAPS_VIEW_URL; ?>" 

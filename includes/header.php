@@ -91,10 +91,10 @@ $schemaGraph = [
         "hasMap" => GOOGLE_MAPS_VIEW_URL,
         "address" => [
             "@type" => "PostalAddress",
-            "streetAddress" => "Sector 62",
-            "addressLocality" => "Noida",
-            "addressRegion" => "NCR",
-            "postalCode" => "201301",
+            "streetAddress" => "Block A, Ram Datt Enclave, Uttam Nagar",
+            "addressLocality" => "New Delhi",
+            "addressRegion" => "Delhi",
+            "postalCode" => "110059",
             "addressCountry" => "IN"
         ],
         "sameAs" => [
