@@ -432,8 +432,14 @@ require_once __DIR__ . '/includes/components/section-header.php';
           <div class="text-sm font-bold text-slate-900"><?php echo OFFICE_PRIMARY; ?> &bull; <?php echo OFFICE_SECONDARY; ?></div>
         </div>
       </div>
-      <div class="text-xs font-mono text-slate-500">
-        Operating Pan-India &bull; Delivering Globally
+      <div class="flex items-center gap-3">
+        <a href="contact.php#office-map" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-50 hover:bg-electric-50 text-slate-700 hover:text-electric-600 text-xs font-mono font-medium transition-colors border border-slate-200">
+          <i data-lucide="map" class="w-3.5 h-3.5 text-electric-600"></i>
+          <span>View on Google Maps &rarr;</span>
+        </a>
+        <div class="text-xs font-mono text-slate-500 hidden md:block">
+          Operating Pan-India &bull; Delivering Globally
+        </div>
       </div>
     </div>
 

@@ -37,6 +37,8 @@ if (!defined('COMPANY_NAME')) {
     define('OFFICE_PRIMARY', 'Sector 62, Noida, NCR, India');
     define('OFFICE_SECONDARY', 'HSR Layout, Bengaluru, Karnataka, India');
     define('WORKING_HOURS', 'Mon – Sat: 9:30 AM – 7:30 PM IST');
+    define('GOOGLE_MAPS_EMBED_SRC', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.2383772372173!2d77.06746019999997!3d28.622616899999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d05241482afc1%3A0x64a7da1df8947b30!2sYukt%20IT%20Solutions!5e0!3m2!1shi!2sin!4v1792762605037!5m2!1shi!2sin');
+    define('GOOGLE_MAPS_VIEW_URL', 'https://www.google.com/maps/place/Yukt+IT+Solutions/@28.6226169,77.0674602,17z');
 
     // Helper function to generate tailored WhatsApp URLs with prefilled messages (Default: Ansar Ali Shah)
     if (!function_exists('getWhatsAppUrl')) {

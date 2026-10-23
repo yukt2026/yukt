@@ -88,6 +88,7 @@ $schemaGraph = [
         "description" => $pageDesc,
         "telephone" => PHONE_NUMBER,
         "email" => EMAIL_PRIMARY,
+        "hasMap" => GOOGLE_MAPS_VIEW_URL,
         "address" => [
             "@type" => "PostalAddress",
             "streetAddress" => "Sector 62",

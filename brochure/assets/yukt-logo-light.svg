@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none" width="100%" height="100%">
+  <!-- Icon Group -->
+  <g transform="translate(6, 6)">
+    <rect x="0" y="0" width="52" height="52" rx="12" fill="#0066FF"/>
+    
+    <!-- Geometric 'Y' Emblem -->
+    <path d="M16 14L26 26" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M36 14L26 26" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M26 26V39" stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round"/>
+    
+    <!-- Accent Orange Spark Node -->
+    <circle cx="26" cy="26" r="3.5" fill="#EA580C" />
+    <circle cx="16" cy="14" r="2.5" fill="#FFFFFF" />
+    <circle cx="36" cy="14" r="2.5" fill="#EA580C" />
+    <circle cx="26" cy="39" r="2.5" fill="#FFFFFF" />
+  </g>
+
+  <!-- Wordmark Text Group -->
+  <g transform="translate(70, 20)">
+    <text x="0" y="20" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" letter-spacing="-0.03em" fill="#FFFFFF">YUKT</text>
+    <circle cx="68" cy="10" r="3" fill="#EA580C" />
+    <text x="0" y="34" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" letter-spacing="0.22em" fill="#94A3B8">IT SOLUTIONS</text>
+  </g>
+</svg>
