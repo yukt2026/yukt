@@ -156,12 +156,12 @@ require_once __DIR__ . '/includes/components/section-header.php';
               </a>
             </div>
             <div class="pt-2 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500">
-              <a href="https://github.com/yukt2026" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 flex items-center gap-1">
-                <i data-lucide="github" class="w-3 h-3"></i>
+              <a href="<?php echo RANJEET_GITHUB; ?>" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 flex items-center gap-1.5 transition-colors">
+                <?php echo getIconSvg('github', 'w-3.5 h-3.5 text-slate-700'); ?>
                 <span>GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/ranjeet-m-079777262/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="hover:text-electric-600 flex items-center gap-1">
-                <i data-lucide="linkedin" class="w-3 h-3"></i>
+              <a href="<?php echo RANJEET_LINKEDIN; ?>" target="_blank" rel="noopener noreferrer" class="hover:text-electric-600 flex items-center gap-1.5 transition-colors">
+                <?php echo getIconSvg('linkedin', 'w-3.5 h-3.5 text-electric-600'); ?>
                 <span>LinkedIn</span>
               </a>
             </div>
@@ -187,12 +187,12 @@ require_once __DIR__ . '/includes/components/section-header.php';
               </a>
             </div>
             <div class="pt-2 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500">
-              <a href="https://github.com/ansaralisahh" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 flex items-center gap-1">
-                <i data-lucide="github" class="w-3 h-3"></i>
+              <a href="<?php echo ANSAR_GITHUB; ?>" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 flex items-center gap-1.5 transition-colors">
+                <?php echo getIconSvg('github', 'w-3.5 h-3.5 text-slate-700'); ?>
                 <span>GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/ansaralisahh" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 flex items-center gap-1">
-                <i data-lucide="linkedin" class="w-3 h-3"></i>
+              <a href="<?php echo ANSAR_LINKEDIN; ?>" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 flex items-center gap-1.5 transition-colors">
+                <?php echo getIconSvg('linkedin', 'w-3.5 h-3.5 text-blue-600'); ?>
                 <span>LinkedIn</span>
               </a>
             </div>
@@ -206,14 +206,22 @@ require_once __DIR__ . '/includes/components/section-header.php';
           <!-- Official Socials & Instagram Card -->
           <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
             <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Official Social &amp; Community Channels</div>
-            <div class="grid grid-cols-2 gap-2 text-xs">
-              <a href="https://www.instagram.com/yukt_officials?psln=MWo3bndtb3JhMmN2dQ==" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-2 rounded-xl bg-slate-50 hover:bg-pink-50 hover:text-pink-600 transition-colors border border-slate-200">
-                <i data-lucide="instagram" class="w-4 h-4 text-pink-500"></i>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              <a href="<?php echo INSTAGRAM_URL; ?>" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 hover:bg-pink-50 hover:text-pink-600 transition-colors border border-slate-200 group">
+                <?php echo getIconSvg('instagram', 'w-4 h-4 text-pink-500 group-hover:scale-110 transition-transform'); ?>
                 <span class="font-medium truncate">@yukt_officials</span>
               </a>
-              <a href="https://github.com/yukt2026" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-2 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-200">
-                <i data-lucide="github" class="w-4 h-4 text-slate-800"></i>
+              <a href="<?php echo GITHUB_URL; ?>" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 transition-colors border border-slate-200 group">
+                <?php echo getIconSvg('github', 'w-4 h-4 text-slate-800 group-hover:scale-110 transition-transform'); ?>
                 <span class="font-medium truncate">github/yukt2026</span>
+              </a>
+              <a href="<?php echo LINKEDIN_URL; ?>" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 hover:bg-electric-50 hover:text-electric-600 transition-colors border border-slate-200 group">
+                <?php echo getIconSvg('linkedin', 'w-4 h-4 text-electric-600 group-hover:scale-110 transition-transform'); ?>
+                <span class="font-medium truncate">LinkedIn Network</span>
+              </a>
+              <a href="<?php echo TWITTER_URL; ?>" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 p-2.5 rounded-xl bg-slate-50 hover:bg-sky-50 hover:text-sky-600 transition-colors border border-slate-200 group">
+                <?php echo getIconSvg('twitter', 'w-4 h-4 text-sky-500 group-hover:scale-110 transition-transform'); ?>
+                <span class="font-medium truncate">@yuktonline</span>
               </a>
             </div>
           </div>

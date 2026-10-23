@@ -1428,12 +1428,12 @@ require_once __DIR__ . '/includes/header.php';
           </div>
 
           <div class="mt-5 pt-4 border-t border-white/10 flex flex-wrap items-center gap-2.5 relative z-10">
-            <a href="https://github.com/ansaralisahh" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors">
-              <i data-lucide="github" class="w-3.5 h-3.5 text-white"></i>
+            <a href="<?php echo ANSAR_GITHUB; ?>" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors group">
+              <?php echo getIconSvg('github', 'w-3.5 h-3.5 text-white group-hover:scale-110 transition-transform'); ?>
               <span class="font-mono">github.com/ansaralisahh</span>
             </a>
-            <a href="https://www.linkedin.com/in/ansaralisahh" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-blue-500/20 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors">
-              <i data-lucide="linkedin" class="w-3.5 h-3.5 text-blue-400"></i>
+            <a href="<?php echo ANSAR_LINKEDIN; ?>" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-blue-500/20 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors group">
+              <?php echo getIconSvg('linkedin', 'w-3.5 h-3.5 text-blue-400 group-hover:scale-110 transition-transform'); ?>
               <span>LinkedIn Profile</span>
             </a>
           </div>
@@ -1474,12 +1474,12 @@ require_once __DIR__ . '/includes/header.php';
           </div>
 
           <div class="mt-5 pt-4 border-t border-white/10 flex flex-wrap items-center gap-2.5 relative z-10">
-            <a href="https://github.com/yukt2026" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors">
-              <i data-lucide="github" class="w-3.5 h-3.5 text-white"></i>
+            <a href="<?php echo RANJEET_GITHUB; ?>" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/15 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors group">
+              <?php echo getIconSvg('github', 'w-3.5 h-3.5 text-white group-hover:scale-110 transition-transform'); ?>
               <span class="font-mono">github.com/yukt2026</span>
             </a>
-            <a href="https://www.linkedin.com/in/ranjeet-m-079777262/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-electric-500/20 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors">
-              <i data-lucide="linkedin" class="w-3.5 h-3.5 text-electric-400"></i>
+            <a href="<?php echo RANJEET_LINKEDIN; ?>" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-electric-500/20 border border-white/10 flex items-center gap-2 text-xs text-slate-300 hover:text-white transition-colors group">
+              <?php echo getIconSvg('linkedin', 'w-3.5 h-3.5 text-electric-400 group-hover:scale-110 transition-transform'); ?>
               <span>LinkedIn Profile</span>
             </a>
           </div>
