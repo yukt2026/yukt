@@ -17,7 +17,9 @@ $pageDesc = $pageDesc ?? 'YUKT IT SOLUTIONS builds intelligent digital experienc
 $cssVersion = defined('APP_VERSION') ? APP_VERSION . '.' . (file_exists(__DIR__ . '/../assets/css/main.css') ? filemtime(__DIR__ . '/../assets/css/main.css') : time()) : time();
 
 $currentScript = basename($_SERVER['PHP_SELF']);
-$canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_URL . '/' . $currentScript;
+if (!isset($canonicalUrl)) {
+    $canonicalUrl = ($currentScript === 'index.php') ? COMPANY_URL . '/' : COMPANY_URL . '/' . $currentScript;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -175,10 +177,11 @@ if ($currentScript !== 'index.php' && $activePage !== '404') {
             "item" => $canonicalUrl
         ];
     } else {
+        $breadcrumbTitle = $breadcrumbName ?? ucwords(str_replace('-', ' ', $activePage));
         $breadcrumbItems[] = [
             "@type" => "ListItem",
             "position" => 2,
-            "name" => ucfirst($activePage),
+            "name" => $breadcrumbTitle,
             "item" => $canonicalUrl
         ];
     }

@@ -24,6 +24,11 @@ ErrorDocument 404 /404.php
     RewriteCond %{HTTP_HOST} ^(www\.)?yukt\.online$ [NC]
     RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php [NC]
     RewriteRule ^index\.php$ https://yukt.online/ [R=301,L]
+
+    # Clean URLs for Legal & Policy Pages
+    RewriteRule ^privacy-policy/?$ privacy-policy.php [L,QSA]
+    RewriteRule ^terms/?$ terms.php [L,QSA]
+    RewriteRule ^terms-and-conditions/?$ terms.php [L,QSA]
 </IfModule>
 
 # 3. Character Encoding & MIME Types

@@ -112,6 +112,8 @@
             <li><a href="contact.php" class="hover:text-white transition-colors">Contact &amp; Scoping Desk</a></li>
             <li><a href="contact.php#office-map" class="hover:text-white transition-colors">Office Location &amp; Map</a></li>
             <li><a href="index.php#services" class="hover:text-white transition-colors">3D Interactive Showcase</a></li>
+            <li><a href="privacy-policy" class="hover:text-white transition-colors">Privacy Policy</a></li>
+            <li><a href="terms" class="hover:text-white transition-colors">Terms &amp; Conditions</a></li>
           </ul>
         </div>
 
@@ -119,7 +121,14 @@
 
       <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
         <p>&copy; <?php echo date('Y'); ?> YUKT IT SOLUTIONS (yukt.online). All rights reserved.</p>
-        <p class="font-mono">Engineered with Interactive 3D WebGL &bull; WhatsApp Lead Integration</p>
+        <div class="flex items-center gap-4 text-xs font-medium">
+          <a href="privacy-policy" class="hover:text-electric-400 transition-colors">Privacy Policy</a>
+          <span class="text-slate-700">&bull;</span>
+          <a href="terms" class="hover:text-electric-400 transition-colors">Terms of Service</a>
+          <span class="text-slate-700">&bull;</span>
+          <a href="contact.php" class="hover:text-electric-400 transition-colors">Contact Desk</a>
+        </div>
+        <p class="font-mono hidden md:block">Engineered with Interactive 3D WebGL &bull; WhatsApp Lead Integration</p>
       </div>
     </div>
   </footer>
