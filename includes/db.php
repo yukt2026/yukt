@@ -58,6 +58,20 @@ try {
             email VARCHAR(150) UNIQUE NOT NULL,
             subscribed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+        CREATE TABLE IF NOT EXISTS data_deletion_requests (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            tracking_code VARCHAR(50) UNIQUE NOT NULL,
+            requester_name VARCHAR(150) NOT NULL,
+            email VARCHAR(150) NOT NULL,
+            phone VARCHAR(30) NULL,
+            interaction_type VARCHAR(100) NULL,
+            deletion_scope VARCHAR(100) NULL,
+            notes TEXT NULL,
+            ip_address VARCHAR(45) NULL,
+            status VARCHAR(30) DEFAULT 'received',
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
     ");
 
 } catch (PDOException $e) {

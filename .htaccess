@@ -29,6 +29,8 @@ ErrorDocument 404 /404.php
     RewriteRule ^privacy-policy/?$ privacy-policy.php [L,QSA]
     RewriteRule ^terms/?$ terms.php [L,QSA]
     RewriteRule ^terms-and-conditions/?$ terms.php [L,QSA]
+    RewriteRule ^data-deletion/?$ data-deletion.php [L,QSA]
+    RewriteRule ^user-data-deletion/?$ data-deletion.php [L,QSA]
 </IfModule>
 
 # 3. Character Encoding & MIME Types
