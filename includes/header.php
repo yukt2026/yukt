@@ -367,7 +367,7 @@ if (!empty($faqs) && is_array($faqs)) {
             target="_blank"
             rel="noopener noreferrer"
             class="hidden sm:inline-flex items-center gap-2.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-electric-500 to-electric-600 bg-electric-600 hover:from-electric-400 hover:to-electric-500 border border-electric-400/30 shadow-lg shadow-electric-500/25 hover:shadow-electric-500/40 transition-all hover:-translate-y-0.5"
-            title="Chat on WhatsApp (+91 95763 38282)"
+            title="Chat on WhatsApp (+91 82354 11806)"
           >
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
             <span>WhatsApp Us</span>
@@ -507,7 +507,7 @@ if (!empty($faqs) && is_array($faqs)) {
               class="w-full py-3.5 px-4 rounded-xl font-display font-semibold text-xs sm:text-sm text-white bg-gradient-to-r from-yukt-orange to-amber-600 hover:from-yukt-orangeLight hover:to-yukt-orange flex items-center justify-center gap-2 shadow-xl shadow-yukt-orange/30 border border-amber-400/30 transition-all active:scale-[0.98]"
             >
               <i data-lucide="message-circle" class="w-4 h-4"></i>
-              <span>Start Project on WhatsApp (+91 95763 38282)</span>
+              <span>Start Project on WhatsApp (+91 82354 11806)</span>
             </a>
           </div>
         </div>

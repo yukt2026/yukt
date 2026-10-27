@@ -34,8 +34,8 @@ foreach ($routes as $url) {
         continue;
     }
 
-    // Check floating WhatsApp button present (Ansar's official number)
-    if (strpos($html, 'wa.me/919576338282') === false) {
+    // Check floating WhatsApp button present (Company number)
+    if (strpos($html, 'wa.me/918235411806') === false) {
         $errors[] = "Missing official WhatsApp link on: $url";
     }
 

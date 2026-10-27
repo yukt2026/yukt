@@ -1505,7 +1505,7 @@ require_once __DIR__ . '/includes/header.php';
         <div class="text-center max-w-2xl mx-auto space-y-5 mb-10">
           <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 font-mono text-xs uppercase tracking-widest">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-            <span>Instant WhatsApp Consultation &bull; +91 95763 38282</span>
+            <span>Instant WhatsApp Consultation &bull; +91 82354 11806</span>
           </div>
 
           <h2 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-white">
@@ -2213,7 +2213,7 @@ require_once __DIR__ . '/includes/header.php';
         const listEl = document.getElementById('modal-highlights');
         listEl.innerHTML = item.highlights.map(h => `<li class="text-slate-300">${h}</li>`).join('');
 
-        document.getElementById('modal-wa-link').href = `https://wa.me/919576338282?text=${encodeURIComponent(item.waText)}`;
+        document.getElementById('modal-wa-link').href = `https://wa.me/918235411806?text=${encodeURIComponent(item.waText)}`;
 
         portfolioModal.classList.remove('hidden');
         portfolioModal.classList.add('flex');
@@ -2270,7 +2270,7 @@ require_once __DIR__ . '/includes/header.php';
           message += ` Project details: ${note}`;
         }
 
-        const waUrl = `https://wa.me/919576338282?text=${encodeURIComponent(message)}`;
+        const waUrl = `https://wa.me/918235411806?text=${encodeURIComponent(message)}`;
         window.open(waUrl, '_blank', 'noopener,noreferrer');
       });
     }

@@ -27,6 +27,10 @@
               <a href="https://yukt.online" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">https://yukt.online</a>
             </div>
             <div class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i>
+              <a href="tel:<?php echo PHONE_RAW; ?>" class="hover:text-white transition-colors">Office: <?php echo PHONE_NUMBER; ?></a>
+            </div>
+            <div class="flex items-center gap-2">
               <i data-lucide="phone" class="w-3.5 h-3.5 text-yukt-orange"></i>
               <a href="https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20want%20to%20discuss%20a%20project%20with%20Yukt." target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Ansar: +91 95763 38282</a>
             </div>
@@ -162,10 +166,10 @@
           <span class="text-[10px] text-slate-400 font-mono">+91 72176 45059</span>
         </a>
         <div class="pt-1 border-t border-white/10"></div>
-        <a href="https://wa.me/919576338282?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20Website%20or%20Software%20Development." target="_blank" rel="noopener noreferrer" class="block px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors">
+        <a href="https://wa.me/918235411806?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20Website%20or%20Software%20Development." target="_blank" rel="noopener noreferrer" class="block px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors">
           💻 Website / Software Development
         </a>
-        <a href="https://wa.me/919576338282?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20AI%20Automation%20%26%20Marketing." target="_blank" rel="noopener noreferrer" class="block px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors">
+        <a href="https://wa.me/918235411806?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%27m%20interested%20in%20AI%20Automation%20%26%20Marketing." target="_blank" rel="noopener noreferrer" class="block px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300 hover:text-white transition-colors">
           🤖 AI Automation &amp; Digital Growth
         </a>
       </div>
@@ -184,10 +188,10 @@
       </button>
 
       <a 
-        href="https://wa.me/919576338282?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%20want%20to%20discuss%20a%20project."
+        href="https://wa.me/918235411806?text=Hi%20YUKT%20IT%20SOLUTIONS%2C%20I%20want%20to%20discuss%20a%20project."
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat on WhatsApp with YUKT IT SOLUTIONS (+91 95763 38282)"
+        aria-label="Chat on WhatsApp with YUKT IT SOLUTIONS (+91 82354 11806)"
         class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-emerald-500 text-white flex items-center justify-center shadow-2xl shadow-emerald-500/40 border border-emerald-300/40 transition-transform hover:scale-105"
       >
         <i data-lucide="message-circle" class="w-7 h-7"></i>

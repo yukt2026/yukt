@@ -15,8 +15,8 @@ if (!defined('COMPANY_NAME')) {
     define('APP_VERSION', '2.5.0');
 
     // Contact & Location (Indian IT Powerhouse)
-    define('PHONE_NUMBER', '+91 95763 38282');
-    define('PHONE_RAW', '919576338282');
+    define('PHONE_NUMBER', '+91 82354 11806');
+    define('PHONE_RAW', '918235411806');
     define('PHONE_SECONDARY', '+91 72176 45059');
     define('PHONE_SECONDARY_RAW', '917217645059');
     define('PHONE_ANSAR', '+91 95763 38282');
@@ -24,10 +24,10 @@ if (!defined('COMPANY_NAME')) {
     define('PHONE_RANJEET', '+91 72176 45059');
     define('PHONE_RANJEET_RAW', '917217645059');
 
-    define('WHATSAPP_NUMBER', '919576338282');
-    define('WHATSAPP_FORMATTED', '+91 95763 38282');
-    define('WHATSAPP_BASE_URL', 'https://wa.me/919576338282');
-    define('WHATSAPP_URL', 'https://wa.me/919576338282?text=Hi%20Yukt%20IT%20Solutions%2C%20I%20would%20like%20to%20discuss%20a%20project.');
+    define('WHATSAPP_NUMBER', '918235411806');
+    define('WHATSAPP_FORMATTED', '+91 82354 11806');
+    define('WHATSAPP_BASE_URL', 'https://wa.me/918235411806');
+    define('WHATSAPP_URL', 'https://wa.me/918235411806?text=Hi%20Yukt%20IT%20Solutions%2C%20I%20would%20like%20to%20discuss%20a%20project.');
     define('WHATSAPP_ANSAR_URL', 'https://wa.me/919576338282?text=Hi%20Ansar%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Yukt%20IT%20Solutions.');
     define('WHATSAPP_RANJEET_URL', 'https://wa.me/917217645059?text=Hi%20Ranjeet%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20Yukt%20IT%20Solutions.');
 
@@ -41,9 +41,9 @@ if (!defined('COMPANY_NAME')) {
     define('GOOGLE_MAPS_EMBED_SRC', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.2383772372173!2d77.06746019999997!3d28.622616899999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d05241482afc1%3A0x64a7da1df8947b30!2sYukt%20IT%20Solutions!5e0!3m2!1shi!2sin!4v1792762605037!5m2!1shi!2sin');
     define('GOOGLE_MAPS_VIEW_URL', 'https://www.google.com/maps/place/Yukt+IT+Solutions/@28.6226169,77.0674602,17z');
 
-    // Helper function to generate tailored WhatsApp URLs with prefilled messages (Default: Ansar Ali Shah)
+    // Helper function to generate tailored WhatsApp URLs with prefilled messages (Default: Company WhatsApp)
     if (!function_exists('getWhatsAppUrl')) {
-        function getWhatsAppUrl($message = '', $rawPhone = '919576338282') {
+        function getWhatsAppUrl($message = '', $rawPhone = '918235411806') {
             $base = 'https://wa.me/' . $rawPhone;
             if (!empty($message)) {
                 return $base . '?text=' . rawurlencode($message);

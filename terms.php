@@ -149,7 +149,7 @@ require_once __DIR__ . '/includes/header.php';
             </a>
             <a href="<?php echo getWhatsAppUrl('Hi Ansar and Ranjeet, I would like to review a contract / SOW with Yukt.'); ?>" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-xs text-emerald-600 hover:text-emerald-700 font-semibold">
               <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
-              <span>WhatsApp Contracts Desk (+91 95763 38282)</span>
+              <span>WhatsApp Contracts Desk (+91 82354 11806)</span>
             </a>
           </div>
 

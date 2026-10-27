@@ -426,7 +426,7 @@ require_once __DIR__ . '/includes/header.php';
           </div>
 
           <div class="pt-2">
-            <a href="https://wa.me/919576338282?text=DELETE%20MY%20DATA%3A%20Please%20erase%20all%20my%20contact%20and%20chat%20records%20from%20Yukt." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-display font-semibold text-xs text-white bg-emerald-600 hover:bg-emerald-500 transition-colors">
+            <a href="https://wa.me/918235411806?text=DELETE%20MY%20DATA%3A%20Please%20erase%20all%20my%20contact%20and%20chat%20records%20from%20Yukt." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-display font-semibold text-xs text-white bg-emerald-600 hover:bg-emerald-500 transition-colors">
               <i data-lucide="message-circle" class="w-4 h-4"></i>
               <span>Send One-Click WhatsApp Deletion Command</span>
             </a>

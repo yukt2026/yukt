@@ -282,7 +282,7 @@ function initQuoteModal() {
       const msg = targetService
         ? `Hi Yukt IT Solutions, I would like to request an instant quote and timeline for ${targetService}.`
         : 'Hi Yukt IT Solutions, I would like to request an instant project scope and pricing estimate.';
-      waBtn.href = `https://wa.me/919576338282?text=${encodeURIComponent(msg)}`;
+      waBtn.href = `https://wa.me/918235411806?text=${encodeURIComponent(msg)}`;
     }
   }
 
@@ -318,7 +318,7 @@ function initQuoteModal() {
         const msg = val
           ? `Hi Yukt IT Solutions, I would like to request an instant quote and timeline for ${val}.`
           : 'Hi Yukt IT Solutions, I would like to request an instant project scope and pricing estimate.';
-        waBtn.href = `https://wa.me/919576338282?text=${encodeURIComponent(msg)}`;
+        waBtn.href = `https://wa.me/918235411806?text=${encodeURIComponent(msg)}`;
       }
     });
   }

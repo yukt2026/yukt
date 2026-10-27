@@ -82,16 +82,16 @@ if (!empty($menuMatches[1])) {
 }
 
 // Check WhatsApp CTAs in header and drawer
-if (strpos($headerHtml, 'Start Project on WhatsApp (+91 95763 38282)') !== false) {
-    $passes[] = "Mobile drawer WhatsApp CTA text displays Ansar's number (+91 95763 38282).";
+if (strpos($headerHtml, 'Start Project on WhatsApp (+91 82354 11806)') !== false) {
+    $passes[] = "Mobile drawer WhatsApp CTA text displays company number (+91 82354 11806).";
 } else {
-    $errors[] = "Mobile drawer WhatsApp CTA does not display (+91 95763 38282).";
+    $errors[] = "Mobile drawer WhatsApp CTA does not display (+91 82354 11806).";
 }
 
-if (strpos($headerHtml, 'Chat on WhatsApp (+91 95763 38282)') !== false) {
-    $passes[] = "Header desktop WhatsApp button title displays Ansar's number (+91 95763 38282).";
+if (strpos($headerHtml, 'Chat on WhatsApp (+91 82354 11806)') !== false) {
+    $passes[] = "Header desktop WhatsApp button title displays company number (+91 82354 11806).";
 } else {
-    $errors[] = "Header desktop WhatsApp button title does not display (+91 95763 38282).";
+    $errors[] = "Header desktop WhatsApp button title does not display (+91 82354 11806).";
 }
 
 // 2. Check JavaScript Logic in assets/js/app.js
@@ -116,7 +116,7 @@ if (strpos($jsCode, "window.toggleMobileServices = toggleServices") !== false) {
 }
 
 if (strpos($jsCode, "https://wa.me/917217645059") === false) {
-    $passes[] = "app.js contains no legacy quote modal WhatsApp links pointing to 72176 (all point to Ansar: 919576338282).";
+    $passes[] = "app.js contains no legacy quote modal WhatsApp links pointing to 72176 (all point to company: 918235411806).";
 } else {
     $errors[] = "app.js still contains hardcoded links to 917217645059.";
 }
