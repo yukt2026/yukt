@@ -160,6 +160,7 @@ function initContactForm() {
 function initMobileMenu() {
   const toggleBtn = document.getElementById('mobileMenuToggle');
   const drawer = document.getElementById('mobileDrawer');
+  const backdrop = document.getElementById('mobileDrawerBackdrop');
   const iconOpen = document.getElementById('menuIconOpen');
   const iconClose = document.getElementById('menuIconClose');
 
@@ -171,12 +172,14 @@ function initMobileMenu() {
 
     if (shouldOpen) {
       drawer.classList.remove('hidden');
+      backdrop?.classList.remove('hidden');
       iconOpen?.classList.add('hidden');
       iconClose?.classList.remove('hidden');
       toggleBtn.setAttribute('aria-expanded', 'true');
       document.body.classList.add('overflow-hidden');
     } else {
       drawer.classList.add('hidden');
+      backdrop?.classList.add('hidden');
       iconOpen?.classList.remove('hidden');
       iconClose?.classList.add('hidden');
       toggleBtn.setAttribute('aria-expanded', 'false');
@@ -188,6 +191,12 @@ function initMobileMenu() {
     e.stopPropagation();
     toggleMenu();
   });
+
+  if (backdrop) {
+    backdrop.addEventListener('click', () => {
+      toggleMenu(false);
+    });
+  }
 
   // Collapsible Services Accordion inside Mobile Drawer
   const servicesToggle = document.getElementById('mobileServicesToggle');

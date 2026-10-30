@@ -110,6 +110,9 @@
         <div class="lg:col-span-3 space-y-3">
           <div class="font-mono text-xs uppercase tracking-widest text-white">Company &amp; Work</div>
           <ul class="space-y-2 text-xs sm:text-sm">
+            <li><a href="service-catalogue.php" class="text-electric-400 hover:text-electric-300 font-semibold transition-colors flex items-center gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5"></i> 140+ Services Directory</a></li>
+            <li><a href="partner.php" class="text-yukt-orange hover:text-amber-400 font-semibold transition-colors flex items-center gap-1"><i data-lucide="store" class="w-3.5 h-3.5"></i> Digital Partner Program</a></li>
+            <li><a href="partner-login.php" class="hover:text-white transition-colors">Partner Portal Login</a></li>
             <li><a href="services.php" class="hover:text-white transition-colors">All Services Hub</a></li>
             <li><a href="about.php" class="hover:text-white transition-colors">About YUKT &amp; Founders</a></li>
             <li><a href="portfolio.php" class="hover:text-white transition-colors">Client Work &amp; Case Studies</a></li>

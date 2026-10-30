@@ -11,6 +11,10 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 require_once __DIR__ . '/../includes/db.php';
 
 // Anti-Spam Honeypot Trap
@@ -62,6 +66,57 @@ try {
             ':timeline' => $timeline,
             ':details' => $details
         ]);
+
+        // Referral Partner Attribution
+        $refCode = $_SESSION['yukt_ref'] ?? $_COOKIE['yukt_ref'] ?? null;
+        if (!empty($refCode)) {
+            try {
+                $refPartner = $pdo->prepare("SELECT id, partner_code FROM partners WHERE partner_code = :c LIMIT 1");
+                $refPartner->execute([':c' => $refCode]);
+                $pRow = $refPartner->fetch();
+
+                if ($pRow) {
+                    $tracking_code = 'ENQ-' . rand(10000, 99999);
+                    $partnerEnq = $pdo->prepare("
+                        INSERT INTO partner_enquiries (
+                            tracking_code, partner_id, partner_code, customer_name, customer_phone, customer_email,
+                            service_category, service_item, project_description, estimated_budget, status, commission_status, commission_rate
+                        ) VALUES (
+                            :trk, :pid, :pcode, :cname, :cphone, :cemail,
+                            'Web / Digital', :item, :details, :budget, 'received', 'pending', 15.00
+                        )
+                    ");
+                    $partnerEnq->execute([
+                        ':trk' => $tracking_code,
+                        ':pid' => $pRow['id'],
+                        ':pcode' => $pRow['partner_code'],
+                        ':cname' => $client_name,
+                        ':cphone' => $client_phone ?? '',
+                        ':cemail' => $client_email,
+                        ':item' => $project_type,
+                        ':details' => $details ?? 'Client inquiry submitted via website quote modal',
+                        ':budget' => $estimated_budget
+                    ]);
+
+                    $refLog = $pdo->prepare("
+                        INSERT INTO partner_referrals (
+                            partner_code, visitor_ip, referred_client_name, referred_client_phone, referred_client_email, conversion_status
+                        ) VALUES (
+                            :code, :ip, :name, :phone, :email, 'lead_submitted'
+                        )
+                    ");
+                    $refLog->execute([
+                        ':code' => $pRow['partner_code'],
+                        ':ip' => $_SERVER['REMOTE_ADDR'] ?? '',
+                        ':name' => $client_name,
+                        ':phone' => $client_phone ?? '',
+                        ':email' => $client_email
+                    ]);
+                }
+            } catch (Exception $e) {
+                error_log("Referral quote link error: " . $e->getMessage());
+            }
+        }
     }
 
     echo json_encode([

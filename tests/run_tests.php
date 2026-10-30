@@ -95,6 +95,10 @@ $routes = [
     '/project-corporate-portal.php' => 'Project: Corporate Portal',
     '/project-b2b-marketing.php' => 'Project: B2B Marketing',
     '/project-franchise-platform.php' => 'Project: Franchise Platform',
+    '/service-catalogue.php' => 'Service Catalogue (140+ Services)',
+    '/partner.php' => 'Partner Program Landing',
+    '/partner-login.php' => 'Partner Portal Login',
+    '/admin-partners.php' => 'Partner Admin Console',
     '/robots.txt' => 'Robots Crawl File',
     '/sitemap.xml' => 'XML Sitemap'
 ];
@@ -200,11 +204,68 @@ $newsJson = json_decode($resNews['body'], true);
 $newsValid = ($resNews['code'] === 200 && !empty($newsJson['success']));
 logTest('API: Newsletter Subscription Endpoint', $newsValid);
 
+// Test 3F: Partner Registration System API
+$partnerTestData = [
+    'full_name' => 'QA Cyber Cafe Partner',
+    'email' => 'partner.qa@yukt.online',
+    'phone' => '+91 98888 77777',
+    'whatsapp' => '+91 98888 77777',
+    'password' => 'secret1234',
+    'confirm_password' => 'secret1234',
+    'shop_name' => 'QA Digital Jan Seva Kendra',
+    'business_type' => 'Cyber Cafe',
+    'state' => 'Delhi',
+    'district' => 'New Delhi',
+    'city' => 'Uttam Nagar',
+    'address' => 'Shop 14, Main Market, Uttam Nagar',
+    'experience_years' => '3 to 5 years',
+    'preferred_language' => 'Hinglish',
+    'interested_services' => ['Website & Web Development', 'Advanced Document Services', 'Software & Billing Solutions'],
+    'terms' => '1'
+];
+$resPartner = fetchUrl($baseUrl . '/api/partner-register.php', ['post' => $partnerTestData]);
+$partnerJson = json_decode($resPartner['body'], true);
+$partnerValid = ($resPartner['code'] === 200 && !empty($partnerJson['success']) && !empty($partnerJson['partner_code']));
+logTest('API: Partner Registration & ID Generation', $partnerValid, "Partner ID: " . ($partnerJson['partner_code'] ?? 'None'));
+
+// Verify Partner DB Record & Initial Status 'pending_verification'
+$dbPartnerStatus = '';
+$dbPartnerCode = '';
+if ($pdo) {
+    $stmt = $pdo->prepare("SELECT partner_code, status FROM partners WHERE email = :email LIMIT 1");
+    $stmt->execute([':email' => 'partner.qa@yukt.online']);
+    $pRow = $stmt->fetch();
+    if ($pRow) {
+        $dbPartnerCode = $pRow['partner_code'];
+        $dbPartnerStatus = $pRow['status'];
+    }
+}
+$isPartnerPending = ($dbPartnerStatus === 'pending_verification');
+logTest('DB: Partner Saved with Status "pending_verification"', $isPartnerPending, "Status: $dbPartnerStatus");
+
+// Test 3G: Duplicate Partner Email Rejection
+$resDupPartner = fetchUrl($baseUrl . '/api/partner-register.php', ['post' => $partnerTestData]);
+logTest('Validation: Duplicate Partner Rejection (HTTP 400)', ($resDupPartner['code'] === 400));
+
+// Test 3H: Anti-Spam Honeypot on Partner Registration
+$spamPartnerData = $partnerTestData;
+$spamPartnerData['email'] = 'spampartner@bot.com';
+$spamPartnerData['partner_honey'] = 'bot_detected';
+$resPartnerSpam = fetchUrl($baseUrl . '/api/partner-register.php', ['post' => $spamPartnerData]);
+$dbPartnerSpamCount = 0;
+if ($pdo) {
+    $stmt = $pdo->prepare("SELECT COUNT(*) FROM partners WHERE email = :email");
+    $stmt->execute([':email' => 'spampartner@bot.com']);
+    $dbPartnerSpamCount = $stmt->fetchColumn();
+}
+logTest('Security: Partner Honeypot Traps Bot (0 DB Rows)', ($dbPartnerSpamCount === 0));
+
 // Clean up QA test rows
 if ($pdo) {
     $pdo->exec("DELETE FROM inquiries WHERE email IN ('qa.test@yukt.online', 'spambot@automated-crawler.com')");
     $pdo->exec("DELETE FROM quote_requests WHERE client_email = 'quote.qa@yukt.online'");
     $pdo->exec("DELETE FROM newsletter_subscribers WHERE email = 'newsletter.qa@yukt.online'");
+    $pdo->exec("DELETE FROM partners WHERE email IN ('partner.qa@yukt.online', 'spampartner@bot.com')");
 }
 
 // -------------------------------------------------------------------------

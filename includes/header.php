@@ -7,9 +7,42 @@ if (!headers_sent()) {
 }
 
 require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/components/icons.php';
 require_once __DIR__ . '/components/button.php';
 require_once __DIR__ . '/components/badge.php';
+
+if (session_status() === PHP_SESSION_NONE && !headers_sent()) {
+    session_start();
+}
+
+// Global Partner Referral Tracking
+if (!empty($_GET['ref'])) {
+    $cleanRef = preg_replace('/[^a-zA-Z0-9_-]/', '', $_GET['ref']);
+    if (!empty($cleanRef)) {
+        $_SESSION['yukt_ref'] = $cleanRef;
+        if (!headers_sent()) {
+            setcookie('yukt_ref', $cleanRef, time() + (30 * 86400), '/');
+        }
+        if (!isset($_SESSION['yukt_ref_logged']) && isset($pdo) && $pdo) {
+            try {
+                $refLogStmt = $pdo->prepare("
+                    INSERT INTO partner_referrals (partner_code, visitor_ip, user_agent, landing_page, conversion_status)
+                    VALUES (:code, :ip, :ua, :page, 'visited')
+                ");
+                $refLogStmt->execute([
+                    ':code' => $cleanRef,
+                    ':ip' => $_SERVER['REMOTE_ADDR'] ?? '',
+                    ':ua' => mb_substr($_SERVER['HTTP_USER_AGENT'] ?? '', 0, 500),
+                    ':page' => mb_substr($_SERVER['REQUEST_URI'] ?? '', 0, 255)
+                ]);
+                $_SESSION['yukt_ref_logged'] = true;
+            } catch (Exception $e) {
+                // silent
+            }
+        }
+    }
+}
 
 $activePage = $activePage ?? 'home';
 $pageTitle = $pageTitle ?? (COMPANY_NAME . ' | Technology That Moves Your Business Forward');
@@ -245,32 +278,32 @@ if (!empty($faqs) && is_array($faqs)) {
   <!-- ==========================================
        HEADER / GLASSMORPHISM NAVIGATION BAR
   =========================================== -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-2.5 px-3 sm:py-3.5 sm:px-6 lg:px-10">
-    <div class="max-w-7xl mx-auto">
-      <nav class="navbar-container rounded-2xl px-3 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between shadow-2xl shadow-black/50 border border-white/15">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-2 sm:py-3 px-2.5 sm:px-5 lg:px-8">
+    <div class="max-w-7xl mx-auto relative">
+      <nav class="navbar-container rounded-2xl px-2.5 sm:px-5 lg:px-6 py-2 sm:py-2.5 flex items-center justify-between shadow-2xl shadow-black/50 border border-white/15 flex-nowrap">
         
         <!-- Brand Logo Badge -->
-        <a href="index.php" class="flex items-center gap-2 sm:gap-3 group focus:outline-none flex-shrink-0" aria-label="YUKT IT SOLUTIONS Home">
-          <div class="h-9 sm:h-11 px-2 sm:px-2.5 py-1 rounded-xl bg-white shadow-md shadow-black/40 flex items-center justify-center group-hover:scale-105 transition-transform border border-white/40 flex-shrink-0">
-            <img src="assets/images/yukt-official-logo.png" alt="YUKT IT SOLUTIONS Official Logo" width="160" height="40" class="h-6 sm:h-8 w-auto object-contain flex-shrink-0">
+        <a href="index.php" class="flex items-center gap-2 sm:gap-2.5 group focus:outline-none flex-shrink-0" aria-label="YUKT IT SOLUTIONS Home">
+          <div class="h-8.5 sm:h-10 px-2 sm:px-2.5 py-1 rounded-xl bg-white shadow-md shadow-black/40 flex items-center justify-center group-hover:scale-105 transition-transform border border-white/40 flex-shrink-0">
+            <img src="assets/images/yukt-official-logo.png" alt="YUKT IT SOLUTIONS Official Logo" width="160" height="40" class="h-5 sm:h-7 w-auto object-contain flex-shrink-0">
           </div>
           <div class="flex flex-col leading-none">
             <div class="flex items-center gap-1 sm:gap-1.5 whitespace-nowrap">
-              <span class="font-display font-bold text-sm sm:text-lg tracking-tight text-white">YUKT</span>
-              <span class="font-display font-semibold text-[11px] sm:text-sm tracking-wider sm:tracking-widest uppercase text-electric-400">IT SOLUTIONS</span>
+              <span class="font-display font-bold text-sm sm:text-base lg:text-lg tracking-tight text-white">YUKT</span>
+              <span class="font-display font-semibold text-[10px] sm:text-xs lg:text-sm tracking-wider sm:tracking-widest uppercase text-electric-400">IT SOLUTIONS</span>
             </div>
-            <span class="font-mono text-[9px] sm:text-[10px] text-slate-400 tracking-wider hidden xs:inline mt-0.5">yukt.online</span>
+            <span class="font-mono text-[9px] sm:text-[10px] text-slate-400 tracking-wider hidden sm:inline mt-0.5">yukt.online</span>
           </div>
         </a>
 
-        <!-- Desktop Navigation Links (with Glass Dropdown) -->
-        <div class="hidden lg:flex items-center gap-1 bg-white/[0.03] border border-white/[0.06] rounded-xl px-2 py-1 relative">
+        <!-- Desktop Navigation Links (Visible on >= 1280px Desktop) -->
+        <div class="hidden xl:flex items-center gap-0.5 2xl:gap-1 bg-white/[0.03] border border-white/[0.06] rounded-xl px-1.5 py-1 relative flex-shrink-0 whitespace-nowrap">
           
           <!-- Services with Interactive Flyout Mega-Menu -->
-          <div class="relative group/menu">
+          <div class="relative group/menu flex-shrink-0">
             <a 
               href="services.php" 
-              class="px-3.5 py-2 rounded-lg text-sm font-medium transition-all inline-flex items-center gap-1.5 <?php echo ($activePage === 'services') ? 'text-white bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'; ?>"
+              class="px-2.5 2xl:px-3 py-1.5 rounded-lg text-xs 2xl:text-sm font-medium transition-all inline-flex items-center gap-1 whitespace-nowrap <?php echo ($activePage === 'services') ? 'text-white bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'; ?>"
             >
               <span>Services</span>
               <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400 group-hover/menu:text-white transition-transform group-hover/menu:rotate-180"></i>
@@ -281,17 +314,10 @@ if (!empty($faqs) && is_array($faqs)) {
               <div class="w-[680px] dropdown-mega-panel rounded-2xl p-5 shadow-2xl shadow-black/95 text-white">
                 <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/10 text-xs">
                   <span class="font-mono uppercase tracking-wider text-slate-300 font-semibold">8 Core Capabilities</span>
-                  <div class="flex items-center gap-3">
-                    <a href="index.php#services" class="text-electric-400 hover:text-electric-300 font-medium flex items-center gap-1 transition-colors">
-                      <span>3D Showcase</span>
-                      <i data-lucide="sparkles" class="w-3 h-3"></i>
-                    </a>
-                    <span class="text-slate-600">|</span>
-                    <a href="services.php" class="text-yukt-orange hover:text-amber-400 font-semibold flex items-center gap-1 transition-colors">
-                      <span>View All Services</span>
-                      <i data-lucide="arrow-right" class="w-3 h-3"></i>
-                    </a>
-                  </div>
+                  <a href="partner.php" class="text-yukt-orange hover:text-amber-400 font-semibold flex items-center gap-1.5 transition-colors">
+                    <i data-lucide="store" class="w-3.5 h-3.5"></i>
+                    <span>Partner Program Hub</span>
+                  </a>
                 </div>
                 <div class="grid grid-cols-2 gap-2 text-left">
                   <?php foreach ($SERVICES as $s): ?>
@@ -312,10 +338,29 @@ if (!empty($faqs) && is_array($faqs)) {
             </div>
           </div>
 
+          <!-- Partner Program Hub -->
+          <?php if (isset($_SESSION['partner_id'])): ?>
+            <a 
+              href="partner-dashboard.php" 
+              class="px-2.5 py-1.5 rounded-lg text-xs 2xl:text-sm font-semibold transition-all text-white bg-electric-600 hover:bg-electric-500 border border-electric-400/30 shadow-md shadow-electric-600/20 flex items-center gap-1.5 whitespace-nowrap flex-shrink-0"
+            >
+              <i data-lucide="layout-dashboard" class="w-3.5 h-3.5"></i>
+              <span>Dashboard</span>
+            </a>
+          <?php else: ?>
+            <a 
+              href="partner.php" 
+              class="px-2 2xl:px-2.5 py-1.5 rounded-lg text-xs 2xl:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 <?php echo ($activePage === 'partner') ? 'text-white bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'; ?> flex items-center gap-1.5"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-yukt-orange animate-pulse"></span>
+              <span>Partner Hub</span>
+            </a>
+          <?php endif; ?>
+
           <!-- 3D Process -->
           <a 
             href="<?php echo ($activePage === 'home') ? '#process' : 'index.php#process'; ?>" 
-            class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/[0.06] transition-all"
+            class="px-2 2xl:px-2.5 py-1.5 rounded-lg text-xs 2xl:text-sm font-medium text-slate-300 hover:text-white hover:bg-white/[0.06] transition-all whitespace-nowrap flex-shrink-0"
           >
             3D Process
           </a>
@@ -323,7 +368,7 @@ if (!empty($faqs) && is_array($faqs)) {
           <!-- Portfolio / Case Studies -->
           <a 
             href="portfolio.php" 
-            class="px-3.5 py-2 rounded-lg text-sm font-medium transition-all <?php echo ($activePage === 'portfolio') ? 'text-white bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'; ?>"
+            class="px-2 2xl:px-2.5 py-1.5 rounded-lg text-xs 2xl:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 <?php echo ($activePage === 'portfolio') ? 'text-white bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'; ?>"
           >
             Portfolio
           </a>
@@ -331,7 +376,7 @@ if (!empty($faqs) && is_array($faqs)) {
           <!-- About Us -->
           <a 
             href="about.php" 
-            class="px-3.5 py-2 rounded-lg text-sm font-medium transition-all <?php echo ($activePage === 'about') ? 'text-white bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'; ?>"
+            class="px-2 2xl:px-2.5 py-1.5 rounded-lg text-xs 2xl:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 <?php echo ($activePage === 'about') ? 'text-white bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'; ?>"
           >
             About
           </a>
@@ -339,7 +384,7 @@ if (!empty($faqs) && is_array($faqs)) {
           <!-- Why Choose YUKT -->
           <a 
             href="<?php echo ($activePage === 'home') ? '#why-yukt' : 'index.php#why-yukt'; ?>" 
-            class="px-3.5 py-2 rounded-lg text-sm font-medium text-slate-300 hover:text-white hover:bg-white/[0.06] transition-all"
+            class="px-2 2xl:px-2.5 py-1.5 rounded-lg text-xs 2xl:text-sm font-medium text-slate-300 hover:text-white hover:bg-white/[0.06] transition-all whitespace-nowrap flex-shrink-0"
           >
             Why YUKT
           </a>
@@ -347,39 +392,54 @@ if (!empty($faqs) && is_array($faqs)) {
           <!-- Contact Page -->
           <a 
             href="contact.php" 
-            class="px-3.5 py-2 rounded-lg text-sm font-medium transition-all <?php echo ($activePage === 'contact') ? 'text-white bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'; ?>"
+            class="px-2 2xl:px-2.5 py-1.5 rounded-lg text-xs 2xl:text-sm font-medium transition-all whitespace-nowrap flex-shrink-0 <?php echo ($activePage === 'contact') ? 'text-white bg-white/10' : 'text-slate-300 hover:text-white hover:bg-white/[0.06]'; ?>"
           >
             Contact
           </a>
 
         </div>
 
-        <!-- Right Action Button & Mobile Hamburger -->
-        <div class="flex items-center gap-3">
-          <!-- Get a Quote Button -->
-          <button type="button" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-semibold text-slate-200 bg-white/[0.06] hover:bg-white/10 border border-white/10 transition-all open-quote-modal-btn">
+        <!-- Right Action Buttons & Mobile Hamburger -->
+        <div class="flex items-center gap-1.5 sm:gap-2.5 flex-shrink-0 flex-nowrap">
+          
+          <!-- Quick Quote Modal Trigger (Commented out as requested) -->
+          <!--
+          <button type="button" class="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 lg:px-3.5 lg:py-2 rounded-xl text-xs font-semibold text-slate-200 bg-white/[0.06] hover:bg-white/10 border border-white/10 transition-all open-quote-modal-btn whitespace-nowrap flex-shrink-0">
             <span>Get a Quote</span>
           </button>
+          -->
 
-          <!-- WhatsApp Primary Action Link -->
+          <!-- WhatsApp Primary Action Link (Tablet & Desktop: >= 640px) -->
           <a 
             href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I want to discuss a project.'); ?>"
             target="_blank"
             rel="noopener noreferrer"
-            class="hidden sm:inline-flex items-center gap-2.5 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-electric-500 to-electric-600 bg-electric-600 hover:from-electric-400 hover:to-electric-500 border border-electric-400/30 shadow-lg shadow-electric-500/25 hover:shadow-electric-500/40 transition-all hover:-translate-y-0.5"
+            class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-electric-500 to-electric-600 bg-electric-600 hover:from-electric-400 hover:to-electric-500 border border-electric-400/30 shadow-lg shadow-electric-500/25 transition-all whitespace-nowrap flex-shrink-0"
             title="Chat on WhatsApp (+91 82354 11806)"
           >
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
             <span>WhatsApp Us</span>
-            <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
           </a>
 
-          <!-- Mobile Menu Toggle Button -->
+          <!-- Quick Mobile WhatsApp Button (< 640px phones) -->
+          <a 
+            href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I want to discuss a project.'); ?>"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex sm:hidden items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-bold text-white bg-emerald-600 hover:bg-emerald-500 shadow-md shadow-emerald-600/30 transition-all flex-shrink-0 whitespace-nowrap"
+            title="Chat on WhatsApp (+91 82354 11806)"
+          >
+            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+            <span class="text-[11px]">WhatsApp</span>
+          </a>
+
+          <!-- Mobile Menu Toggle Button (Visible on < 1280px) -->
           <button 
             id="mobileMenuToggle" 
             type="button"
             aria-label="Toggle Menu"
-            class="lg:hidden p-2 sm:p-2.5 rounded-xl bg-white/[0.05] border border-white/10 text-slate-200 hover:text-white hover:bg-white/10 transition-colors flex-shrink-0"
+            class="xl:hidden p-2 sm:p-2.5 rounded-xl bg-white/[0.08] border border-white/15 text-slate-200 hover:text-white hover:bg-white/15 active:scale-95 transition-all flex-shrink-0 flex items-center justify-center"
           >
             <span id="menuIconOpen"><i data-lucide="menu" class="w-5 h-5"></i></span>
             <span id="menuIconClose" class="hidden"><i data-lucide="x" class="w-5 h-5"></i></span>
@@ -387,11 +447,15 @@ if (!empty($faqs) && is_array($faqs)) {
         </div>
       </nav>
 
+      <!-- Mobile Drawer Backdrop Overlay -->
+      <div id="mobileDrawerBackdrop" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-40 hidden transition-opacity duration-300 xl:hidden"></div>
+
       <!-- Mobile Navigation Drawer with Responsive Max Height & Smooth Scrolling -->
       <div 
         id="mobileDrawer" 
-        class="hidden lg:hidden mt-2 dropdown-mega-panel rounded-2xl p-4 sm:p-5 shadow-2xl shadow-black/95 max-h-[calc(100dvh-5.25rem)] overflow-y-auto overscroll-contain"
+        class="hidden xl:hidden mt-2 dropdown-mega-panel rounded-2xl p-4 sm:p-5 shadow-2xl shadow-black/95 max-h-[calc(100dvh-5.5rem)] overflow-y-auto overscroll-contain border border-white/15 relative z-50"
         style="-webkit-overflow-scrolling: touch;"
+      >
       >
         <div class="flex flex-col space-y-1.5">
           <!-- Home Link -->
@@ -448,6 +512,26 @@ if (!empty($faqs) && is_array($faqs)) {
             </div>
           </div>
 
+          <!-- Digital Partner Program Link -->
+          <?php if (isset($_SESSION['partner_id'])): ?>
+            <a href="partner-dashboard.php" class="mobile-nav-link px-3.5 py-2.5 rounded-xl text-sm font-semibold text-emerald-300 bg-emerald-500/10 border border-emerald-400/20 flex items-center justify-between transition-colors">
+              <span class="flex items-center gap-2.5">
+                <i data-lucide="layout-dashboard" class="w-4 h-4 text-emerald-400"></i>
+                <span>Partner Dashboard</span>
+              </span>
+              <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400"></i>
+            </a>
+          <?php else: ?>
+            <a href="partner.php" class="mobile-nav-link px-3.5 py-2.5 rounded-xl text-sm font-medium <?php echo ($activePage === 'partner') ? 'text-white bg-white/10' : 'text-slate-200 hover:bg-white/5'; ?> flex items-center justify-between transition-colors">
+              <span class="flex items-center gap-2.5">
+                <i data-lucide="store" class="w-4 h-4 text-yukt-orange"></i>
+                <span>Digital Partner Program</span>
+                <span class="text-[10px] font-mono px-1.5 py-0.5 rounded-full bg-yukt-orange/20 text-yukt-orange border border-yukt-orange/30">Earn 15-25%</span>
+              </span>
+              <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+            </a>
+          <?php endif; ?>
+
           <!-- 3D Execution Process -->
           <a href="<?php echo ($activePage === 'home') ? '#process' : 'index.php#process'; ?>" class="mobile-nav-link px-3.5 py-2.5 rounded-xl text-sm font-medium text-slate-200 hover:bg-white/5 flex items-center justify-between transition-colors">
             <span class="flex items-center gap-2.5">
@@ -496,10 +580,13 @@ if (!empty($faqs) && is_array($faqs)) {
 
           <!-- Bottom Action Buttons -->
           <div class="pt-3 border-t border-white/10 space-y-2.5 mt-1">
+            <!-- Get a Quote Modal Trigger (Commented out as requested) -->
+            <!--
             <button type="button" class="w-full py-3 px-4 rounded-xl font-display font-semibold text-xs sm:text-sm text-slate-200 bg-white/10 hover:bg-white/20 border border-white/15 transition-all flex items-center justify-center gap-2 open-quote-modal-btn">
               <span>Get a Project Scope Quote</span>
               <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-electric-400"></i>
             </button>
+            -->
             <a 
               href="<?php echo getWhatsAppUrl('Hi YUKT IT SOLUTIONS, I want to discuss a project.'); ?>"
               target="_blank"
@@ -508,6 +595,13 @@ if (!empty($faqs) && is_array($faqs)) {
             >
               <i data-lucide="message-circle" class="w-4 h-4"></i>
               <span>Start Project on WhatsApp (+91 82354 11806)</span>
+            </a>
+            <a 
+              href="tel:+918235411806"
+              class="w-full py-2.5 px-4 rounded-xl font-display font-semibold text-xs text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2 border border-white/10 transition-all"
+            >
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-blue-400"></i>
+              <span>Call Helpline (+91 82354 11806)</span>
             </a>
           </div>
         </div>

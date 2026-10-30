@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YUKT Partner Shop Poster | A4 & A3 Print Ready</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 6mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    :root {
+      --primary: #0052CC;
+      --primary-dark: #073B8C;
+      --orange: #FF6B00;
+      --emerald: #059669;
+      --bg-page: #FFFFFF;
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --card-bg: #F8FAFC;
+      --card-border: #CBD5E1;
+      --highlight-bg: #FFF7ED;
+      --highlight-border: #FDBA74;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      background: #E2E8F0;
+      color: var(--text-main);
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* Floating Toolbar (Hidden in Print) */
+    .toolbar {
+      width: 210mm;
+      max-width: 100%;
+      background: #1E293B;
+      color: #FFFFFF;
+      border-radius: 16px;
+      padding: 12px 18px;
+      margin-bottom: 16px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .toolbar-inputs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      flex: 1;
+    }
+    .toolbar-inputs input {
+      background: #334155;
+      border: 1px solid #475569;
+      color: #FFFFFF;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      flex: 1;
+      min-width: 130px;
+    }
+    .toolbar-inputs input::placeholder {
+      color: #94A3B8;
+    }
+    .toolbar-inputs input:focus {
+      outline: none;
+      border-color: #38BDF8;
+      background: #1E293B;
+    }
+    .toolbar-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .btn-print {
+      background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+      color: #FFFFFF;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 12px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+      transition: all 0.2s ease;
+    }
+    .btn-print:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+    }
+    .btn-theme {
+      background: #334155;
+      color: #F8FAFC;
+      border: 1px solid #475569;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-back {
+      color: #94A3B8;
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 8px;
+    }
+    .btn-back:hover {
+      color: #FFFFFF;
+    }
+
+    /* =======================================================
+       THE PRINTABLE A4 POSTER SHEET
+    ======================================================= */
+    .poster-sheet {
+      width: 210mm;
+      height: 297mm;
+      max-width: 100%;
+      background: var(--bg-page);
+      border: 2px solid #0052CC;
+      border-radius: 12px;
+      padding: 10mm 12mm;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    /* Outer Border Trim */
+    .poster-sheet::before {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border: 1px dashed rgba(0, 82, 204, 0.35);
+      border-radius: 8px;
+      pointer-events: none;
+    }
+
+    /* Header Bar */
+    .poster-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #E2E8F0;
+      padding-bottom: 8px;
+      position: relative;
+    }
+    .poster-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .poster-logo-wrap img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+    }
+    .brand-subtext {
+      border-left: 2px solid #CBD5E1;
+      padding-left: 10px;
+    }
+    .brand-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #0052CC;
+      letter-spacing: 0.5px;
+      line-height: 1.1;
+    }
+    .brand-tagline {
+      font-size: 9px;
+      font-weight: 700;
+      color: var(--orange);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .partner-stamp-badge {
+      background: #EFF6FF;
+      border: 1.5px solid #0052CC;
+      color: #0052CC;
+      padding: 5px 12px;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Main Poster Headline */
+    .headline-section {
+      text-align: center;
+      margin: 8px 0 6px;
+    }
+    .sub-announcement {
+      display: inline-block;
+      background: #FEF3C7;
+      color: #92400E;
+      border: 1px solid #FCD34D;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .poster-main-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+    }
+    .poster-main-title span {
+      color: #0052CC;
+      background: linear-gradient(135deg, #0052CC 0%, #2563EB 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hindi-bullet-ribbon {
+      font-size: 12px;
+      font-weight: 700;
+      color: #1E293B;
+      margin-top: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .hindi-bullet-ribbon span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .hindi-bullet-ribbon span::before {
+      content: "✔";
+      color: #059669;
+      font-size: 10px;
+    }
+
+    /* 6 Core Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+      margin: 6px 0;
+    }
+    .service-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 10px;
+      padding: 8px 11px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+    }
+    .service-card.highlight {
+      background: var(--highlight-bg);
+      border-color: var(--highlight-border);
+    }
+    .card-head {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      padding-bottom: 4px;
+    }
+    .card-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: #0052CC;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      flex-shrink: 0;
+    }
+    .service-card.highlight .card-icon {
+      background: var(--orange);
+    }
+    .card-title-group h3 {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #0F172A;
+      line-height: 1.15;
+    }
+    .card-title-group p {
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #0052CC;
+    }
+    .service-card.highlight .card-title-group p {
+      color: #C2410C;
+    }
+    .service-list {
+      list-style: none;
+      font-size: 10.5px;
+      color: #334155;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+    .service-list li {
+      position: relative;
+      padding-left: 12px;
+      margin-bottom: 2px;
+    }
+    .service-list li::before {
+      content: "•";
+      color: #0052CC;
+      position: absolute;
+      left: 0;
+      font-weight: 900;
+      font-size: 13px;
+      top: -1px;
+    }
+    .service-card.highlight .service-list li::before {
+      color: var(--orange);
+    }
+
+    /* Counter Booking & Shop Contact Desk */
+    .shop-counter-banner {
+      background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+      border: 2px solid #86EFAC;
+      border-radius: 12px;
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .shop-details-left {
+      flex: 1;
+      min-width: 0;
+    }
+    .counter-label {
+      font-size: 9px;
+      font-weight: 800;
+      color: #15803D;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .counter-shop-name {
+      font-size: 17px;
+      font-weight: 800;
+      color: #0F172A;
+      margin-top: 1px;
+      line-height: 1.2;
+    }
+    .counter-phone {
+      font-size: 13.5px;
+      font-weight: 800;
+      color: #15803D;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .counter-address {
+      font-size: 10px;
+      font-weight: 600;
+      color: #475569;
+      margin-top: 2px;
+    }
+    .qr-stamp-box {
+      width: 95px;
+      height: 95px;
+      border: 2px dashed #059669;
+      background: #FFFFFF;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4px;
+      flex-shrink: 0;
+    }
+    .qr-stamp-box span {
+      font-size: 8px;
+      font-weight: 800;
+      color: #15803D;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+    .qr-stamp-box strong {
+      font-size: 11px;
+      color: #0F172A;
+      margin-top: 2px;
+    }
+
+    /* Poster Micro Footer */
+    .poster-footer {
+      border-top: 1px solid #CBD5E1;
+      padding-top: 6px;
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 8.5px;
+      color: #64748B;
+      font-weight: 600;
+    }
+    .poster-footer strong {
+      color: #0052CC;
+    }
+
+    /* =======================================================
+       DARK BLUE THEME VARIANT (For High-Gloss Posters)
+    ======================================================= */
+    body.theme-royal {
+      --bg-page: #040914;
+      --text-main: #FFFFFF;
+      --text-muted: #CBD5E1;
+      --card-bg: rgba(15, 23, 42, 0.85);
+      --card-border: rgba(255, 255, 255, 0.15);
+      --highlight-bg: rgba(255, 107, 0, 0.12);
+      --highlight-border: #FF6B00;
+    }
+    body.theme-royal .poster-sheet {
+      border-color: #0066FF;
+      box-shadow: 0 20px 40px rgba(0, 102, 255, 0.25);
+    }
+    body.theme-royal .brand-title { color: #38BDF8; }
+    body.theme-royal .partner-stamp-badge {
+      background: rgba(0, 102, 255, 0.2);
+      border-color: #38BDF8;
+      color: #38BDF8;
+    }
+    body.theme-royal .poster-main-title { color: #FFFFFF; }
+    body.theme-royal .hindi-bullet-ribbon { color: #E2E8F0; }
+    body.theme-royal .card-title-group h3 { color: #FFFFFF; }
+    body.theme-royal .card-title-group p { color: #38BDF8; }
+    body.theme-royal .service-list { color: #CBD5E1; }
+    body.theme-royal .shop-counter-banner {
+      background: linear-gradient(135deg, #072346 0%, #03152B 100%);
+      border-color: #0066FF;
+    }
+    body.theme-royal .counter-label { color: #38BDF8; }
+    body.theme-royal .counter-shop-name { color: #FFFFFF; }
+    body.theme-royal .counter-phone { color: #4ADE80; }
+    body.theme-royal .counter-address { color: #94A3B8; }
+    body.theme-royal .qr-stamp-box {
+      background: #0B192C;
+      border-color: #38BDF8;
+    }
+    body.theme-royal .qr-stamp-box strong { color: #FFFFFF; }
+    body.theme-royal .poster-footer { border-color: rgba(255, 255, 255, 0.15); color: #94A3B8; }
+
+    /* =======================================================
+       PRINT MEDIA SPECIFIC (EXACT 1 PAGE A4 / A3)
+    ======================================================= */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .poster-sheet {
+        width: 100% !important;
+        height: 100vh !important;
+        max-width: 100% !important;
+        border: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        padding: 6mm 8mm !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      .poster-sheet::before {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Customization Bar (Hidden during Print) -->
+  <div class="toolbar">
+    <div class="toolbar-inputs">
+      <input type="text" id="inputShop" placeholder="दुकान का नाम (उदा. वर्मा साइबर कैफे)" value="वर्मा साइबर कैफे एवं जन सेवा केंद्र" oninput="updatePoster()">
+      <input type="text" id="inputPhone" placeholder="मोबाइल / WhatsApp नंबर" value="+91 98765 43210" oninput="updatePoster()">
+      <input type="text" id="inputAddress" placeholder="दुकान का पता / शहर" value="मेन मार्केट, ब्लॉक मोड़, दानापुर (पटना)" oninput="updatePoster()">
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn-theme" onclick="toggleTheme()" id="themeBtn">🎨 Dark/Light Theme</button>
+      <button class="btn-print" onclick="window.print()">🖨️ Print Poster (A4/A3)</button>
+      <a href="../partner.php" class="btn-back">&larr; Back to Partner Page</a>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       PRINTABLE A4 POSTER SHEET
+  ======================================================== -->
+  <div class="poster-sheet" id="posterSheet">
+    
+    <!-- Top Header -->
+    <header class="poster-header">
+      <div class="poster-logo-wrap">
+        <img src="../assets/images/yukt-official-logo.png" alt="YUKT IT SOLUTIONS Logo">
+        <div class="brand-subtext">
+          <div class="brand-title">YUKT IT SOLUTIONS</div>
+          <div class="brand-tagline">BUILDING DIGITAL SOLUTIONS</div>
+        </div>
+      </div>
+      <div class="partner-stamp-badge">
+        <span>★</span> OFFICIAL DIGITAL PARTNER HUB
+      </div>
+    </header>
+
+    <!-- Main Catchy Hindi Headline -->
+    <section class="headline-section">
+      <div class="sub-announcement">★ आपकी दुकान • संपूर्ण डिजिटल समाधान ★</div>
+      <h1 class="poster-main-title">
+        यहाँ सभी प्रकार की <span>डिजिटल व ऑनलाइन सेवाएं</span> उपलब्ध हैं!
+      </h1>
+      <div class="hindi-bullet-ribbon">
+        <span>वेबसाइट बनवायें</span>
+        <span>जीएसटी बिलिंग सॉफ्टवेयर</span>
+        <span>रिज्यूमे व टाइपिंग</span>
+        <span>गूगल मैप्स लिस्टिंग</span>
+        <span>लोगो व बैनर डिजाइन</span>
+      </div>
+    </section>
+
+    <!-- 6 Strategic Service Pillars Grid (High-Footfall Services) -->
+    <main class="services-grid">
+      
+      <!-- Box 1: Websites -->
+      <div class="service-card">
+        <div class="card-head">
+          <div class="card-icon">🌐</div>
+          <div class="card-title-group">
+            <h3>Website Development</h3>
+            <p>वेबसाइट निर्माण (दुकान, स्कूल, हॉस्पिटल)</p>
+          </div>
+        </div>
+        <ul class="service-list">
+          <li>लोकल दुकान, शोरूम व व्यापार की वेबसाइट</li>
+          <li>स्कूल, कॉलेज व कोचिंग मैनेजमेंट वेबसाइट</li>
+          <li>ऑनलाइन शॉपिंग व ई-कॉमर्स पोर्टल</li>
+          <li>हॉस्पिटल, क्लिनिक व डॉक्टर अपॉइंटमेंट</li>
+          <li>100% मोबाइल फ्रेंडली व सुपरफास्ट लोडिंग</li>
+        </ul>
+      </div>
+
+      <!-- Box 2: GST Billing & Software -->
+      <div class="service-card highlight">
+        <div class="card-head">
+          <div class="card-icon">💻</div>
+          <div class="card-title-group">
+            <h3>GST Billing &amp; Software</h3>
+            <p>दुकान का बिलिंग व इन्वेंटरी सॉफ्टवेयर</p>
+          </div>
+        </div>
+        <ul class="service-list">
+          <li>किराना, गारमेंट्स व रिटेल शॉप GST बिलिंग</li>
+          <li>मेडिकल स्टोर, फार्मेसी व एक्सपायरी ट्रैकर</li>
+          <li>होटल व रेस्टोरेंट KOT टेबल बिलिंग POS</li>
+          <li>स्टॉक व इन्वेंटरी मैनेजमेंट सॉफ्टवेयर</li>
+          <li>थर्मल प्रिंटर व बारकोड स्कैनर सपोर्ट</li>
+        </ul>
+      </div>
+
+      <!-- Box 3: Advanced Documents & Typing (CSC Special) -->
+      <div class="service-card highlight">
+        <div class="card-head">
+          <div class="card-icon">📄</div>
+          <div class="card-title-group">
+            <h3>Resume, Typing &amp; OCR</h3>
+            <p>रिज्यूमे, टाइपिंग व दस्तावेज फॉर्मेटिंग</p>
+          </div>
+        </div>
+        <ul class="service-list">
+          <li>जॉब के लिए प्रोफेशनल ATS रिज्यूमे / Bio-Data</li>
+          <li>फास्ट हिंदी व इंग्लिश टाइपिंग (कोर्ट व ऑफिस)</li>
+          <li>बैंक लोन प्रोजेक्ट रिपोर्ट व बिज़नेस प्रपोजल</li>
+          <li>स्कैन डॉक्यूमेंट से वर्ड व PDF कन्वर्शन (OCR)</li>
+          <li>कंपनी प्रोफाइल, एग्रीमेंट व लेटर ड्राफ्टिंग सहायता</li>
+        </ul>
+      </div>
+
+      <!-- Box 4: Graphic Design & Flex Printing -->
+      <div class="service-card">
+        <div class="card-head">
+          <div class="card-icon">🎨</div>
+          <div class="card-title-group">
+            <h3>Graphic Design &amp; Printing</h3>
+            <p>लोगो, बैनर व विजिटिंग कार्ड डिजाइन</p>
+          </div>
+        </div>
+        <ul class="service-list">
+          <li>प्रोफेशनल बिज़नेस लोगो (Logo) डिजाइन</li>
+          <li>दुकान का फ्लेक्स बैनर, होर्डिंग व स्टेंडी</li>
+          <li>विजिटिंग कार्ड, लेटरहेड व बिल बुक फॉर्मेट</li>
+          <li>पम्पलेट, ब्रोशर व प्रोडक्ट कैटलॉग</li>
+          <li>सोशल मीडिया व त्योहारों के विज्ञापन पोस्टर</li>
+        </ul>
+      </div>
+
+      <!-- Box 5: Google Maps & Local Marketing -->
+      <div class="service-card">
+        <div class="card-head">
+          <div class="card-icon">📍</div>
+          <div class="card-title-group">
+            <h3>Google Maps &amp; Marketing</h3>
+            <p>दुकान को Google Search पर लाएं</p>
+          </div>
+        </div>
+        <ul class="service-list">
+          <li>Google Business Profile सेटअप व वेरिफिकेशन</li>
+          <li>लोकल एरिया में Google Maps टॉप 3 रैंकिंग</li>
+          <li>फेसबुक व इंस्टाग्राम विज्ञापनों से नए ग्राहक लाएं</li>
+          <li>WhatsApp बल्क प्रमोशन व मैसेजिंग सेटअप</li>
+          <li>कस्टमर रेटिंग व ऑनलाइन रिव्यूज ग्रोथ</li>
+        </ul>
+      </div>
+
+      <!-- Box 6: WhatsApp Bot & Shop Digitalization -->
+      <div class="service-card">
+        <div class="card-head">
+          <div class="card-icon">🤖</div>
+          <div class="card-title-group">
+            <h3>WhatsApp Bot &amp; QR Standee</h3>
+            <p>24/7 ऑटो रिप्लाई बॉट व डिजिटल दुकान</p>
+          </div>
+        </div>
+        <ul class="service-list">
+          <li>24/7 ऑटोमैटिक व्हाट्सएप रिप्लाई बॉट</li>
+          <li>दुकान का डिजिटल PDF रेट कार्ड व कैटलॉग</li>
+          <li>ब्रांडेड QR कोड स्टैंडी (PhonePe / Google Pay)</li>
+          <li>डॉक्टर व सैलून ऑनलाइन अपॉइंटमेंट सिस्टम</li>
+          <li>ऑटोमैटिक बिल व रसीद व्हाट्सएप पर भेजें</li>
+        </ul>
+      </div>
+
+    </main>
+
+    <!-- Bottom Shop Counter Booking & Contact Banner -->
+    <section class="shop-counter-banner">
+      <div class="shop-details-left">
+        <div class="counter-label">
+          <span>📍</span> अधिक जानकारी व बुकिंग के लिए काउंटर पर संपर्क करें:
+        </div>
+        <div class="counter-shop-name" id="displayShop">
+          वर्मा साइबर कैफे एवं जन सेवा केंद्र
+        </div>
+        <div class="counter-phone" id="displayPhone">
+          <span>📞 / WhatsApp:</span> +91 98765 43210
+        </div>
+        <div class="counter-address" id="displayAddress">
+          पता: मेन मार्केट, ब्लॉक मोड़, दानापुर (पटना)
+        </div>
+      </div>
+
+      <div class="qr-stamp-box">
+        <span>Shop QR / Stamp</span>
+        <strong>यहाँ संपर्क करें</strong>
+        <span style="font-size: 7px; color: #64748B; margin-top: 2px;">Official Desk</span>
+      </div>
+    </section>
+
+    <!-- Poster Micro Footer -->
+    <footer class="poster-footer">
+      <div>
+        टेक्निकल सपोर्ट: <strong>YUKT IT SOLUTIONS</strong> &bull; वेबसाइट: <strong>www.yukt.online</strong> &bull; हेल्पलाइन: <strong>+91 82354 11806</strong>
+      </div>
+      <div>
+        सूचना: डॉक्यूमेंट सेवाएं केवल ड्राफ्टिंग सहायता हैं, कानूनी सलाह नहीं।
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function updatePoster() {
+      const shop = document.getElementById('inputShop').value.trim() || 'आपकी दुकान का नाम';
+      const phone = document.getElementById('inputPhone').value.trim() || '+91 XXXXX XXXXX';
+      const address = document.getElementById('inputAddress').value.trim() || 'दुकान का पता व शहर';
+
+      document.getElementById('displayShop').textContent = shop;
+      document.getElementById('displayPhone').innerHTML = '<span>📞 / WhatsApp:</span> ' + phone;
+      document.getElementById('displayAddress').textContent = 'पता: ' + address;
+    }
+
+    function toggleTheme() {
+      const isRoyal = document.body.classList.toggle('theme-royal');
+      document.getElementById('themeBtn').textContent = isRoyal ? '☀️ Light Print Theme' : '🌙 Royal Navy Theme';
+    }
+  </script>
+
+</body>
+</html>

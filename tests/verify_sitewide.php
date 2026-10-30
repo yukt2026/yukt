@@ -19,7 +19,11 @@ $routes = [
     "http://localhost/yukt/project-rag-assistant.php",
     "http://localhost/yukt/project-corporate-portal.php",
     "http://localhost/yukt/project-b2b-marketing.php",
-    "http://localhost/yukt/project-franchise-platform.php"
+    "http://localhost/yukt/project-franchise-platform.php",
+    "http://localhost/yukt/service-catalogue.php",
+    "http://localhost/yukt/partner.php",
+    "http://localhost/yukt/partner-login.php",
+    "http://localhost/yukt/admin-partners.php"
 ];
 
 $errors = [];
@@ -53,7 +57,7 @@ foreach ($routes as $url) {
         if (empty($clean)) continue;
 
         $targetFile = $rootDir . '/' . ltrim($clean, '/');
-        if (!file_exists($targetFile)) {
+        if (!file_exists($targetFile) && !file_exists($targetFile . '.php')) {
             $errors[] = "Broken link on $url -> $href (Target '$targetFile' not found)";
         }
     }
